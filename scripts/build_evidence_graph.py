@@ -133,10 +133,6 @@ def _parse_adjudication():
 _impl.parse_adjudication = _parse_adjudication
 
 
-def _ids(value: str, prefix: str, width: int = 3):
-    return sorted(set(re.findall(rf"{prefix}\d{{{width}}}", value)), key=lambda x: int(re.search(r"\d+", x).group()))
-
-
 def _question_domain(oid: str):
     if oid == "EQ006":
         return ["movement-disorders", "clinical-genetics"]
@@ -161,9 +157,9 @@ def _parse_expert_questions():
         missing = [x for x in required if x not in fields]
         if missing:
             raise _impl.GateError(f"{oid} missing Expert Question fields: {missing}")
-        tensions = _ids(fields["Documentary triggers"], "T")
+        tensions = _impl.extract_ids(fields["Documentary triggers"], "T")
         propositions = sorted(
-            set(_ids(fields["Controlled propositions"], "P") + _ids(fields["Controlled propositions"], "S")),
+            set(_impl.extract_ids(fields["Controlled propositions"], "P") + _impl.extract_ids(fields["Controlled propositions"], "S")),
             key=lambda x: (x[0], int(x[1:])),
         )
         o = _impl.base_obj(oid, "evidential", "expert_question", path, oid)
@@ -212,6 +208,16 @@ _original_validate = _impl.validate
 
 def _deterministic_validate(objects, vocab):
     result = _original_validate(objects, vocab)
+    by_id = {o["id"]: o for o in objects}
+    expert_questions = [o for o in objects if o["object_type"] == "expert_question"]
+    for o in expert_questions:
+        for field in ["question", "expert_domain", "status", "boundary", "counsel_consequence"]:
+            if not o.get(field):
+                result["fatal_errors"].append({"id": o["id"], "source_file": o["source_file"], "condition": f"expert question missing {field}"})
+    mapped_tensions = {t for o in expert_questions for t in o.get("tension_ids", [])}
+    for oid, o in by_id.items():
+        if o["object_type"] == "tension" and "requires-expert-evidence" in o.get("resolution_status", []) and oid not in mapped_tensions:
+            result["warnings"].append({"id": oid, "source_file": o["source_file"], "condition": "expert-required Tension has no mapped Expert Question"})
     key = lambda item: (item.get("source_file", ""), item.get("id", ""), item.get("condition", ""))
     result["fatal_errors"] = sorted(result.get("fatal_errors", []), key=key)
     result["warnings"] = sorted(result.get("warnings", []), key=key)
