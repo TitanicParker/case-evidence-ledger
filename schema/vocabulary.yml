@@ -1,0 +1,245 @@
+schema_version: 1.0.0
+status: frozen
+purpose: >-
+  Controlled classificatory vocabulary for evidence-object parsing, validation,
+  retrieval, and generated GitHub Pages views. Values classify existing controlled
+  objects; they do not replace substantive evidence text or explicit ID relationships.
+
+object_type:
+  - source_euid
+  - fact
+  - tension
+  - proposition
+  - supporting_proposition
+  - control_rule
+  - argument_stage
+  - defence_audit
+  - adjudication
+  - expert_question
+
+id_kind:
+  - evidential
+  - implementation
+
+audience:
+  - expert
+  - counsel
+  - governance
+  - foundation
+
+topic:
+  - entry-state
+  - structural-foot
+  - movement-phenotype
+  - treatment-state
+  - medication-strategy
+  - genetics
+  - administrative-state
+  - knowledge-state
+  - representation
+  - document-finalisation
+  - provenance
+  - chronology
+  - missing-evidence
+  - reconstruction
+
+expert_dependency:
+  - none
+  - contextual
+  - required
+
+proposition_strength:
+  - direct-documentary
+  - near-direct-documentary-inference
+  - strong-documentary-inference
+  - qualified-documentary-inference
+
+# Normalized values preserve the meaning of the controlled source labels below.
+resolution_status:
+  - unresolved
+  - partially-reconcilable
+  - requires-additional-source
+  - requires-expert-evidence
+  - resolved-by-record
+  - representation-issue-only
+
+resolution_status_source_map:
+  "UNRESOLVED": unresolved
+  "PARTIALLY RECONCILABLE": partially-reconcilable
+  "REQUIRES ADDITIONAL SOURCE": requires-additional-source
+  "REQUIRES EXPERT EVIDENCE": requires-expert-evidence
+  "RESOLVED BY RECORD": resolved-by-record
+  "REPRESENTATION ISSUE ONLY": representation-issue-only
+
+adjudication_class:
+  A:
+    slug: defeat-or-amend
+    label: Defeats / requires amendment
+  B:
+    slug: material-qualification
+    label: Material qualification
+  C:
+    slug: coexists-but-does-not-answer
+    label: Coexists but does not answer
+  D:
+    slug: requires-expert-adjudication
+    label: Requires expert adjudication
+
+source_status:
+  - controlling-native-or-public-representation
+  - controlled-derived-corpus
+  - original-contemporaneous
+  - later-reproduction
+  - retrospective-account
+  - provenance-metadata
+  - unmapped
+
+statement_status:
+  - source-text
+  - objective-recorded-fact
+  - contemporaneous-patient-report
+  - clinician-observation
+  - clinical-opinion-or-assessment
+  - administrative-act-or-classification
+  - retrospective-clinician-account
+  - retrospective-patient-account
+  - documentary-inference
+
+source_type:
+  - gp-clinical-record
+  - hospital-clinical-record
+  - discharge-or-admission-record
+  - specialist-correspondence
+  - podiatry-record
+  - prescribing-record
+  - medication-administration-record
+  - administrative-record
+  - occupational-health-record
+  - genetic-record
+  - imaging-or-investigation-record
+  - complaint-or-governance-record
+  - patient-statement
+  - source-provenance-record
+  - other-controlled-source
+
+# tension_type is an ordered array. Source Type text is split on the literal
+# separator '/' and each trimmed component is normalized using the map below.
+# Unknown components are validation errors: the parser must never guess a type.
+tension_type:
+  - reasoning-gap
+  - operational-epistemic-mismatch
+  - operational
+  - epistemic-mismatch
+  - representation
+  - reasoning-tension
+  - documentary-tension
+  - mixed-mechanism-issue
+  - administrative
+  - clinical-mismatch
+  - management-persistence
+  - temporal-tension
+  - epistemic
+  - management-tension
+  - treatment-state-tension
+  - treatment-state
+  - representation-mismatch
+  - source-status
+  - representation-scope-tension
+  - temporal
+  - other-controlled-tension
+
+tension_type_source_component_map:
+  "reasoning gap": reasoning-gap
+  "operational-epistemic mismatch": operational-epistemic-mismatch
+  "operational": operational
+  "epistemic mismatch": epistemic-mismatch
+  "representation": representation
+  "reasoning tension": reasoning-tension
+  "documentary tension": documentary-tension
+  "mixed-mechanism issue": mixed-mechanism-issue
+  "administrative": administrative
+  "clinical mismatch": clinical-mismatch
+  "management persistence": management-persistence
+  "temporal tension": temporal-tension
+  "epistemic": epistemic
+  "management tension": management-tension
+  "treatment-state tension": treatment-state-tension
+  "treatment-state": treatment-state
+  "representation mismatch": representation-mismatch
+  "source-status": source-status
+  "representation scope tension": representation-scope-tension
+  "temporal": temporal
+
+# These normalized values correspond one-to-one with the actual controlled
+# Defence Audit labels. No substitute categories are permitted.
+defence_position:
+  - accept
+  - accept-but-neutralise
+  - partially-contest
+  - contest
+  - requires-expert-evidence
+
+defence_position_source_map:
+  "ACCEPT": accept
+  "ACCEPT BUT NEUTRALISE": accept-but-neutralise
+  "PARTIALLY CONTEST": partially-contest
+  "CONTEST": contest
+  "REQUIRES EXPERT EVIDENCE": requires-expert-evidence
+
+expert_question_status:
+  - open
+  - instructed
+  - answered
+  - superseded
+
+expert_domain:
+  - movement-disorders-neurology
+  - neurology
+  - genetics
+  - podiatry
+  - pain-medicine
+  - pharmacology
+  - records-governance
+  - other
+
+temporal_field:
+  - event_date
+  - document_date
+  - recorded_date
+  - finalised_date
+  - received_date
+
+relationship_key:
+  - source_euids
+  - fact_ids
+  - tension_ids
+  - proposition_ids
+  - supporting_proposition_ids
+  - control_rule_ids
+  - argument_stage_refs
+  - defence_audit_refs
+  - adjudication_refs
+  - expert_question_ids
+
+validation_policy:
+  unknown_controlled_value: error
+  unknown_source_normalization_value: error
+  duplicate_controlled_id: error
+  duplicate_normalized_id: error
+  malformed_controlled_id: error
+  unresolved_required_reference: error
+  proposition_without_boundary: error
+  duplicate_canonical_url: error
+  missing_optional_provenance: warning
+  orphan_fact: warning
+  orphan_tension: warning
+  unresolved_noncanonical_source_identifier: warning
+
+notes:
+  - Audience and topic values are retrieval metadata only.
+  - Topics must never substitute for explicit Fact/Tension/Proposition relationships.
+  - Source labels are preserved in parsed source fields even when a normalized slug is also emitted.
+  - Composite tension types preserve source order after deterministic component normalization.
+  - A generated view must preserve Fact qualification, Proposition boundary, and material adjudication/disposition.
+  - Source, Fact, Tension, Proposition, Audit, and Adjudication content must remain visibly distinguishable in search and UI.
+  - Additional controlled values or mappings require schema review; do not introduce free-form tags in production metadata.

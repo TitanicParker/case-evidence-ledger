@@ -1,0 +1,2012 @@
+# Parser Validation Report
+
+**Parser version:** 1.0.0  
+**Schema version:** 1.0.0
+
+## Source files parsed
+
+- `sources-consolidated-evidence-corpus.md`
+- `FACT_REGISTER.md`
+- `EVIDENTIAL_TENSIONS.md`
+- `PROPOSITION_REGISTER.md`
+- `CASE_ARGUMENT_ARCHITECTURE.md`
+- `DEFENCE_ADVERSE_CASE_AUDIT.md`
+- `ADVERSE_CASE_ADJUDICATION.md`
+
+## Object counts
+
+- `adjudication`: 25
+- `argument_stage`: 6
+- `control_rule`: 5
+- `defence_audit`: 25
+- `fact`: 1890
+- `proposition`: 25
+- `source_euid`: 2950
+- `supporting_proposition`: 8
+- `tension`: 22
+
+## Relationship counts
+
+- `fact_ids`: 446
+- `proposition_ids`: 81
+- `source_euids`: 4632
+- `tension_ids`: 101
+
+## Fatal errors
+
+- None
+
+## Warnings
+
+- `F0001` · `FACT_REGISTER.md` — orphan Fact
+- `F0001` · `FACT_REGISTER.md` — unresolved non-canonical evidence identifier GP17-GEN-0001
+- `F0002` · `FACT_REGISTER.md` — unresolved non-canonical evidence identifier GP17-20170410-0001
+- `F0003` · `FACT_REGISTER.md` — orphan Fact
+- `F0003` · `FACT_REGISTER.md` — unresolved non-canonical evidence identifier GP17-20170410-0001
+- `F0004` · `FACT_REGISTER.md` — orphan Fact
+- `F0004` · `FACT_REGISTER.md` — unresolved non-canonical evidence identifier GP17-20170410-0001
+- `F0005` · `FACT_REGISTER.md` — unresolved non-canonical evidence identifier GP17-20170410-0001
+- `F0006` · `FACT_REGISTER.md` — orphan Fact
+- `F0006` · `FACT_REGISTER.md` — unresolved non-canonical evidence identifier GP17-20170410-0001
+- `F0007` · `FACT_REGISTER.md` — orphan Fact
+- `F0007` · `FACT_REGISTER.md` — unresolved non-canonical evidence identifier GP17-20170410-0001
+- `F0008` · `FACT_REGISTER.md` — orphan Fact
+- `F0008` · `FACT_REGISTER.md` — unresolved non-canonical evidence identifier GP17-20170601-0001
+- `F0009` · `FACT_REGISTER.md` — orphan Fact
+- `F0009` · `FACT_REGISTER.md` — unresolved non-canonical evidence identifier GP17-20170601-0001
+- `F0010` · `FACT_REGISTER.md` — orphan Fact
+- `F0010` · `FACT_REGISTER.md` — unresolved non-canonical evidence identifier GP17-20170601-0001
+- `F0011` · `FACT_REGISTER.md` — orphan Fact
+- `F0011` · `FACT_REGISTER.md` — unresolved non-canonical evidence identifier GP17-20170601-0001
+- `F0012` · `FACT_REGISTER.md` — orphan Fact
+- `F0012` · `FACT_REGISTER.md` — unresolved non-canonical evidence identifier GP17-20170601-0001
+- `F0013` · `FACT_REGISTER.md` — orphan Fact
+- `F0013` · `FACT_REGISTER.md` — unresolved non-canonical evidence identifier GP17-20170601-0001
+- `F0014` · `FACT_REGISTER.md` — orphan Fact
+- `F0014` · `FACT_REGISTER.md` — unresolved non-canonical evidence identifier GP17-20170601-0001
+- `F0015` · `FACT_REGISTER.md` — orphan Fact
+- `F0015` · `FACT_REGISTER.md` — unresolved non-canonical evidence identifier GP17-20170608-0001
+- `F0016` · `FACT_REGISTER.md` — orphan Fact
+- `F0016` · `FACT_REGISTER.md` — unresolved non-canonical evidence identifier GP17-20170608-0002
+- `F0017` · `FACT_REGISTER.md` — unresolved non-canonical evidence identifier GP17-20170608-0002
+- `F0018` · `FACT_REGISTER.md` — orphan Fact
+- `F0018` · `FACT_REGISTER.md` — unresolved non-canonical evidence identifier GP17-20170608-0002
+- `F0019` · `FACT_REGISTER.md` — unresolved non-canonical evidence identifier GP17-20170608-0002
+- `F0020` · `FACT_REGISTER.md` — orphan Fact
+- `F0020` · `FACT_REGISTER.md` — unresolved non-canonical evidence identifier GP17-20170612-0001
+- `F0021` · `FACT_REGISTER.md` — orphan Fact
+- `F0021` · `FACT_REGISTER.md` — unresolved non-canonical evidence identifier GP17-20170612-0001
+- `F0022` · `FACT_REGISTER.md` — orphan Fact
+- `F0022` · `FACT_REGISTER.md` — unresolved non-canonical evidence identifier GP17-20170612-0001
+- `F0023` · `FACT_REGISTER.md` — orphan Fact
+- `F0023` · `FACT_REGISTER.md` — unresolved non-canonical evidence identifier GP17-20170612-0001
+- `F0024` · `FACT_REGISTER.md` — orphan Fact
+- `F0024` · `FACT_REGISTER.md` — unresolved non-canonical evidence identifier GP17-20170612-0001
+- `F0025` · `FACT_REGISTER.md` — orphan Fact
+- `F0025` · `FACT_REGISTER.md` — unresolved non-canonical evidence identifier GP17-20170612-0001
+- `F0026` · `FACT_REGISTER.md` — unresolved non-canonical evidence identifier GP17-20170612-0002
+- `F0027` · `FACT_REGISTER.md` — unresolved non-canonical evidence identifier GP17-20170612-0002
+- `F0028` · `FACT_REGISTER.md` — orphan Fact
+- `F0028` · `FACT_REGISTER.md` — unresolved non-canonical evidence identifier GP17-20170620-0001
+- `F0029` · `FACT_REGISTER.md` — orphan Fact
+- `F0029` · `FACT_REGISTER.md` — unresolved non-canonical evidence identifier GP17-20170620-0002
+- `F0030` · `FACT_REGISTER.md` — orphan Fact
+- `F0030` · `FACT_REGISTER.md` — unresolved non-canonical evidence identifier GP17-20170620-0003
+- `F0031` · `FACT_REGISTER.md` — orphan Fact
+- `F0031` · `FACT_REGISTER.md` — unresolved non-canonical evidence identifier GP17-20170623-0001
+- `F0032` · `FACT_REGISTER.md` — orphan Fact
+- `F0032` · `FACT_REGISTER.md` — unresolved non-canonical evidence identifier GP17-20170623-0001
+- `F0033` · `FACT_REGISTER.md` — orphan Fact
+- `F0033` · `FACT_REGISTER.md` — unresolved non-canonical evidence identifier GP17-20170623-0001
+- `F0034` · `FACT_REGISTER.md` — unresolved non-canonical evidence identifier GP17-20170623-0001
+- `F0035` · `FACT_REGISTER.md` — orphan Fact
+- `F0035` · `FACT_REGISTER.md` — unresolved non-canonical evidence identifier GP17-20170623-0001
+- `F0036` · `FACT_REGISTER.md` — orphan Fact
+- `F0036` · `FACT_REGISTER.md` — unresolved non-canonical evidence identifier GP17-20170623-0001
+- `F0037` · `FACT_REGISTER.md` — unresolved non-canonical evidence identifier GP17-20170629-0001
+- `F0038` · `FACT_REGISTER.md` — unresolved non-canonical evidence identifier GP17-20170629-0001
+- `F0039` · `FACT_REGISTER.md` — orphan Fact
+- `F0039` · `FACT_REGISTER.md` — unresolved non-canonical evidence identifier GP17-20170629-0001
+- `F0040` · `FACT_REGISTER.md` — orphan Fact
+- `F0040` · `FACT_REGISTER.md` — unresolved non-canonical evidence identifier GP17-20170629-0001
+- `F0041` · `FACT_REGISTER.md` — orphan Fact
+- `F0041` · `FACT_REGISTER.md` — unresolved non-canonical evidence identifier GP17-20170629-0002
+- `F0042` · `FACT_REGISTER.md` — orphan Fact
+- `F0042` · `FACT_REGISTER.md` — unresolved non-canonical evidence identifier GP17-20170706-0001
+- `F0043` · `FACT_REGISTER.md` — unresolved non-canonical evidence identifier GP17-20170711-0001
+- `F0044` · `FACT_REGISTER.md` — orphan Fact
+- `F0044` · `FACT_REGISTER.md` — unresolved non-canonical evidence identifier GP17-20170713-0001
+- `F0045` · `FACT_REGISTER.md` — unresolved non-canonical evidence identifier GP17-20170714-0001
+- `F0046` · `FACT_REGISTER.md` — orphan Fact
+- `F0046` · `FACT_REGISTER.md` — unresolved non-canonical evidence identifier GP17-20170714-0001
+- `F0047` · `FACT_REGISTER.md` — orphan Fact
+- `F0047` · `FACT_REGISTER.md` — unresolved non-canonical evidence identifier GP17-20170717-0001
+- `F0048` · `FACT_REGISTER.md` — unresolved non-canonical evidence identifier GP17-20170717-0001
+- `F0049` · `FACT_REGISTER.md` — orphan Fact
+- `F0049` · `FACT_REGISTER.md` — unresolved non-canonical evidence identifier GP17-20170717-0001
+- `F0050` · `FACT_REGISTER.md` — orphan Fact
+- `F0050` · `FACT_REGISTER.md` — unresolved non-canonical evidence identifier GP17-20170717-0002
+- `F0051` · `FACT_REGISTER.md` — unresolved non-canonical evidence identifier GP17-20170718-0001
+- `F0052` · `FACT_REGISTER.md` — unresolved non-canonical evidence identifier GP17-20170718-0001
+- `F0053` · `FACT_REGISTER.md` — unresolved non-canonical evidence identifier GP17-20170718-0002
+- `F0054` · `FACT_REGISTER.md` — orphan Fact
+- `F0054` · `FACT_REGISTER.md` — unresolved non-canonical evidence identifier GP17-20170803-0001
+- `F0055` · `FACT_REGISTER.md` — orphan Fact
+- `F0055` · `FACT_REGISTER.md` — unresolved non-canonical evidence identifier GP17-20170803-0001
+- `F0056` · `FACT_REGISTER.md` — orphan Fact
+- `F0056` · `FACT_REGISTER.md` — unresolved non-canonical evidence identifier GP17-20170803-0001
+- `F0057` · `FACT_REGISTER.md` — orphan Fact
+- `F0057` · `FACT_REGISTER.md` — unresolved non-canonical evidence identifier GP17-20170810-0001
+- `F0058` · `FACT_REGISTER.md` — orphan Fact
+- `F0058` · `FACT_REGISTER.md` — unresolved non-canonical evidence identifier GP17-20170810-0001
+- `F0059` · `FACT_REGISTER.md` — orphan Fact
+- `F0059` · `FACT_REGISTER.md` — unresolved non-canonical evidence identifier GP17-20170810-0002
+- `F0060` · `FACT_REGISTER.md` — orphan Fact
+- `F0060` · `FACT_REGISTER.md` — unresolved non-canonical evidence identifier GP17-20170817-0001
+- `F0061` · `FACT_REGISTER.md` — orphan Fact
+- `F0061` · `FACT_REGISTER.md` — unresolved non-canonical evidence identifier GP17-20170901-0001
+- `F0062` · `FACT_REGISTER.md` — unresolved non-canonical evidence identifier GP17-20170907-0001
+- `F0063` · `FACT_REGISTER.md` — orphan Fact
+- `F0063` · `FACT_REGISTER.md` — unresolved non-canonical evidence identifier GP17-20170907-0001
+- `F0064` · `FACT_REGISTER.md` — orphan Fact
+- `F0064` · `FACT_REGISTER.md` — unresolved non-canonical evidence identifier GP17-20170914-0001
+- `F0065` · `FACT_REGISTER.md` — orphan Fact
+- `F0065` · `FACT_REGISTER.md` — unresolved non-canonical evidence identifier GP17-20170914-0002
+- `F0066` · `FACT_REGISTER.md` — orphan Fact
+- `F0066` · `FACT_REGISTER.md` — unresolved non-canonical evidence identifier GP17-20170925-0001
+- `F0067` · `FACT_REGISTER.md` — orphan Fact
+- `F0067` · `FACT_REGISTER.md` — unresolved non-canonical evidence identifier GP17-20170925-0001
+- `F0068` · `FACT_REGISTER.md` — orphan Fact
+- `F0068` · `FACT_REGISTER.md` — unresolved non-canonical evidence identifier GP17-20170925-0001
+- `F0069` · `FACT_REGISTER.md` — orphan Fact
+- `F0069` · `FACT_REGISTER.md` — unresolved non-canonical evidence identifier GP17-20171005-0001
+- `F0070` · `FACT_REGISTER.md` — orphan Fact
+- `F0070` · `FACT_REGISTER.md` — unresolved non-canonical evidence identifier GP17-20171012-0001
+- `F0071` · `FACT_REGISTER.md` — orphan Fact
+- `F0071` · `FACT_REGISTER.md` — unresolved non-canonical evidence identifier GP17-20171018-0001
+- `F0072` · `FACT_REGISTER.md` — orphan Fact
+- `F0072` · `FACT_REGISTER.md` — unresolved non-canonical evidence identifier GP17-20171026-0001
+- `F0073` · `FACT_REGISTER.md` — orphan Fact
+- `F0073` · `FACT_REGISTER.md` — unresolved non-canonical evidence identifier GP17-20171102-0001
+- `F0074` · `FACT_REGISTER.md` — orphan Fact
+- `F0074` · `FACT_REGISTER.md` — unresolved non-canonical evidence identifier GP17-20171106-0001
+- `F0075` · `FACT_REGISTER.md` — orphan Fact
+- `F0075` · `FACT_REGISTER.md` — unresolved non-canonical evidence identifier GP17-20171106-0001
+- `F0076` · `FACT_REGISTER.md` — orphan Fact
+- `F0076` · `FACT_REGISTER.md` — unresolved non-canonical evidence identifier GP17-20171106-0001
+- `F0077` · `FACT_REGISTER.md` — orphan Fact
+- `F0077` · `FACT_REGISTER.md` — unresolved non-canonical evidence identifier GP17-20171110-0001
+- `F0078` · `FACT_REGISTER.md` — orphan Fact
+- `F0078` · `FACT_REGISTER.md` — unresolved non-canonical evidence identifier GP17-20171116-0001
+- `F0079` · `FACT_REGISTER.md` — orphan Fact
+- `F0079` · `FACT_REGISTER.md` — unresolved non-canonical evidence identifier GP17-20171123-0001
+- `F0080` · `FACT_REGISTER.md` — orphan Fact
+- `F0080` · `FACT_REGISTER.md` — unresolved non-canonical evidence identifier GP17-20171130-0001
+- `F0081` · `FACT_REGISTER.md` — orphan Fact
+- `F0081` · `FACT_REGISTER.md` — unresolved non-canonical evidence identifier GP17-20171130-0001
+- `F0082` · `FACT_REGISTER.md` — orphan Fact
+- `F0082` · `FACT_REGISTER.md` — unresolved non-canonical evidence identifier GP17-20171130-0001
+- `F0083` · `FACT_REGISTER.md` — orphan Fact
+- `F0084` · `FACT_REGISTER.md` — orphan Fact
+- `F0085` · `FACT_REGISTER.md` — orphan Fact
+- `F0086` · `FACT_REGISTER.md` — orphan Fact
+- `F0087` · `FACT_REGISTER.md` — orphan Fact
+- `F0088` · `FACT_REGISTER.md` — orphan Fact
+- `F0089` · `FACT_REGISTER.md` — orphan Fact
+- `F0090` · `FACT_REGISTER.md` — orphan Fact
+- `F0091` · `FACT_REGISTER.md` — orphan Fact
+- `F0092` · `FACT_REGISTER.md` — orphan Fact
+- `F0093` · `FACT_REGISTER.md` — orphan Fact
+- `F0094` · `FACT_REGISTER.md` — orphan Fact
+- `F0095` · `FACT_REGISTER.md` — orphan Fact
+- `F0096` · `FACT_REGISTER.md` — orphan Fact
+- `F0097` · `FACT_REGISTER.md` — orphan Fact
+- `F0098` · `FACT_REGISTER.md` — orphan Fact
+- `F0099` · `FACT_REGISTER.md` — orphan Fact
+- `F0100` · `FACT_REGISTER.md` — orphan Fact
+- `F0101` · `FACT_REGISTER.md` — orphan Fact
+- `F0102` · `FACT_REGISTER.md` — orphan Fact
+- `F0103` · `FACT_REGISTER.md` — orphan Fact
+- `F0104` · `FACT_REGISTER.md` — orphan Fact
+- `F0105` · `FACT_REGISTER.md` — orphan Fact
+- `F0106` · `FACT_REGISTER.md` — orphan Fact
+- `F0107` · `FACT_REGISTER.md` — orphan Fact
+- `F0108` · `FACT_REGISTER.md` — orphan Fact
+- `F0109` · `FACT_REGISTER.md` — orphan Fact
+- `F0110` · `FACT_REGISTER.md` — orphan Fact
+- `F0111` · `FACT_REGISTER.md` — orphan Fact
+- `F0112` · `FACT_REGISTER.md` — orphan Fact
+- `F0113` · `FACT_REGISTER.md` — orphan Fact
+- `F0114` · `FACT_REGISTER.md` — orphan Fact
+- `F0115` · `FACT_REGISTER.md` — orphan Fact
+- `F0116` · `FACT_REGISTER.md` — orphan Fact
+- `F0117` · `FACT_REGISTER.md` — orphan Fact
+- `F0118` · `FACT_REGISTER.md` — orphan Fact
+- `F0119` · `FACT_REGISTER.md` — orphan Fact
+- `F0120` · `FACT_REGISTER.md` — orphan Fact
+- `F0121` · `FACT_REGISTER.md` — orphan Fact
+- `F0122` · `FACT_REGISTER.md` — orphan Fact
+- `F0123` · `FACT_REGISTER.md` — orphan Fact
+- `F0124` · `FACT_REGISTER.md` — orphan Fact
+- `F0125` · `FACT_REGISTER.md` — orphan Fact
+- `F0126` · `FACT_REGISTER.md` — orphan Fact
+- `F0127` · `FACT_REGISTER.md` — orphan Fact
+- `F0128` · `FACT_REGISTER.md` — orphan Fact
+- `F0129` · `FACT_REGISTER.md` — orphan Fact
+- `F0130` · `FACT_REGISTER.md` — orphan Fact
+- `F0131` · `FACT_REGISTER.md` — orphan Fact
+- `F0132` · `FACT_REGISTER.md` — orphan Fact
+- `F0133` · `FACT_REGISTER.md` — orphan Fact
+- `F0134` · `FACT_REGISTER.md` — orphan Fact
+- `F0135` · `FACT_REGISTER.md` — orphan Fact
+- `F0136` · `FACT_REGISTER.md` — orphan Fact
+- `F0137` · `FACT_REGISTER.md` — orphan Fact
+- `F0138` · `FACT_REGISTER.md` — orphan Fact
+- `F0139` · `FACT_REGISTER.md` — orphan Fact
+- `F0140` · `FACT_REGISTER.md` — orphan Fact
+- `F0141` · `FACT_REGISTER.md` — orphan Fact
+- `F0142` · `FACT_REGISTER.md` — orphan Fact
+- `F0143` · `FACT_REGISTER.md` — orphan Fact
+- `F0144` · `FACT_REGISTER.md` — orphan Fact
+- `F0145` · `FACT_REGISTER.md` — orphan Fact
+- `F0146` · `FACT_REGISTER.md` — orphan Fact
+- `F0147` · `FACT_REGISTER.md` — orphan Fact
+- `F0148` · `FACT_REGISTER.md` — orphan Fact
+- `F0149` · `FACT_REGISTER.md` — orphan Fact
+- `F0151` · `FACT_REGISTER.md` — orphan Fact
+- `F0152` · `FACT_REGISTER.md` — orphan Fact
+- `F0154` · `FACT_REGISTER.md` — orphan Fact
+- `F0159` · `FACT_REGISTER.md` — orphan Fact
+- `F0160` · `FACT_REGISTER.md` — orphan Fact
+- `F0163` · `FACT_REGISTER.md` — orphan Fact
+- `F0165` · `FACT_REGISTER.md` — orphan Fact
+- `F0171` · `FACT_REGISTER.md` — orphan Fact
+- `F0172` · `FACT_REGISTER.md` — orphan Fact
+- `F0173` · `FACT_REGISTER.md` — orphan Fact
+- `F0174` · `FACT_REGISTER.md` — orphan Fact
+- `F0175` · `FACT_REGISTER.md` — orphan Fact
+- `F0176` · `FACT_REGISTER.md` — orphan Fact
+- `F0177` · `FACT_REGISTER.md` — orphan Fact
+- `F0178` · `FACT_REGISTER.md` — orphan Fact
+- `F0179` · `FACT_REGISTER.md` — orphan Fact
+- `F0180` · `FACT_REGISTER.md` — orphan Fact
+- `F0181` · `FACT_REGISTER.md` — orphan Fact
+- `F0182` · `FACT_REGISTER.md` — orphan Fact
+- `F0183` · `FACT_REGISTER.md` — orphan Fact
+- `F0184` · `FACT_REGISTER.md` — orphan Fact
+- `F0185` · `FACT_REGISTER.md` — orphan Fact
+- `F0186` · `FACT_REGISTER.md` — orphan Fact
+- `F0187` · `FACT_REGISTER.md` — orphan Fact
+- `F0189` · `FACT_REGISTER.md` — orphan Fact
+- `F0190` · `FACT_REGISTER.md` — orphan Fact
+- `F0191` · `FACT_REGISTER.md` — orphan Fact
+- `F0192` · `FACT_REGISTER.md` — orphan Fact
+- `F0193` · `FACT_REGISTER.md` — orphan Fact
+- `F0194` · `FACT_REGISTER.md` — orphan Fact
+- `F0195` · `FACT_REGISTER.md` — orphan Fact
+- `F0196` · `FACT_REGISTER.md` — orphan Fact
+- `F0197` · `FACT_REGISTER.md` — orphan Fact
+- `F0199` · `FACT_REGISTER.md` — orphan Fact
+- `F0200` · `FACT_REGISTER.md` — orphan Fact
+- `F0201` · `FACT_REGISTER.md` — orphan Fact
+- `F0202` · `FACT_REGISTER.md` — orphan Fact
+- `F0203` · `FACT_REGISTER.md` — orphan Fact
+- `F0204` · `FACT_REGISTER.md` — orphan Fact
+- `F0205` · `FACT_REGISTER.md` — orphan Fact
+- `F0206` · `FACT_REGISTER.md` — orphan Fact
+- `F0207` · `FACT_REGISTER.md` — orphan Fact
+- `F0208` · `FACT_REGISTER.md` — orphan Fact
+- `F0209` · `FACT_REGISTER.md` — orphan Fact
+- `F0210` · `FACT_REGISTER.md` — orphan Fact
+- `F0211` · `FACT_REGISTER.md` — orphan Fact
+- `F0212` · `FACT_REGISTER.md` — orphan Fact
+- `F0213` · `FACT_REGISTER.md` — orphan Fact
+- `F0214` · `FACT_REGISTER.md` — orphan Fact
+- `F0215` · `FACT_REGISTER.md` — orphan Fact
+- `F0216` · `FACT_REGISTER.md` — orphan Fact
+- `F0217` · `FACT_REGISTER.md` — orphan Fact
+- `F0218` · `FACT_REGISTER.md` — orphan Fact
+- `F0219` · `FACT_REGISTER.md` — orphan Fact
+- `F0220` · `FACT_REGISTER.md` — orphan Fact
+- `F0221` · `FACT_REGISTER.md` — orphan Fact
+- `F0222` · `FACT_REGISTER.md` — orphan Fact
+- `F0223` · `FACT_REGISTER.md` — orphan Fact
+- `F0224` · `FACT_REGISTER.md` — orphan Fact
+- `F0225` · `FACT_REGISTER.md` — orphan Fact
+- `F0226` · `FACT_REGISTER.md` — orphan Fact
+- `F0227` · `FACT_REGISTER.md` — orphan Fact
+- `F0228` · `FACT_REGISTER.md` — orphan Fact
+- `F0229` · `FACT_REGISTER.md` — orphan Fact
+- `F0230` · `FACT_REGISTER.md` — orphan Fact
+- `F0231` · `FACT_REGISTER.md` — orphan Fact
+- `F0232` · `FACT_REGISTER.md` — orphan Fact
+- `F0233` · `FACT_REGISTER.md` — orphan Fact
+- `F0234` · `FACT_REGISTER.md` — orphan Fact
+- `F0235` · `FACT_REGISTER.md` — orphan Fact
+- `F0236` · `FACT_REGISTER.md` — orphan Fact
+- `F0237` · `FACT_REGISTER.md` — orphan Fact
+- `F0238` · `FACT_REGISTER.md` — orphan Fact
+- `F0239` · `FACT_REGISTER.md` — orphan Fact
+- `F0240` · `FACT_REGISTER.md` — orphan Fact
+- `F0241` · `FACT_REGISTER.md` — orphan Fact
+- `F0242` · `FACT_REGISTER.md` — orphan Fact
+- `F0243` · `FACT_REGISTER.md` — orphan Fact
+- `F0244` · `FACT_REGISTER.md` — orphan Fact
+- `F0245` · `FACT_REGISTER.md` — orphan Fact
+- `F0246` · `FACT_REGISTER.md` — orphan Fact
+- `F0247` · `FACT_REGISTER.md` — orphan Fact
+- `F0248` · `FACT_REGISTER.md` — orphan Fact
+- `F0249` · `FACT_REGISTER.md` — orphan Fact
+- `F0250` · `FACT_REGISTER.md` — orphan Fact
+- `F0251` · `FACT_REGISTER.md` — orphan Fact
+- `F0252` · `FACT_REGISTER.md` — orphan Fact
+- `F0253` · `FACT_REGISTER.md` — orphan Fact
+- `F0254` · `FACT_REGISTER.md` — orphan Fact
+- `F0255` · `FACT_REGISTER.md` — orphan Fact
+- `F0256` · `FACT_REGISTER.md` — orphan Fact
+- `F0257` · `FACT_REGISTER.md` — orphan Fact
+- `F0258` · `FACT_REGISTER.md` — orphan Fact
+- `F0259` · `FACT_REGISTER.md` — orphan Fact
+- `F0260` · `FACT_REGISTER.md` — orphan Fact
+- `F0261` · `FACT_REGISTER.md` — orphan Fact
+- `F0262` · `FACT_REGISTER.md` — orphan Fact
+- `F0263` · `FACT_REGISTER.md` — orphan Fact
+- `F0264` · `FACT_REGISTER.md` — orphan Fact
+- `F0265` · `FACT_REGISTER.md` — orphan Fact
+- `F0266` · `FACT_REGISTER.md` — orphan Fact
+- `F0267` · `FACT_REGISTER.md` — orphan Fact
+- `F0268` · `FACT_REGISTER.md` — orphan Fact
+- `F0269` · `FACT_REGISTER.md` — orphan Fact
+- `F0270` · `FACT_REGISTER.md` — orphan Fact
+- `F0271` · `FACT_REGISTER.md` — orphan Fact
+- `F0272` · `FACT_REGISTER.md` — orphan Fact
+- `F0273` · `FACT_REGISTER.md` — orphan Fact
+- `F0274` · `FACT_REGISTER.md` — orphan Fact
+- `F0275` · `FACT_REGISTER.md` — orphan Fact
+- `F0276` · `FACT_REGISTER.md` — orphan Fact
+- `F0277` · `FACT_REGISTER.md` — orphan Fact
+- `F0278` · `FACT_REGISTER.md` — orphan Fact
+- `F0279` · `FACT_REGISTER.md` — orphan Fact
+- `F0280` · `FACT_REGISTER.md` — orphan Fact
+- `F0281` · `FACT_REGISTER.md` — orphan Fact
+- `F0293` · `FACT_REGISTER.md` — orphan Fact
+- `F0294` · `FACT_REGISTER.md` — orphan Fact
+- `F0295` · `FACT_REGISTER.md` — orphan Fact
+- `F0296` · `FACT_REGISTER.md` — orphan Fact
+- `F0297` · `FACT_REGISTER.md` — orphan Fact
+- `F0298` · `FACT_REGISTER.md` — orphan Fact
+- `F0300` · `FACT_REGISTER.md` — orphan Fact
+- `F0301` · `FACT_REGISTER.md` — orphan Fact
+- `F0302` · `FACT_REGISTER.md` — orphan Fact
+- `F0303` · `FACT_REGISTER.md` — orphan Fact
+- `F0304` · `FACT_REGISTER.md` — orphan Fact
+- `F0305` · `FACT_REGISTER.md` — orphan Fact
+- `F0307` · `FACT_REGISTER.md` — orphan Fact
+- `F0308` · `FACT_REGISTER.md` — orphan Fact
+- `F0309` · `FACT_REGISTER.md` — orphan Fact
+- `F0310` · `FACT_REGISTER.md` — orphan Fact
+- `F0311` · `FACT_REGISTER.md` — orphan Fact
+- `F0312` · `FACT_REGISTER.md` — orphan Fact
+- `F0313` · `FACT_REGISTER.md` — orphan Fact
+- `F0314` · `FACT_REGISTER.md` — orphan Fact
+- `F0315` · `FACT_REGISTER.md` — orphan Fact
+- `F0316` · `FACT_REGISTER.md` — orphan Fact
+- `F0317` · `FACT_REGISTER.md` — orphan Fact
+- `F0318` · `FACT_REGISTER.md` — orphan Fact
+- `F0319` · `FACT_REGISTER.md` — orphan Fact
+- `F0320` · `FACT_REGISTER.md` — orphan Fact
+- `F0321` · `FACT_REGISTER.md` — orphan Fact
+- `F0322` · `FACT_REGISTER.md` — orphan Fact
+- `F0326` · `FACT_REGISTER.md` — orphan Fact
+- `F0327` · `FACT_REGISTER.md` — orphan Fact
+- `F0329` · `FACT_REGISTER.md` — orphan Fact
+- `F0330` · `FACT_REGISTER.md` — orphan Fact
+- `F0331` · `FACT_REGISTER.md` — orphan Fact
+- `F0332` · `FACT_REGISTER.md` — orphan Fact
+- `F0333` · `FACT_REGISTER.md` — orphan Fact
+- `F0334` · `FACT_REGISTER.md` — orphan Fact
+- `F0335` · `FACT_REGISTER.md` — orphan Fact
+- `F0336` · `FACT_REGISTER.md` — orphan Fact
+- `F0337` · `FACT_REGISTER.md` — orphan Fact
+- `F0338` · `FACT_REGISTER.md` — orphan Fact
+- `F0339` · `FACT_REGISTER.md` — orphan Fact
+- `F0340` · `FACT_REGISTER.md` — orphan Fact
+- `F0341` · `FACT_REGISTER.md` — orphan Fact
+- `F0342` · `FACT_REGISTER.md` — orphan Fact
+- `F0343` · `FACT_REGISTER.md` — orphan Fact
+- `F0344` · `FACT_REGISTER.md` — orphan Fact
+- `F0345` · `FACT_REGISTER.md` — orphan Fact
+- `F0346` · `FACT_REGISTER.md` — orphan Fact
+- `F0348` · `FACT_REGISTER.md` — orphan Fact
+- `F0349` · `FACT_REGISTER.md` — orphan Fact
+- `F0350` · `FACT_REGISTER.md` — orphan Fact
+- `F0351` · `FACT_REGISTER.md` — orphan Fact
+- `F0352` · `FACT_REGISTER.md` — orphan Fact
+- `F0353` · `FACT_REGISTER.md` — orphan Fact
+- `F0354` · `FACT_REGISTER.md` — orphan Fact
+- `F0356` · `FACT_REGISTER.md` — orphan Fact
+- `F0357` · `FACT_REGISTER.md` — orphan Fact
+- `F0358` · `FACT_REGISTER.md` — orphan Fact
+- `F0359` · `FACT_REGISTER.md` — orphan Fact
+- `F0362` · `FACT_REGISTER.md` — orphan Fact
+- `F0363` · `FACT_REGISTER.md` — orphan Fact
+- `F0364` · `FACT_REGISTER.md` — orphan Fact
+- `F0365` · `FACT_REGISTER.md` — orphan Fact
+- `F0368` · `FACT_REGISTER.md` — orphan Fact
+- `F0369` · `FACT_REGISTER.md` — orphan Fact
+- `F0370` · `FACT_REGISTER.md` — orphan Fact
+- `F0371` · `FACT_REGISTER.md` — orphan Fact
+- `F0372` · `FACT_REGISTER.md` — orphan Fact
+- `F0373` · `FACT_REGISTER.md` — orphan Fact
+- `F0374` · `FACT_REGISTER.md` — orphan Fact
+- `F0375` · `FACT_REGISTER.md` — orphan Fact
+- `F0376` · `FACT_REGISTER.md` — orphan Fact
+- `F0377` · `FACT_REGISTER.md` — orphan Fact
+- `F0378` · `FACT_REGISTER.md` — orphan Fact
+- `F0379` · `FACT_REGISTER.md` — orphan Fact
+- `F0380` · `FACT_REGISTER.md` — orphan Fact
+- `F0381` · `FACT_REGISTER.md` — orphan Fact
+- `F0382` · `FACT_REGISTER.md` — orphan Fact
+- `F0383` · `FACT_REGISTER.md` — orphan Fact
+- `F0384` · `FACT_REGISTER.md` — orphan Fact
+- `F0385` · `FACT_REGISTER.md` — orphan Fact
+- `F0386` · `FACT_REGISTER.md` — orphan Fact
+- `F0395` · `FACT_REGISTER.md` — orphan Fact
+- `F0396` · `FACT_REGISTER.md` — orphan Fact
+- `F0397` · `FACT_REGISTER.md` — orphan Fact
+- `F0398` · `FACT_REGISTER.md` — orphan Fact
+- `F0399` · `FACT_REGISTER.md` — orphan Fact
+- `F0400` · `FACT_REGISTER.md` — orphan Fact
+- `F0401` · `FACT_REGISTER.md` — orphan Fact
+- `F0402` · `FACT_REGISTER.md` — orphan Fact
+- `F0403` · `FACT_REGISTER.md` — orphan Fact
+- `F0404` · `FACT_REGISTER.md` — orphan Fact
+- `F0405` · `FACT_REGISTER.md` — orphan Fact
+- `F0406` · `FACT_REGISTER.md` — orphan Fact
+- `F0407` · `FACT_REGISTER.md` — orphan Fact
+- `F0408` · `FACT_REGISTER.md` — orphan Fact
+- `F0409` · `FACT_REGISTER.md` — orphan Fact
+- `F0410` · `FACT_REGISTER.md` — orphan Fact
+- `F0411` · `FACT_REGISTER.md` — orphan Fact
+- `F0412` · `FACT_REGISTER.md` — orphan Fact
+- `F0413` · `FACT_REGISTER.md` — orphan Fact
+- `F0414` · `FACT_REGISTER.md` — orphan Fact
+- `F0415` · `FACT_REGISTER.md` — orphan Fact
+- `F0416` · `FACT_REGISTER.md` — orphan Fact
+- `F0417` · `FACT_REGISTER.md` — orphan Fact
+- `F0418` · `FACT_REGISTER.md` — orphan Fact
+- `F0419` · `FACT_REGISTER.md` — orphan Fact
+- `F0420` · `FACT_REGISTER.md` — orphan Fact
+- `F0421` · `FACT_REGISTER.md` — orphan Fact
+- `F0422` · `FACT_REGISTER.md` — orphan Fact
+- `F0423` · `FACT_REGISTER.md` — orphan Fact
+- `F0424` · `FACT_REGISTER.md` — orphan Fact
+- `F0425` · `FACT_REGISTER.md` — orphan Fact
+- `F0426` · `FACT_REGISTER.md` — orphan Fact
+- `F0427` · `FACT_REGISTER.md` — orphan Fact
+- `F0428` · `FACT_REGISTER.md` — orphan Fact
+- `F0429` · `FACT_REGISTER.md` — orphan Fact
+- `F0430` · `FACT_REGISTER.md` — orphan Fact
+- `F0431` · `FACT_REGISTER.md` — orphan Fact
+- `F0432` · `FACT_REGISTER.md` — orphan Fact
+- `F0433` · `FACT_REGISTER.md` — orphan Fact
+- `F0434` · `FACT_REGISTER.md` — orphan Fact
+- `F0435` · `FACT_REGISTER.md` — orphan Fact
+- `F0436` · `FACT_REGISTER.md` — orphan Fact
+- `F0440` · `FACT_REGISTER.md` — orphan Fact
+- `F0442` · `FACT_REGISTER.md` — orphan Fact
+- `F0443` · `FACT_REGISTER.md` — orphan Fact
+- `F0444` · `FACT_REGISTER.md` — orphan Fact
+- `F0445` · `FACT_REGISTER.md` — orphan Fact
+- `F0446` · `FACT_REGISTER.md` — orphan Fact
+- `F0447` · `FACT_REGISTER.md` — orphan Fact
+- `F0448` · `FACT_REGISTER.md` — orphan Fact
+- `F0449` · `FACT_REGISTER.md` — orphan Fact
+- `F0450` · `FACT_REGISTER.md` — orphan Fact
+- `F0451` · `FACT_REGISTER.md` — orphan Fact
+- `F0452` · `FACT_REGISTER.md` — orphan Fact
+- `F0453` · `FACT_REGISTER.md` — orphan Fact
+- `F0454` · `FACT_REGISTER.md` — orphan Fact
+- `F0455` · `FACT_REGISTER.md` — orphan Fact
+- `F0456` · `FACT_REGISTER.md` — orphan Fact
+- `F0457` · `FACT_REGISTER.md` — orphan Fact
+- `F0458` · `FACT_REGISTER.md` — orphan Fact
+- `F0459` · `FACT_REGISTER.md` — orphan Fact
+- `F0460` · `FACT_REGISTER.md` — orphan Fact
+- `F0462` · `FACT_REGISTER.md` — orphan Fact
+- `F0463` · `FACT_REGISTER.md` — orphan Fact
+- `F0464` · `FACT_REGISTER.md` — orphan Fact
+- `F0465` · `FACT_REGISTER.md` — orphan Fact
+- `F0466` · `FACT_REGISTER.md` — orphan Fact
+- `F0467` · `FACT_REGISTER.md` — orphan Fact
+- `F0468` · `FACT_REGISTER.md` — orphan Fact
+- `F0469` · `FACT_REGISTER.md` — orphan Fact
+- `F0470` · `FACT_REGISTER.md` — orphan Fact
+- `F0471` · `FACT_REGISTER.md` — orphan Fact
+- `F0472` · `FACT_REGISTER.md` — orphan Fact
+- `F0473` · `FACT_REGISTER.md` — orphan Fact
+- `F0474` · `FACT_REGISTER.md` — orphan Fact
+- `F0475` · `FACT_REGISTER.md` — orphan Fact
+- `F0476` · `FACT_REGISTER.md` — orphan Fact
+- `F0482` · `FACT_REGISTER.md` — orphan Fact
+- `F0483` · `FACT_REGISTER.md` — orphan Fact
+- `F0484` · `FACT_REGISTER.md` — orphan Fact
+- `F0485` · `FACT_REGISTER.md` — orphan Fact
+- `F0486` · `FACT_REGISTER.md` — orphan Fact
+- `F0487` · `FACT_REGISTER.md` — orphan Fact
+- `F0488` · `FACT_REGISTER.md` — orphan Fact
+- `F0489` · `FACT_REGISTER.md` — orphan Fact
+- `F0490` · `FACT_REGISTER.md` — orphan Fact
+- `F0491` · `FACT_REGISTER.md` — orphan Fact
+- `F0492` · `FACT_REGISTER.md` — orphan Fact
+- `F0493` · `FACT_REGISTER.md` — orphan Fact
+- `F0494` · `FACT_REGISTER.md` — orphan Fact
+- `F0495` · `FACT_REGISTER.md` — orphan Fact
+- `F0496` · `FACT_REGISTER.md` — orphan Fact
+- `F0497` · `FACT_REGISTER.md` — orphan Fact
+- `F0498` · `FACT_REGISTER.md` — orphan Fact
+- `F0499` · `FACT_REGISTER.md` — orphan Fact
+- `F0500` · `FACT_REGISTER.md` — orphan Fact
+- `F0501` · `FACT_REGISTER.md` — orphan Fact
+- `F0502` · `FACT_REGISTER.md` — orphan Fact
+- `F0503` · `FACT_REGISTER.md` — orphan Fact
+- `F0504` · `FACT_REGISTER.md` — orphan Fact
+- `F0505` · `FACT_REGISTER.md` — orphan Fact
+- `F0506` · `FACT_REGISTER.md` — orphan Fact
+- `F0507` · `FACT_REGISTER.md` — orphan Fact
+- `F0508` · `FACT_REGISTER.md` — orphan Fact
+- `F0509` · `FACT_REGISTER.md` — orphan Fact
+- `F0510` · `FACT_REGISTER.md` — orphan Fact
+- `F0511` · `FACT_REGISTER.md` — orphan Fact
+- `F0512` · `FACT_REGISTER.md` — orphan Fact
+- `F0513` · `FACT_REGISTER.md` — orphan Fact
+- `F0514` · `FACT_REGISTER.md` — orphan Fact
+- `F0515` · `FACT_REGISTER.md` — orphan Fact
+- `F0516` · `FACT_REGISTER.md` — orphan Fact
+- `F0517` · `FACT_REGISTER.md` — orphan Fact
+- `F0518` · `FACT_REGISTER.md` — orphan Fact
+- `F0519` · `FACT_REGISTER.md` — orphan Fact
+- `F0520` · `FACT_REGISTER.md` — orphan Fact
+- `F0521` · `FACT_REGISTER.md` — orphan Fact
+- `F0522` · `FACT_REGISTER.md` — orphan Fact
+- `F0523` · `FACT_REGISTER.md` — orphan Fact
+- `F0524` · `FACT_REGISTER.md` — orphan Fact
+- `F0525` · `FACT_REGISTER.md` — orphan Fact
+- `F0526` · `FACT_REGISTER.md` — orphan Fact
+- `F0527` · `FACT_REGISTER.md` — orphan Fact
+- `F0528` · `FACT_REGISTER.md` — orphan Fact
+- `F0529` · `FACT_REGISTER.md` — orphan Fact
+- `F0530` · `FACT_REGISTER.md` — orphan Fact
+- `F0531` · `FACT_REGISTER.md` — orphan Fact
+- `F0532` · `FACT_REGISTER.md` — orphan Fact
+- `F0533` · `FACT_REGISTER.md` — orphan Fact
+- `F0534` · `FACT_REGISTER.md` — orphan Fact
+- `F0535` · `FACT_REGISTER.md` — orphan Fact
+- `F0536` · `FACT_REGISTER.md` — orphan Fact
+- `F0537` · `FACT_REGISTER.md` — orphan Fact
+- `F0538` · `FACT_REGISTER.md` — orphan Fact
+- `F0539` · `FACT_REGISTER.md` — orphan Fact
+- `F0540` · `FACT_REGISTER.md` — orphan Fact
+- `F0541` · `FACT_REGISTER.md` — orphan Fact
+- `F0542` · `FACT_REGISTER.md` — orphan Fact
+- `F0543` · `FACT_REGISTER.md` — orphan Fact
+- `F0544` · `FACT_REGISTER.md` — orphan Fact
+- `F0545` · `FACT_REGISTER.md` — orphan Fact
+- `F0546` · `FACT_REGISTER.md` — orphan Fact
+- `F0547` · `FACT_REGISTER.md` — orphan Fact
+- `F0548` · `FACT_REGISTER.md` — orphan Fact
+- `F0549` · `FACT_REGISTER.md` — orphan Fact
+- `F0550` · `FACT_REGISTER.md` — orphan Fact
+- `F0551` · `FACT_REGISTER.md` — orphan Fact
+- `F0552` · `FACT_REGISTER.md` — orphan Fact
+- `F0553` · `FACT_REGISTER.md` — orphan Fact
+- `F0554` · `FACT_REGISTER.md` — orphan Fact
+- `F0555` · `FACT_REGISTER.md` — orphan Fact
+- `F0556` · `FACT_REGISTER.md` — orphan Fact
+- `F0557` · `FACT_REGISTER.md` — orphan Fact
+- `F0560` · `FACT_REGISTER.md` — orphan Fact
+- `F0561` · `FACT_REGISTER.md` — orphan Fact
+- `F0562` · `FACT_REGISTER.md` — orphan Fact
+- `F0563` · `FACT_REGISTER.md` — orphan Fact
+- `F0564` · `FACT_REGISTER.md` — orphan Fact
+- `F0565` · `FACT_REGISTER.md` — orphan Fact
+- `F0566` · `FACT_REGISTER.md` — orphan Fact
+- `F0567` · `FACT_REGISTER.md` — orphan Fact
+- `F0568` · `FACT_REGISTER.md` — orphan Fact
+- `F0569` · `FACT_REGISTER.md` — orphan Fact
+- `F0570` · `FACT_REGISTER.md` — orphan Fact
+- `F0571` · `FACT_REGISTER.md` — orphan Fact
+- `F0572` · `FACT_REGISTER.md` — orphan Fact
+- `F0573` · `FACT_REGISTER.md` — orphan Fact
+- `F0574` · `FACT_REGISTER.md` — orphan Fact
+- `F0575` · `FACT_REGISTER.md` — orphan Fact
+- `F0576` · `FACT_REGISTER.md` — orphan Fact
+- `F0577` · `FACT_REGISTER.md` — orphan Fact
+- `F0578` · `FACT_REGISTER.md` — orphan Fact
+- `F0579` · `FACT_REGISTER.md` — orphan Fact
+- `F0580` · `FACT_REGISTER.md` — orphan Fact
+- `F0581` · `FACT_REGISTER.md` — orphan Fact
+- `F0582` · `FACT_REGISTER.md` — orphan Fact
+- `F0583` · `FACT_REGISTER.md` — orphan Fact
+- `F0584` · `FACT_REGISTER.md` — orphan Fact
+- `F0585` · `FACT_REGISTER.md` — orphan Fact
+- `F0586` · `FACT_REGISTER.md` — orphan Fact
+- `F0587` · `FACT_REGISTER.md` — orphan Fact
+- `F0588` · `FACT_REGISTER.md` — orphan Fact
+- `F0589` · `FACT_REGISTER.md` — orphan Fact
+- `F0590` · `FACT_REGISTER.md` — orphan Fact
+- `F0591` · `FACT_REGISTER.md` — orphan Fact
+- `F0592` · `FACT_REGISTER.md` — orphan Fact
+- `F0593` · `FACT_REGISTER.md` — orphan Fact
+- `F0594` · `FACT_REGISTER.md` — orphan Fact
+- `F0595` · `FACT_REGISTER.md` — orphan Fact
+- `F0596` · `FACT_REGISTER.md` — orphan Fact
+- `F0597` · `FACT_REGISTER.md` — orphan Fact
+- `F0598` · `FACT_REGISTER.md` — orphan Fact
+- `F0599` · `FACT_REGISTER.md` — orphan Fact
+- `F0600` · `FACT_REGISTER.md` — orphan Fact
+- `F0601` · `FACT_REGISTER.md` — orphan Fact
+- `F0602` · `FACT_REGISTER.md` — orphan Fact
+- `F0603` · `FACT_REGISTER.md` — orphan Fact
+- `F0604` · `FACT_REGISTER.md` — orphan Fact
+- `F0605` · `FACT_REGISTER.md` — orphan Fact
+- `F0606` · `FACT_REGISTER.md` — orphan Fact
+- `F0607` · `FACT_REGISTER.md` — orphan Fact
+- `F0608` · `FACT_REGISTER.md` — orphan Fact
+- `F0609` · `FACT_REGISTER.md` — orphan Fact
+- `F0610` · `FACT_REGISTER.md` — orphan Fact
+- `F0611` · `FACT_REGISTER.md` — orphan Fact
+- `F0612` · `FACT_REGISTER.md` — orphan Fact
+- `F0613` · `FACT_REGISTER.md` — orphan Fact
+- `F0614` · `FACT_REGISTER.md` — orphan Fact
+- `F0615` · `FACT_REGISTER.md` — orphan Fact
+- `F0616` · `FACT_REGISTER.md` — orphan Fact
+- `F0617` · `FACT_REGISTER.md` — orphan Fact
+- `F0618` · `FACT_REGISTER.md` — orphan Fact
+- `F0619` · `FACT_REGISTER.md` — orphan Fact
+- `F0620` · `FACT_REGISTER.md` — orphan Fact
+- `F0622` · `FACT_REGISTER.md` — orphan Fact
+- `F0623` · `FACT_REGISTER.md` — orphan Fact
+- `F0624` · `FACT_REGISTER.md` — orphan Fact
+- `F0625` · `FACT_REGISTER.md` — orphan Fact
+- `F0626` · `FACT_REGISTER.md` — orphan Fact
+- `F0627` · `FACT_REGISTER.md` — orphan Fact
+- `F0628` · `FACT_REGISTER.md` — orphan Fact
+- `F0629` · `FACT_REGISTER.md` — orphan Fact
+- `F0630` · `FACT_REGISTER.md` — orphan Fact
+- `F0631` · `FACT_REGISTER.md` — orphan Fact
+- `F0632` · `FACT_REGISTER.md` — orphan Fact
+- `F0634` · `FACT_REGISTER.md` — orphan Fact
+- `F0635` · `FACT_REGISTER.md` — orphan Fact
+- `F0637` · `FACT_REGISTER.md` — orphan Fact
+- `F0639` · `FACT_REGISTER.md` — orphan Fact
+- `F0640` · `FACT_REGISTER.md` — orphan Fact
+- `F0641` · `FACT_REGISTER.md` — orphan Fact
+- `F0642` · `FACT_REGISTER.md` — orphan Fact
+- `F0643` · `FACT_REGISTER.md` — orphan Fact
+- `F0644` · `FACT_REGISTER.md` — orphan Fact
+- `F0645` · `FACT_REGISTER.md` — orphan Fact
+- `F0646` · `FACT_REGISTER.md` — orphan Fact
+- `F0647` · `FACT_REGISTER.md` — orphan Fact
+- `F0648` · `FACT_REGISTER.md` — orphan Fact
+- `F0649` · `FACT_REGISTER.md` — orphan Fact
+- `F0650` · `FACT_REGISTER.md` — orphan Fact
+- `F0651` · `FACT_REGISTER.md` — orphan Fact
+- `F0652` · `FACT_REGISTER.md` — orphan Fact
+- `F0653` · `FACT_REGISTER.md` — orphan Fact
+- `F0654` · `FACT_REGISTER.md` — orphan Fact
+- `F0655` · `FACT_REGISTER.md` — orphan Fact
+- `F0656` · `FACT_REGISTER.md` — orphan Fact
+- `F0657` · `FACT_REGISTER.md` — orphan Fact
+- `F0663` · `FACT_REGISTER.md` — orphan Fact
+- `F0664` · `FACT_REGISTER.md` — orphan Fact
+- `F0665` · `FACT_REGISTER.md` — orphan Fact
+- `F0666` · `FACT_REGISTER.md` — orphan Fact
+- `F0667` · `FACT_REGISTER.md` — orphan Fact
+- `F0668` · `FACT_REGISTER.md` — orphan Fact
+- `F0669` · `FACT_REGISTER.md` — orphan Fact
+- `F0670` · `FACT_REGISTER.md` — orphan Fact
+- `F0671` · `FACT_REGISTER.md` — orphan Fact
+- `F0672` · `FACT_REGISTER.md` — orphan Fact
+- `F0673` · `FACT_REGISTER.md` — orphan Fact
+- `F0674` · `FACT_REGISTER.md` — orphan Fact
+- `F0675` · `FACT_REGISTER.md` — orphan Fact
+- `F0676` · `FACT_REGISTER.md` — orphan Fact
+- `F0677` · `FACT_REGISTER.md` — orphan Fact
+- `F0678` · `FACT_REGISTER.md` — orphan Fact
+- `F0679` · `FACT_REGISTER.md` — orphan Fact
+- `F0680` · `FACT_REGISTER.md` — orphan Fact
+- `F0681` · `FACT_REGISTER.md` — orphan Fact
+- `F0682` · `FACT_REGISTER.md` — orphan Fact
+- `F0683` · `FACT_REGISTER.md` — orphan Fact
+- `F0684` · `FACT_REGISTER.md` — orphan Fact
+- `F0685` · `FACT_REGISTER.md` — orphan Fact
+- `F0686` · `FACT_REGISTER.md` — orphan Fact
+- `F0687` · `FACT_REGISTER.md` — orphan Fact
+- `F0688` · `FACT_REGISTER.md` — orphan Fact
+- `F0689` · `FACT_REGISTER.md` — orphan Fact
+- `F0690` · `FACT_REGISTER.md` — orphan Fact
+- `F0691` · `FACT_REGISTER.md` — orphan Fact
+- `F0692` · `FACT_REGISTER.md` — orphan Fact
+- `F0693` · `FACT_REGISTER.md` — orphan Fact
+- `F0694` · `FACT_REGISTER.md` — orphan Fact
+- `F0695` · `FACT_REGISTER.md` — orphan Fact
+- `F0696` · `FACT_REGISTER.md` — orphan Fact
+- `F0697` · `FACT_REGISTER.md` — orphan Fact
+- `F0698` · `FACT_REGISTER.md` — orphan Fact
+- `F0699` · `FACT_REGISTER.md` — orphan Fact
+- `F0700` · `FACT_REGISTER.md` — orphan Fact
+- `F0701` · `FACT_REGISTER.md` — orphan Fact
+- `F0702` · `FACT_REGISTER.md` — orphan Fact
+- `F0703` · `FACT_REGISTER.md` — orphan Fact
+- `F0704` · `FACT_REGISTER.md` — orphan Fact
+- `F0705` · `FACT_REGISTER.md` — orphan Fact
+- `F0706` · `FACT_REGISTER.md` — orphan Fact
+- `F0707` · `FACT_REGISTER.md` — orphan Fact
+- `F0708` · `FACT_REGISTER.md` — orphan Fact
+- `F0709` · `FACT_REGISTER.md` — orphan Fact
+- `F0710` · `FACT_REGISTER.md` — orphan Fact
+- `F0711` · `FACT_REGISTER.md` — orphan Fact
+- `F0712` · `FACT_REGISTER.md` — orphan Fact
+- `F0713` · `FACT_REGISTER.md` — orphan Fact
+- `F0714` · `FACT_REGISTER.md` — orphan Fact
+- `F0715` · `FACT_REGISTER.md` — orphan Fact
+- `F0716` · `FACT_REGISTER.md` — orphan Fact
+- `F0717` · `FACT_REGISTER.md` — orphan Fact
+- `F0718` · `FACT_REGISTER.md` — orphan Fact
+- `F0719` · `FACT_REGISTER.md` — orphan Fact
+- `F0720` · `FACT_REGISTER.md` — orphan Fact
+- `F0721` · `FACT_REGISTER.md` — orphan Fact
+- `F0722` · `FACT_REGISTER.md` — orphan Fact
+- `F0723` · `FACT_REGISTER.md` — orphan Fact
+- `F0724` · `FACT_REGISTER.md` — orphan Fact
+- `F0725` · `FACT_REGISTER.md` — orphan Fact
+- `F0726` · `FACT_REGISTER.md` — orphan Fact
+- `F0727` · `FACT_REGISTER.md` — orphan Fact
+- `F0728` · `FACT_REGISTER.md` — orphan Fact
+- `F0729` · `FACT_REGISTER.md` — orphan Fact
+- `F0730` · `FACT_REGISTER.md` — orphan Fact
+- `F0731` · `FACT_REGISTER.md` — orphan Fact
+- `F0732` · `FACT_REGISTER.md` — orphan Fact
+- `F0733` · `FACT_REGISTER.md` — orphan Fact
+- `F0734` · `FACT_REGISTER.md` — orphan Fact
+- `F0735` · `FACT_REGISTER.md` — orphan Fact
+- `F0736` · `FACT_REGISTER.md` — orphan Fact
+- `F0737` · `FACT_REGISTER.md` — orphan Fact
+- `F0738` · `FACT_REGISTER.md` — orphan Fact
+- `F0739` · `FACT_REGISTER.md` — orphan Fact
+- `F0740` · `FACT_REGISTER.md` — orphan Fact
+- `F0741` · `FACT_REGISTER.md` — orphan Fact
+- `F0742` · `FACT_REGISTER.md` — orphan Fact
+- `F0743` · `FACT_REGISTER.md` — orphan Fact
+- `F0744` · `FACT_REGISTER.md` — orphan Fact
+- `F0745` · `FACT_REGISTER.md` — orphan Fact
+- `F0746` · `FACT_REGISTER.md` — orphan Fact
+- `F0747` · `FACT_REGISTER.md` — orphan Fact
+- `F0748` · `FACT_REGISTER.md` — orphan Fact
+- `F0749` · `FACT_REGISTER.md` — orphan Fact
+- `F0750` · `FACT_REGISTER.md` — orphan Fact
+- `F0751` · `FACT_REGISTER.md` — orphan Fact
+- `F0752` · `FACT_REGISTER.md` — orphan Fact
+- `F0753` · `FACT_REGISTER.md` — orphan Fact
+- `F0754` · `FACT_REGISTER.md` — orphan Fact
+- `F0755` · `FACT_REGISTER.md` — orphan Fact
+- `F0756` · `FACT_REGISTER.md` — orphan Fact
+- `F0757` · `FACT_REGISTER.md` — orphan Fact
+- `F0758` · `FACT_REGISTER.md` — orphan Fact
+- `F0759` · `FACT_REGISTER.md` — orphan Fact
+- `F0760` · `FACT_REGISTER.md` — orphan Fact
+- `F0761` · `FACT_REGISTER.md` — orphan Fact
+- `F0762` · `FACT_REGISTER.md` — orphan Fact
+- `F0763` · `FACT_REGISTER.md` — orphan Fact
+- `F0764` · `FACT_REGISTER.md` — orphan Fact
+- `F0765` · `FACT_REGISTER.md` — orphan Fact
+- `F0766` · `FACT_REGISTER.md` — orphan Fact
+- `F0767` · `FACT_REGISTER.md` — orphan Fact
+- `F0768` · `FACT_REGISTER.md` — orphan Fact
+- `F0769` · `FACT_REGISTER.md` — orphan Fact
+- `F0770` · `FACT_REGISTER.md` — orphan Fact
+- `F0771` · `FACT_REGISTER.md` — orphan Fact
+- `F0772` · `FACT_REGISTER.md` — orphan Fact
+- `F0773` · `FACT_REGISTER.md` — orphan Fact
+- `F0774` · `FACT_REGISTER.md` — orphan Fact
+- `F0775` · `FACT_REGISTER.md` — orphan Fact
+- `F0776` · `FACT_REGISTER.md` — orphan Fact
+- `F0777` · `FACT_REGISTER.md` — orphan Fact
+- `F0778` · `FACT_REGISTER.md` — orphan Fact
+- `F0779` · `FACT_REGISTER.md` — orphan Fact
+- `F0780` · `FACT_REGISTER.md` — orphan Fact
+- `F0781` · `FACT_REGISTER.md` — orphan Fact
+- `F0782` · `FACT_REGISTER.md` — orphan Fact
+- `F0783` · `FACT_REGISTER.md` — orphan Fact
+- `F0784` · `FACT_REGISTER.md` — orphan Fact
+- `F0785` · `FACT_REGISTER.md` — orphan Fact
+- `F0786` · `FACT_REGISTER.md` — orphan Fact
+- `F0787` · `FACT_REGISTER.md` — orphan Fact
+- `F0788` · `FACT_REGISTER.md` — orphan Fact
+- `F0789` · `FACT_REGISTER.md` — orphan Fact
+- `F0790` · `FACT_REGISTER.md` — orphan Fact
+- `F0791` · `FACT_REGISTER.md` — orphan Fact
+- `F0792` · `FACT_REGISTER.md` — orphan Fact
+- `F0793` · `FACT_REGISTER.md` — orphan Fact
+- `F0794` · `FACT_REGISTER.md` — orphan Fact
+- `F0795` · `FACT_REGISTER.md` — orphan Fact
+- `F0796` · `FACT_REGISTER.md` — orphan Fact
+- `F0797` · `FACT_REGISTER.md` — orphan Fact
+- `F0798` · `FACT_REGISTER.md` — orphan Fact
+- `F0799` · `FACT_REGISTER.md` — orphan Fact
+- `F0800` · `FACT_REGISTER.md` — orphan Fact
+- `F0801` · `FACT_REGISTER.md` — orphan Fact
+- `F0802` · `FACT_REGISTER.md` — orphan Fact
+- `F0803` · `FACT_REGISTER.md` — orphan Fact
+- `F0804` · `FACT_REGISTER.md` — orphan Fact
+- `F0805` · `FACT_REGISTER.md` — orphan Fact
+- `F0806` · `FACT_REGISTER.md` — orphan Fact
+- `F0807` · `FACT_REGISTER.md` — orphan Fact
+- `F0808` · `FACT_REGISTER.md` — orphan Fact
+- `F0809` · `FACT_REGISTER.md` — orphan Fact
+- `F0810` · `FACT_REGISTER.md` — orphan Fact
+- `F0811` · `FACT_REGISTER.md` — orphan Fact
+- `F0812` · `FACT_REGISTER.md` — orphan Fact
+- `F0813` · `FACT_REGISTER.md` — orphan Fact
+- `F0814` · `FACT_REGISTER.md` — orphan Fact
+- `F0815` · `FACT_REGISTER.md` — orphan Fact
+- `F0816` · `FACT_REGISTER.md` — orphan Fact
+- `F0817` · `FACT_REGISTER.md` — orphan Fact
+- `F0818` · `FACT_REGISTER.md` — orphan Fact
+- `F0819` · `FACT_REGISTER.md` — orphan Fact
+- `F0820` · `FACT_REGISTER.md` — orphan Fact
+- `F0821` · `FACT_REGISTER.md` — orphan Fact
+- `F0822` · `FACT_REGISTER.md` — orphan Fact
+- `F0823` · `FACT_REGISTER.md` — orphan Fact
+- `F0824` · `FACT_REGISTER.md` — orphan Fact
+- `F0825` · `FACT_REGISTER.md` — orphan Fact
+- `F0826` · `FACT_REGISTER.md` — orphan Fact
+- `F0827` · `FACT_REGISTER.md` — orphan Fact
+- `F0828` · `FACT_REGISTER.md` — orphan Fact
+- `F0829` · `FACT_REGISTER.md` — orphan Fact
+- `F0830` · `FACT_REGISTER.md` — orphan Fact
+- `F0831` · `FACT_REGISTER.md` — orphan Fact
+- `F0832` · `FACT_REGISTER.md` — orphan Fact
+- `F0833` · `FACT_REGISTER.md` — orphan Fact
+- `F0834` · `FACT_REGISTER.md` — orphan Fact
+- `F0835` · `FACT_REGISTER.md` — orphan Fact
+- `F0836` · `FACT_REGISTER.md` — orphan Fact
+- `F0837` · `FACT_REGISTER.md` — orphan Fact
+- `F0838` · `FACT_REGISTER.md` — orphan Fact
+- `F0839` · `FACT_REGISTER.md` — orphan Fact
+- `F0840` · `FACT_REGISTER.md` — orphan Fact
+- `F0841` · `FACT_REGISTER.md` — orphan Fact
+- `F0842` · `FACT_REGISTER.md` — orphan Fact
+- `F0843` · `FACT_REGISTER.md` — orphan Fact
+- `F0844` · `FACT_REGISTER.md` — orphan Fact
+- `F0845` · `FACT_REGISTER.md` — orphan Fact
+- `F0846` · `FACT_REGISTER.md` — orphan Fact
+- `F0847` · `FACT_REGISTER.md` — orphan Fact
+- `F0848` · `FACT_REGISTER.md` — orphan Fact
+- `F0849` · `FACT_REGISTER.md` — orphan Fact
+- `F0850` · `FACT_REGISTER.md` — orphan Fact
+- `F0851` · `FACT_REGISTER.md` — orphan Fact
+- `F0852` · `FACT_REGISTER.md` — orphan Fact
+- `F0853` · `FACT_REGISTER.md` — orphan Fact
+- `F0854` · `FACT_REGISTER.md` — orphan Fact
+- `F0855` · `FACT_REGISTER.md` — orphan Fact
+- `F0856` · `FACT_REGISTER.md` — orphan Fact
+- `F0857` · `FACT_REGISTER.md` — orphan Fact
+- `F0858` · `FACT_REGISTER.md` — orphan Fact
+- `F0859` · `FACT_REGISTER.md` — orphan Fact
+- `F0860` · `FACT_REGISTER.md` — orphan Fact
+- `F0861` · `FACT_REGISTER.md` — orphan Fact
+- `F0862` · `FACT_REGISTER.md` — orphan Fact
+- `F0863` · `FACT_REGISTER.md` — orphan Fact
+- `F0864` · `FACT_REGISTER.md` — orphan Fact
+- `F0865` · `FACT_REGISTER.md` — orphan Fact
+- `F0866` · `FACT_REGISTER.md` — orphan Fact
+- `F0867` · `FACT_REGISTER.md` — orphan Fact
+- `F0868` · `FACT_REGISTER.md` — orphan Fact
+- `F0869` · `FACT_REGISTER.md` — orphan Fact
+- `F0870` · `FACT_REGISTER.md` — orphan Fact
+- `F0871` · `FACT_REGISTER.md` — orphan Fact
+- `F0872` · `FACT_REGISTER.md` — orphan Fact
+- `F0873` · `FACT_REGISTER.md` — orphan Fact
+- `F0874` · `FACT_REGISTER.md` — orphan Fact
+- `F0875` · `FACT_REGISTER.md` — orphan Fact
+- `F0876` · `FACT_REGISTER.md` — orphan Fact
+- `F0877` · `FACT_REGISTER.md` — orphan Fact
+- `F0878` · `FACT_REGISTER.md` — orphan Fact
+- `F0879` · `FACT_REGISTER.md` — orphan Fact
+- `F0880` · `FACT_REGISTER.md` — orphan Fact
+- `F0881` · `FACT_REGISTER.md` — orphan Fact
+- `F0882` · `FACT_REGISTER.md` — orphan Fact
+- `F0883` · `FACT_REGISTER.md` — orphan Fact
+- `F0884` · `FACT_REGISTER.md` — orphan Fact
+- `F0885` · `FACT_REGISTER.md` — orphan Fact
+- `F0886` · `FACT_REGISTER.md` — orphan Fact
+- `F0887` · `FACT_REGISTER.md` — orphan Fact
+- `F0888` · `FACT_REGISTER.md` — orphan Fact
+- `F0889` · `FACT_REGISTER.md` — orphan Fact
+- `F0890` · `FACT_REGISTER.md` — orphan Fact
+- `F0891` · `FACT_REGISTER.md` — orphan Fact
+- `F0892` · `FACT_REGISTER.md` — orphan Fact
+- `F0893` · `FACT_REGISTER.md` — orphan Fact
+- `F0894` · `FACT_REGISTER.md` — orphan Fact
+- `F0895` · `FACT_REGISTER.md` — orphan Fact
+- `F0896` · `FACT_REGISTER.md` — orphan Fact
+- `F0897` · `FACT_REGISTER.md` — orphan Fact
+- `F0898` · `FACT_REGISTER.md` — orphan Fact
+- `F0899` · `FACT_REGISTER.md` — orphan Fact
+- `F0900` · `FACT_REGISTER.md` — orphan Fact
+- `F0901` · `FACT_REGISTER.md` — orphan Fact
+- `F0902` · `FACT_REGISTER.md` — orphan Fact
+- `F0903` · `FACT_REGISTER.md` — orphan Fact
+- `F0904` · `FACT_REGISTER.md` — orphan Fact
+- `F0905` · `FACT_REGISTER.md` — orphan Fact
+- `F0906` · `FACT_REGISTER.md` — orphan Fact
+- `F0907` · `FACT_REGISTER.md` — orphan Fact
+- `F0908` · `FACT_REGISTER.md` — orphan Fact
+- `F0909` · `FACT_REGISTER.md` — orphan Fact
+- `F0910` · `FACT_REGISTER.md` — orphan Fact
+- `F0911` · `FACT_REGISTER.md` — orphan Fact
+- `F0912` · `FACT_REGISTER.md` — orphan Fact
+- `F0913` · `FACT_REGISTER.md` — orphan Fact
+- `F0914` · `FACT_REGISTER.md` — orphan Fact
+- `F0915` · `FACT_REGISTER.md` — orphan Fact
+- `F0916` · `FACT_REGISTER.md` — orphan Fact
+- `F0917` · `FACT_REGISTER.md` — orphan Fact
+- `F0918` · `FACT_REGISTER.md` — orphan Fact
+- `F0919` · `FACT_REGISTER.md` — orphan Fact
+- `F0920` · `FACT_REGISTER.md` — orphan Fact
+- `F0921` · `FACT_REGISTER.md` — orphan Fact
+- `F0922` · `FACT_REGISTER.md` — orphan Fact
+- `F0923` · `FACT_REGISTER.md` — orphan Fact
+- `F0924` · `FACT_REGISTER.md` — orphan Fact
+- `F0925` · `FACT_REGISTER.md` — orphan Fact
+- `F0926` · `FACT_REGISTER.md` — orphan Fact
+- `F0927` · `FACT_REGISTER.md` — orphan Fact
+- `F0928` · `FACT_REGISTER.md` — orphan Fact
+- `F0929` · `FACT_REGISTER.md` — orphan Fact
+- `F0930` · `FACT_REGISTER.md` — orphan Fact
+- `F0931` · `FACT_REGISTER.md` — orphan Fact
+- `F0932` · `FACT_REGISTER.md` — orphan Fact
+- `F0933` · `FACT_REGISTER.md` — orphan Fact
+- `F0934` · `FACT_REGISTER.md` — orphan Fact
+- `F0935` · `FACT_REGISTER.md` — orphan Fact
+- `F0936` · `FACT_REGISTER.md` — orphan Fact
+- `F0937` · `FACT_REGISTER.md` — orphan Fact
+- `F0942` · `FACT_REGISTER.md` — orphan Fact
+- `F0943` · `FACT_REGISTER.md` — orphan Fact
+- `F0944` · `FACT_REGISTER.md` — orphan Fact
+- `F0945` · `FACT_REGISTER.md` — orphan Fact
+- `F0946` · `FACT_REGISTER.md` — orphan Fact
+- `F0947` · `FACT_REGISTER.md` — orphan Fact
+- `F0948` · `FACT_REGISTER.md` — orphan Fact
+- `F0949` · `FACT_REGISTER.md` — orphan Fact
+- `F0950` · `FACT_REGISTER.md` — orphan Fact
+- `F0951` · `FACT_REGISTER.md` — orphan Fact
+- `F0952` · `FACT_REGISTER.md` — orphan Fact
+- `F0953` · `FACT_REGISTER.md` — orphan Fact
+- `F0954` · `FACT_REGISTER.md` — orphan Fact
+- `F0955` · `FACT_REGISTER.md` — orphan Fact
+- `F0956` · `FACT_REGISTER.md` — orphan Fact
+- `F0957` · `FACT_REGISTER.md` — orphan Fact
+- `F0958` · `FACT_REGISTER.md` — orphan Fact
+- `F0959` · `FACT_REGISTER.md` — orphan Fact
+- `F0960` · `FACT_REGISTER.md` — orphan Fact
+- `F0961` · `FACT_REGISTER.md` — orphan Fact
+- `F0962` · `FACT_REGISTER.md` — orphan Fact
+- `F0963` · `FACT_REGISTER.md` — orphan Fact
+- `F0964` · `FACT_REGISTER.md` — orphan Fact
+- `F0965` · `FACT_REGISTER.md` — orphan Fact
+- `F0966` · `FACT_REGISTER.md` — orphan Fact
+- `F0967` · `FACT_REGISTER.md` — orphan Fact
+- `F0968` · `FACT_REGISTER.md` — orphan Fact
+- `F0969` · `FACT_REGISTER.md` — orphan Fact
+- `F0970` · `FACT_REGISTER.md` — orphan Fact
+- `F0971` · `FACT_REGISTER.md` — orphan Fact
+- `F0972` · `FACT_REGISTER.md` — orphan Fact
+- `F0973` · `FACT_REGISTER.md` — orphan Fact
+- `F0974` · `FACT_REGISTER.md` — orphan Fact
+- `F0975` · `FACT_REGISTER.md` — orphan Fact
+- `F0976` · `FACT_REGISTER.md` — orphan Fact
+- `F0977` · `FACT_REGISTER.md` — orphan Fact
+- `F0978` · `FACT_REGISTER.md` — orphan Fact
+- `F0979` · `FACT_REGISTER.md` — orphan Fact
+- `F0980` · `FACT_REGISTER.md` — orphan Fact
+- `F0981` · `FACT_REGISTER.md` — orphan Fact
+- `F0982` · `FACT_REGISTER.md` — orphan Fact
+- `F0983` · `FACT_REGISTER.md` — orphan Fact
+- `F0984` · `FACT_REGISTER.md` — orphan Fact
+- `F0985` · `FACT_REGISTER.md` — orphan Fact
+- `F0986` · `FACT_REGISTER.md` — orphan Fact
+- `F0987` · `FACT_REGISTER.md` — orphan Fact
+- `F0988` · `FACT_REGISTER.md` — orphan Fact
+- `F0989` · `FACT_REGISTER.md` — orphan Fact
+- `F0990` · `FACT_REGISTER.md` — orphan Fact
+- `F0991` · `FACT_REGISTER.md` — orphan Fact
+- `F0992` · `FACT_REGISTER.md` — orphan Fact
+- `F0993` · `FACT_REGISTER.md` — orphan Fact
+- `F0994` · `FACT_REGISTER.md` — orphan Fact
+- `F0995` · `FACT_REGISTER.md` — orphan Fact
+- `F0996` · `FACT_REGISTER.md` — orphan Fact
+- `F0997` · `FACT_REGISTER.md` — orphan Fact
+- `F0998` · `FACT_REGISTER.md` — orphan Fact
+- `F0999` · `FACT_REGISTER.md` — orphan Fact
+- `F1000` · `FACT_REGISTER.md` — orphan Fact
+- `F1001` · `FACT_REGISTER.md` — orphan Fact
+- `F1002` · `FACT_REGISTER.md` — orphan Fact
+- `F1003` · `FACT_REGISTER.md` — orphan Fact
+- `F1004` · `FACT_REGISTER.md` — orphan Fact
+- `F1005` · `FACT_REGISTER.md` — orphan Fact
+- `F1006` · `FACT_REGISTER.md` — orphan Fact
+- `F1007` · `FACT_REGISTER.md` — orphan Fact
+- `F1008` · `FACT_REGISTER.md` — orphan Fact
+- `F1009` · `FACT_REGISTER.md` — orphan Fact
+- `F1010` · `FACT_REGISTER.md` — orphan Fact
+- `F1014` · `FACT_REGISTER.md` — orphan Fact
+- `F1015` · `FACT_REGISTER.md` — orphan Fact
+- `F1016` · `FACT_REGISTER.md` — orphan Fact
+- `F1017` · `FACT_REGISTER.md` — orphan Fact
+- `F1018` · `FACT_REGISTER.md` — orphan Fact
+- `F1019` · `FACT_REGISTER.md` — orphan Fact
+- `F1020` · `FACT_REGISTER.md` — orphan Fact
+- `F1021` · `FACT_REGISTER.md` — orphan Fact
+- `F1022` · `FACT_REGISTER.md` — orphan Fact
+- `F1023` · `FACT_REGISTER.md` — orphan Fact
+- `F1024` · `FACT_REGISTER.md` — orphan Fact
+- `F1025` · `FACT_REGISTER.md` — orphan Fact
+- `F1026` · `FACT_REGISTER.md` — orphan Fact
+- `F1027` · `FACT_REGISTER.md` — orphan Fact
+- `F1028` · `FACT_REGISTER.md` — orphan Fact
+- `F1029` · `FACT_REGISTER.md` — orphan Fact
+- `F1030` · `FACT_REGISTER.md` — orphan Fact
+- `F1031` · `FACT_REGISTER.md` — orphan Fact
+- `F1032` · `FACT_REGISTER.md` — orphan Fact
+- `F1033` · `FACT_REGISTER.md` — orphan Fact
+- `F1034` · `FACT_REGISTER.md` — orphan Fact
+- `F1035` · `FACT_REGISTER.md` — orphan Fact
+- `F1036` · `FACT_REGISTER.md` — orphan Fact
+- `F1037` · `FACT_REGISTER.md` — orphan Fact
+- `F1038` · `FACT_REGISTER.md` — orphan Fact
+- `F1039` · `FACT_REGISTER.md` — orphan Fact
+- `F1040` · `FACT_REGISTER.md` — orphan Fact
+- `F1041` · `FACT_REGISTER.md` — orphan Fact
+- `F1042` · `FACT_REGISTER.md` — orphan Fact
+- `F1043` · `FACT_REGISTER.md` — orphan Fact
+- `F1044` · `FACT_REGISTER.md` — orphan Fact
+- `F1045` · `FACT_REGISTER.md` — orphan Fact
+- `F1046` · `FACT_REGISTER.md` — orphan Fact
+- `F1047` · `FACT_REGISTER.md` — orphan Fact
+- `F1048` · `FACT_REGISTER.md` — orphan Fact
+- `F1049` · `FACT_REGISTER.md` — orphan Fact
+- `F1050` · `FACT_REGISTER.md` — orphan Fact
+- `F1051` · `FACT_REGISTER.md` — orphan Fact
+- `F1052` · `FACT_REGISTER.md` — orphan Fact
+- `F1053` · `FACT_REGISTER.md` — orphan Fact
+- `F1054` · `FACT_REGISTER.md` — orphan Fact
+- `F1055` · `FACT_REGISTER.md` — orphan Fact
+- `F1056` · `FACT_REGISTER.md` — orphan Fact
+- `F1057` · `FACT_REGISTER.md` — orphan Fact
+- `F1058` · `FACT_REGISTER.md` — orphan Fact
+- `F1059` · `FACT_REGISTER.md` — orphan Fact
+- `F1060` · `FACT_REGISTER.md` — orphan Fact
+- `F1061` · `FACT_REGISTER.md` — orphan Fact
+- `F1062` · `FACT_REGISTER.md` — orphan Fact
+- `F1063` · `FACT_REGISTER.md` — orphan Fact
+- `F1064` · `FACT_REGISTER.md` — orphan Fact
+- `F1065` · `FACT_REGISTER.md` — orphan Fact
+- `F1066` · `FACT_REGISTER.md` — orphan Fact
+- `F1067` · `FACT_REGISTER.md` — orphan Fact
+- `F1068` · `FACT_REGISTER.md` — orphan Fact
+- `F1069` · `FACT_REGISTER.md` — orphan Fact
+- `F1070` · `FACT_REGISTER.md` — orphan Fact
+- `F1071` · `FACT_REGISTER.md` — orphan Fact
+- `F1072` · `FACT_REGISTER.md` — orphan Fact
+- `F1073` · `FACT_REGISTER.md` — orphan Fact
+- `F1074` · `FACT_REGISTER.md` — orphan Fact
+- `F1075` · `FACT_REGISTER.md` — orphan Fact
+- `F1076` · `FACT_REGISTER.md` — orphan Fact
+- `F1077` · `FACT_REGISTER.md` — orphan Fact
+- `F1078` · `FACT_REGISTER.md` — orphan Fact
+- `F1079` · `FACT_REGISTER.md` — orphan Fact
+- `F1080` · `FACT_REGISTER.md` — orphan Fact
+- `F1081` · `FACT_REGISTER.md` — orphan Fact
+- `F1082` · `FACT_REGISTER.md` — orphan Fact
+- `F1083` · `FACT_REGISTER.md` — orphan Fact
+- `F1084` · `FACT_REGISTER.md` — orphan Fact
+- `F1085` · `FACT_REGISTER.md` — orphan Fact
+- `F1086` · `FACT_REGISTER.md` — orphan Fact
+- `F1087` · `FACT_REGISTER.md` — orphan Fact
+- `F1088` · `FACT_REGISTER.md` — orphan Fact
+- `F1089` · `FACT_REGISTER.md` — orphan Fact
+- `F1090` · `FACT_REGISTER.md` — orphan Fact
+- `F1091` · `FACT_REGISTER.md` — orphan Fact
+- `F1092` · `FACT_REGISTER.md` — orphan Fact
+- `F1093` · `FACT_REGISTER.md` — orphan Fact
+- `F1094` · `FACT_REGISTER.md` — orphan Fact
+- `F1095` · `FACT_REGISTER.md` — orphan Fact
+- `F1096` · `FACT_REGISTER.md` — orphan Fact
+- `F1097` · `FACT_REGISTER.md` — orphan Fact
+- `F1098` · `FACT_REGISTER.md` — orphan Fact
+- `F1099` · `FACT_REGISTER.md` — orphan Fact
+- `F1100` · `FACT_REGISTER.md` — orphan Fact
+- `F1101` · `FACT_REGISTER.md` — orphan Fact
+- `F1102` · `FACT_REGISTER.md` — orphan Fact
+- `F1103` · `FACT_REGISTER.md` — orphan Fact
+- `F1104` · `FACT_REGISTER.md` — orphan Fact
+- `F1105` · `FACT_REGISTER.md` — orphan Fact
+- `F1106` · `FACT_REGISTER.md` — orphan Fact
+- `F1107` · `FACT_REGISTER.md` — orphan Fact
+- `F1108` · `FACT_REGISTER.md` — orphan Fact
+- `F1109` · `FACT_REGISTER.md` — orphan Fact
+- `F1110` · `FACT_REGISTER.md` — orphan Fact
+- `F1111` · `FACT_REGISTER.md` — orphan Fact
+- `F1112` · `FACT_REGISTER.md` — orphan Fact
+- `F1113` · `FACT_REGISTER.md` — orphan Fact
+- `F1114` · `FACT_REGISTER.md` — orphan Fact
+- `F1115` · `FACT_REGISTER.md` — orphan Fact
+- `F1116` · `FACT_REGISTER.md` — orphan Fact
+- `F1117` · `FACT_REGISTER.md` — orphan Fact
+- `F1118` · `FACT_REGISTER.md` — orphan Fact
+- `F1119` · `FACT_REGISTER.md` — orphan Fact
+- `F1120` · `FACT_REGISTER.md` — orphan Fact
+- `F1121` · `FACT_REGISTER.md` — orphan Fact
+- `F1122` · `FACT_REGISTER.md` — orphan Fact
+- `F1123` · `FACT_REGISTER.md` — orphan Fact
+- `F1124` · `FACT_REGISTER.md` — orphan Fact
+- `F1125` · `FACT_REGISTER.md` — orphan Fact
+- `F1126` · `FACT_REGISTER.md` — orphan Fact
+- `F1127` · `FACT_REGISTER.md` — orphan Fact
+- `F1128` · `FACT_REGISTER.md` — orphan Fact
+- `F1129` · `FACT_REGISTER.md` — orphan Fact
+- `F1130` · `FACT_REGISTER.md` — orphan Fact
+- `F1131` · `FACT_REGISTER.md` — orphan Fact
+- `F1132` · `FACT_REGISTER.md` — orphan Fact
+- `F1133` · `FACT_REGISTER.md` — orphan Fact
+- `F1134` · `FACT_REGISTER.md` — orphan Fact
+- `F1135` · `FACT_REGISTER.md` — orphan Fact
+- `F1136` · `FACT_REGISTER.md` — orphan Fact
+- `F1137` · `FACT_REGISTER.md` — orphan Fact
+- `F1138` · `FACT_REGISTER.md` — orphan Fact
+- `F1139` · `FACT_REGISTER.md` — orphan Fact
+- `F1140` · `FACT_REGISTER.md` — orphan Fact
+- `F1141` · `FACT_REGISTER.md` — orphan Fact
+- `F1142` · `FACT_REGISTER.md` — orphan Fact
+- `F1143` · `FACT_REGISTER.md` — orphan Fact
+- `F1144` · `FACT_REGISTER.md` — orphan Fact
+- `F1145` · `FACT_REGISTER.md` — orphan Fact
+- `F1146` · `FACT_REGISTER.md` — orphan Fact
+- `F1147` · `FACT_REGISTER.md` — orphan Fact
+- `F1148` · `FACT_REGISTER.md` — orphan Fact
+- `F1149` · `FACT_REGISTER.md` — orphan Fact
+- `F1150` · `FACT_REGISTER.md` — orphan Fact
+- `F1151` · `FACT_REGISTER.md` — orphan Fact
+- `F1152` · `FACT_REGISTER.md` — orphan Fact
+- `F1153` · `FACT_REGISTER.md` — orphan Fact
+- `F1154` · `FACT_REGISTER.md` — orphan Fact
+- `F1155` · `FACT_REGISTER.md` — orphan Fact
+- `F1156` · `FACT_REGISTER.md` — orphan Fact
+- `F1157` · `FACT_REGISTER.md` — orphan Fact
+- `F1158` · `FACT_REGISTER.md` — orphan Fact
+- `F1159` · `FACT_REGISTER.md` — orphan Fact
+- `F1160` · `FACT_REGISTER.md` — orphan Fact
+- `F1161` · `FACT_REGISTER.md` — orphan Fact
+- `F1162` · `FACT_REGISTER.md` — orphan Fact
+- `F1163` · `FACT_REGISTER.md` — orphan Fact
+- `F1164` · `FACT_REGISTER.md` — orphan Fact
+- `F1165` · `FACT_REGISTER.md` — orphan Fact
+- `F1166` · `FACT_REGISTER.md` — orphan Fact
+- `F1167` · `FACT_REGISTER.md` — orphan Fact
+- `F1168` · `FACT_REGISTER.md` — orphan Fact
+- `F1169` · `FACT_REGISTER.md` — orphan Fact
+- `F1170` · `FACT_REGISTER.md` — orphan Fact
+- `F1171` · `FACT_REGISTER.md` — orphan Fact
+- `F1172` · `FACT_REGISTER.md` — orphan Fact
+- `F1173` · `FACT_REGISTER.md` — orphan Fact
+- `F1174` · `FACT_REGISTER.md` — orphan Fact
+- `F1175` · `FACT_REGISTER.md` — orphan Fact
+- `F1176` · `FACT_REGISTER.md` — orphan Fact
+- `F1177` · `FACT_REGISTER.md` — orphan Fact
+- `F1178` · `FACT_REGISTER.md` — orphan Fact
+- `F1179` · `FACT_REGISTER.md` — orphan Fact
+- `F1180` · `FACT_REGISTER.md` — orphan Fact
+- `F1181` · `FACT_REGISTER.md` — orphan Fact
+- `F1182` · `FACT_REGISTER.md` — orphan Fact
+- `F1183` · `FACT_REGISTER.md` — orphan Fact
+- `F1184` · `FACT_REGISTER.md` — orphan Fact
+- `F1185` · `FACT_REGISTER.md` — orphan Fact
+- `F1186` · `FACT_REGISTER.md` — orphan Fact
+- `F1187` · `FACT_REGISTER.md` — orphan Fact
+- `F1188` · `FACT_REGISTER.md` — orphan Fact
+- `F1189` · `FACT_REGISTER.md` — orphan Fact
+- `F1190` · `FACT_REGISTER.md` — orphan Fact
+- `F1191` · `FACT_REGISTER.md` — orphan Fact
+- `F1192` · `FACT_REGISTER.md` — orphan Fact
+- `F1193` · `FACT_REGISTER.md` — orphan Fact
+- `F1194` · `FACT_REGISTER.md` — orphan Fact
+- `F1195` · `FACT_REGISTER.md` — orphan Fact
+- `F1196` · `FACT_REGISTER.md` — orphan Fact
+- `F1197` · `FACT_REGISTER.md` — orphan Fact
+- `F1198` · `FACT_REGISTER.md` — orphan Fact
+- `F1199` · `FACT_REGISTER.md` — orphan Fact
+- `F1200` · `FACT_REGISTER.md` — orphan Fact
+- `F1201` · `FACT_REGISTER.md` — orphan Fact
+- `F1202` · `FACT_REGISTER.md` — orphan Fact
+- `F1203` · `FACT_REGISTER.md` — orphan Fact
+- `F1204` · `FACT_REGISTER.md` — orphan Fact
+- `F1205` · `FACT_REGISTER.md` — orphan Fact
+- `F1206` · `FACT_REGISTER.md` — orphan Fact
+- `F1207` · `FACT_REGISTER.md` — orphan Fact
+- `F1208` · `FACT_REGISTER.md` — orphan Fact
+- `F1209` · `FACT_REGISTER.md` — orphan Fact
+- `F1210` · `FACT_REGISTER.md` — orphan Fact
+- `F1211` · `FACT_REGISTER.md` — orphan Fact
+- `F1212` · `FACT_REGISTER.md` — orphan Fact
+- `F1213` · `FACT_REGISTER.md` — orphan Fact
+- `F1214` · `FACT_REGISTER.md` — orphan Fact
+- `F1215` · `FACT_REGISTER.md` — orphan Fact
+- `F1216` · `FACT_REGISTER.md` — orphan Fact
+- `F1217` · `FACT_REGISTER.md` — orphan Fact
+- `F1218` · `FACT_REGISTER.md` — orphan Fact
+- `F1219` · `FACT_REGISTER.md` — orphan Fact
+- `F1220` · `FACT_REGISTER.md` — orphan Fact
+- `F1221` · `FACT_REGISTER.md` — orphan Fact
+- `F1222` · `FACT_REGISTER.md` — orphan Fact
+- `F1223` · `FACT_REGISTER.md` — orphan Fact
+- `F1224` · `FACT_REGISTER.md` — orphan Fact
+- `F1225` · `FACT_REGISTER.md` — orphan Fact
+- `F1226` · `FACT_REGISTER.md` — orphan Fact
+- `F1227` · `FACT_REGISTER.md` — orphan Fact
+- `F1228` · `FACT_REGISTER.md` — orphan Fact
+- `F1229` · `FACT_REGISTER.md` — orphan Fact
+- `F1230` · `FACT_REGISTER.md` — orphan Fact
+- `F1231` · `FACT_REGISTER.md` — orphan Fact
+- `F1232` · `FACT_REGISTER.md` — orphan Fact
+- `F1233` · `FACT_REGISTER.md` — orphan Fact
+- `F1234` · `FACT_REGISTER.md` — orphan Fact
+- `F1235` · `FACT_REGISTER.md` — orphan Fact
+- `F1236` · `FACT_REGISTER.md` — orphan Fact
+- `F1237` · `FACT_REGISTER.md` — orphan Fact
+- `F1238` · `FACT_REGISTER.md` — orphan Fact
+- `F1239` · `FACT_REGISTER.md` — orphan Fact
+- `F1240` · `FACT_REGISTER.md` — orphan Fact
+- `F1241` · `FACT_REGISTER.md` — orphan Fact
+- `F1242` · `FACT_REGISTER.md` — orphan Fact
+- `F1243` · `FACT_REGISTER.md` — orphan Fact
+- `F1244` · `FACT_REGISTER.md` — orphan Fact
+- `F1245` · `FACT_REGISTER.md` — orphan Fact
+- `F1246` · `FACT_REGISTER.md` — orphan Fact
+- `F1247` · `FACT_REGISTER.md` — orphan Fact
+- `F1248` · `FACT_REGISTER.md` — orphan Fact
+- `F1249` · `FACT_REGISTER.md` — orphan Fact
+- `F1250` · `FACT_REGISTER.md` — orphan Fact
+- `F1251` · `FACT_REGISTER.md` — orphan Fact
+- `F1252` · `FACT_REGISTER.md` — orphan Fact
+- `F1253` · `FACT_REGISTER.md` — orphan Fact
+- `F1254` · `FACT_REGISTER.md` — orphan Fact
+- `F1255` · `FACT_REGISTER.md` — orphan Fact
+- `F1256` · `FACT_REGISTER.md` — orphan Fact
+- `F1257` · `FACT_REGISTER.md` — orphan Fact
+- `F1258` · `FACT_REGISTER.md` — orphan Fact
+- `F1259` · `FACT_REGISTER.md` — orphan Fact
+- `F1260` · `FACT_REGISTER.md` — orphan Fact
+- `F1261` · `FACT_REGISTER.md` — orphan Fact
+- `F1262` · `FACT_REGISTER.md` — orphan Fact
+- `F1263` · `FACT_REGISTER.md` — orphan Fact
+- `F1264` · `FACT_REGISTER.md` — orphan Fact
+- `F1265` · `FACT_REGISTER.md` — orphan Fact
+- `F1266` · `FACT_REGISTER.md` — orphan Fact
+- `F1267` · `FACT_REGISTER.md` — orphan Fact
+- `F1268` · `FACT_REGISTER.md` — orphan Fact
+- `F1269` · `FACT_REGISTER.md` — orphan Fact
+- `F1270` · `FACT_REGISTER.md` — orphan Fact
+- `F1271` · `FACT_REGISTER.md` — orphan Fact
+- `F1272` · `FACT_REGISTER.md` — orphan Fact
+- `F1273` · `FACT_REGISTER.md` — orphan Fact
+- `F1274` · `FACT_REGISTER.md` — orphan Fact
+- `F1275` · `FACT_REGISTER.md` — orphan Fact
+- `F1276` · `FACT_REGISTER.md` — orphan Fact
+- `F1277` · `FACT_REGISTER.md` — orphan Fact
+- `F1278` · `FACT_REGISTER.md` — orphan Fact
+- `F1279` · `FACT_REGISTER.md` — orphan Fact
+- `F1280` · `FACT_REGISTER.md` — orphan Fact
+- `F1281` · `FACT_REGISTER.md` — orphan Fact
+- `F1282` · `FACT_REGISTER.md` — orphan Fact
+- `F1283` · `FACT_REGISTER.md` — orphan Fact
+- `F1284` · `FACT_REGISTER.md` — orphan Fact
+- `F1285` · `FACT_REGISTER.md` — orphan Fact
+- `F1286` · `FACT_REGISTER.md` — orphan Fact
+- `F1287` · `FACT_REGISTER.md` — orphan Fact
+- `F1288` · `FACT_REGISTER.md` — orphan Fact
+- `F1289` · `FACT_REGISTER.md` — orphan Fact
+- `F1290` · `FACT_REGISTER.md` — orphan Fact
+- `F1291` · `FACT_REGISTER.md` — orphan Fact
+- `F1292` · `FACT_REGISTER.md` — orphan Fact
+- `F1293` · `FACT_REGISTER.md` — orphan Fact
+- `F1295` · `FACT_REGISTER.md` — orphan Fact
+- `F1296` · `FACT_REGISTER.md` — orphan Fact
+- `F1302` · `FACT_REGISTER.md` — orphan Fact
+- `F1303` · `FACT_REGISTER.md` — orphan Fact
+- `F1304` · `FACT_REGISTER.md` — orphan Fact
+- `F1305` · `FACT_REGISTER.md` — orphan Fact
+- `F1306` · `FACT_REGISTER.md` — orphan Fact
+- `F1307` · `FACT_REGISTER.md` — orphan Fact
+- `F1308` · `FACT_REGISTER.md` — orphan Fact
+- `F1309` · `FACT_REGISTER.md` — orphan Fact
+- `F1310` · `FACT_REGISTER.md` — orphan Fact
+- `F1311` · `FACT_REGISTER.md` — orphan Fact
+- `F1312` · `FACT_REGISTER.md` — orphan Fact
+- `F1313` · `FACT_REGISTER.md` — orphan Fact
+- `F1314` · `FACT_REGISTER.md` — orphan Fact
+- `F1315` · `FACT_REGISTER.md` — orphan Fact
+- `F1316` · `FACT_REGISTER.md` — orphan Fact
+- `F1317` · `FACT_REGISTER.md` — orphan Fact
+- `F1318` · `FACT_REGISTER.md` — orphan Fact
+- `F1319` · `FACT_REGISTER.md` — orphan Fact
+- `F1320` · `FACT_REGISTER.md` — orphan Fact
+- `F1321` · `FACT_REGISTER.md` — orphan Fact
+- `F1322` · `FACT_REGISTER.md` — orphan Fact
+- `F1323` · `FACT_REGISTER.md` — orphan Fact
+- `F1324` · `FACT_REGISTER.md` — orphan Fact
+- `F1325` · `FACT_REGISTER.md` — orphan Fact
+- `F1326` · `FACT_REGISTER.md` — orphan Fact
+- `F1327` · `FACT_REGISTER.md` — orphan Fact
+- `F1328` · `FACT_REGISTER.md` — orphan Fact
+- `F1329` · `FACT_REGISTER.md` — orphan Fact
+- `F1330` · `FACT_REGISTER.md` — orphan Fact
+- `F1331` · `FACT_REGISTER.md` — orphan Fact
+- `F1332` · `FACT_REGISTER.md` — orphan Fact
+- `F1333` · `FACT_REGISTER.md` — orphan Fact
+- `F1334` · `FACT_REGISTER.md` — orphan Fact
+- `F1335` · `FACT_REGISTER.md` — orphan Fact
+- `F1336` · `FACT_REGISTER.md` — orphan Fact
+- `F1337` · `FACT_REGISTER.md` — orphan Fact
+- `F1338` · `FACT_REGISTER.md` — orphan Fact
+- `F1339` · `FACT_REGISTER.md` — orphan Fact
+- `F1340` · `FACT_REGISTER.md` — orphan Fact
+- `F1341` · `FACT_REGISTER.md` — orphan Fact
+- `F1342` · `FACT_REGISTER.md` — orphan Fact
+- `F1343` · `FACT_REGISTER.md` — orphan Fact
+- `F1344` · `FACT_REGISTER.md` — orphan Fact
+- `F1345` · `FACT_REGISTER.md` — orphan Fact
+- `F1346` · `FACT_REGISTER.md` — orphan Fact
+- `F1347` · `FACT_REGISTER.md` — orphan Fact
+- `F1348` · `FACT_REGISTER.md` — orphan Fact
+- `F1349` · `FACT_REGISTER.md` — orphan Fact
+- `F1350` · `FACT_REGISTER.md` — orphan Fact
+- `F1351` · `FACT_REGISTER.md` — orphan Fact
+- `F1352` · `FACT_REGISTER.md` — orphan Fact
+- `F1353` · `FACT_REGISTER.md` — orphan Fact
+- `F1354` · `FACT_REGISTER.md` — orphan Fact
+- `F1355` · `FACT_REGISTER.md` — orphan Fact
+- `F1356` · `FACT_REGISTER.md` — orphan Fact
+- `F1357` · `FACT_REGISTER.md` — orphan Fact
+- `F1358` · `FACT_REGISTER.md` — orphan Fact
+- `F1359` · `FACT_REGISTER.md` — orphan Fact
+- `F1360` · `FACT_REGISTER.md` — orphan Fact
+- `F1361` · `FACT_REGISTER.md` — orphan Fact
+- `F1362` · `FACT_REGISTER.md` — orphan Fact
+- `F1363` · `FACT_REGISTER.md` — orphan Fact
+- `F1364` · `FACT_REGISTER.md` — orphan Fact
+- `F1365` · `FACT_REGISTER.md` — orphan Fact
+- `F1366` · `FACT_REGISTER.md` — orphan Fact
+- `F1367` · `FACT_REGISTER.md` — orphan Fact
+- `F1368` · `FACT_REGISTER.md` — orphan Fact
+- `F1369` · `FACT_REGISTER.md` — orphan Fact
+- `F1370` · `FACT_REGISTER.md` — orphan Fact
+- `F1371` · `FACT_REGISTER.md` — orphan Fact
+- `F1372` · `FACT_REGISTER.md` — orphan Fact
+- `F1373` · `FACT_REGISTER.md` — orphan Fact
+- `F1374` · `FACT_REGISTER.md` — orphan Fact
+- `F1375` · `FACT_REGISTER.md` — orphan Fact
+- `F1376` · `FACT_REGISTER.md` — orphan Fact
+- `F1377` · `FACT_REGISTER.md` — orphan Fact
+- `F1378` · `FACT_REGISTER.md` — orphan Fact
+- `F1379` · `FACT_REGISTER.md` — orphan Fact
+- `F1380` · `FACT_REGISTER.md` — orphan Fact
+- `F1381` · `FACT_REGISTER.md` — orphan Fact
+- `F1382` · `FACT_REGISTER.md` — orphan Fact
+- `F1383` · `FACT_REGISTER.md` — orphan Fact
+- `F1384` · `FACT_REGISTER.md` — orphan Fact
+- `F1385` · `FACT_REGISTER.md` — orphan Fact
+- `F1386` · `FACT_REGISTER.md` — orphan Fact
+- `F1387` · `FACT_REGISTER.md` — orphan Fact
+- `F1388` · `FACT_REGISTER.md` — orphan Fact
+- `F1389` · `FACT_REGISTER.md` — orphan Fact
+- `F1390` · `FACT_REGISTER.md` — orphan Fact
+- `F1391` · `FACT_REGISTER.md` — orphan Fact
+- `F1392` · `FACT_REGISTER.md` — orphan Fact
+- `F1393` · `FACT_REGISTER.md` — orphan Fact
+- `F1394` · `FACT_REGISTER.md` — orphan Fact
+- `F1395` · `FACT_REGISTER.md` — orphan Fact
+- `F1396` · `FACT_REGISTER.md` — orphan Fact
+- `F1397` · `FACT_REGISTER.md` — orphan Fact
+- `F1398` · `FACT_REGISTER.md` — orphan Fact
+- `F1399` · `FACT_REGISTER.md` — orphan Fact
+- `F1400` · `FACT_REGISTER.md` — orphan Fact
+- `F1401` · `FACT_REGISTER.md` — orphan Fact
+- `F1402` · `FACT_REGISTER.md` — orphan Fact
+- `F1403` · `FACT_REGISTER.md` — orphan Fact
+- `F1404` · `FACT_REGISTER.md` — orphan Fact
+- `F1405` · `FACT_REGISTER.md` — orphan Fact
+- `F1406` · `FACT_REGISTER.md` — orphan Fact
+- `F1407` · `FACT_REGISTER.md` — orphan Fact
+- `F1408` · `FACT_REGISTER.md` — orphan Fact
+- `F1409` · `FACT_REGISTER.md` — orphan Fact
+- `F1410` · `FACT_REGISTER.md` — orphan Fact
+- `F1411` · `FACT_REGISTER.md` — orphan Fact
+- `F1412` · `FACT_REGISTER.md` — orphan Fact
+- `F1413` · `FACT_REGISTER.md` — orphan Fact
+- `F1414` · `FACT_REGISTER.md` — orphan Fact
+- `F1415` · `FACT_REGISTER.md` — orphan Fact
+- `F1416` · `FACT_REGISTER.md` — orphan Fact
+- `F1417` · `FACT_REGISTER.md` — orphan Fact
+- `F1418` · `FACT_REGISTER.md` — orphan Fact
+- `F1419` · `FACT_REGISTER.md` — orphan Fact
+- `F1420` · `FACT_REGISTER.md` — orphan Fact
+- `F1421` · `FACT_REGISTER.md` — orphan Fact
+- `F1422` · `FACT_REGISTER.md` — orphan Fact
+- `F1423` · `FACT_REGISTER.md` — orphan Fact
+- `F1424` · `FACT_REGISTER.md` — orphan Fact
+- `F1425` · `FACT_REGISTER.md` — orphan Fact
+- `F1426` · `FACT_REGISTER.md` — orphan Fact
+- `F1427` · `FACT_REGISTER.md` — orphan Fact
+- `F1428` · `FACT_REGISTER.md` — orphan Fact
+- `F1429` · `FACT_REGISTER.md` — orphan Fact
+- `F1430` · `FACT_REGISTER.md` — orphan Fact
+- `F1431` · `FACT_REGISTER.md` — orphan Fact
+- `F1432` · `FACT_REGISTER.md` — orphan Fact
+- `F1433` · `FACT_REGISTER.md` — orphan Fact
+- `F1434` · `FACT_REGISTER.md` — orphan Fact
+- `F1435` · `FACT_REGISTER.md` — orphan Fact
+- `F1436` · `FACT_REGISTER.md` — orphan Fact
+- `F1437` · `FACT_REGISTER.md` — orphan Fact
+- `F1438` · `FACT_REGISTER.md` — orphan Fact
+- `F1439` · `FACT_REGISTER.md` — orphan Fact
+- `F1440` · `FACT_REGISTER.md` — orphan Fact
+- `F1441` · `FACT_REGISTER.md` — orphan Fact
+- `F1442` · `FACT_REGISTER.md` — orphan Fact
+- `F1443` · `FACT_REGISTER.md` — orphan Fact
+- `F1444` · `FACT_REGISTER.md` — orphan Fact
+- `F1445` · `FACT_REGISTER.md` — orphan Fact
+- `F1446` · `FACT_REGISTER.md` — orphan Fact
+- `F1447` · `FACT_REGISTER.md` — orphan Fact
+- `F1448` · `FACT_REGISTER.md` — orphan Fact
+- `F1449` · `FACT_REGISTER.md` — orphan Fact
+- `F1450` · `FACT_REGISTER.md` — orphan Fact
+- `F1451` · `FACT_REGISTER.md` — orphan Fact
+- `F1452` · `FACT_REGISTER.md` — orphan Fact
+- `F1453` · `FACT_REGISTER.md` — orphan Fact
+- `F1454` · `FACT_REGISTER.md` — orphan Fact
+- `F1455` · `FACT_REGISTER.md` — orphan Fact
+- `F1456` · `FACT_REGISTER.md` — orphan Fact
+- `F1457` · `FACT_REGISTER.md` — orphan Fact
+- `F1458` · `FACT_REGISTER.md` — orphan Fact
+- `F1459` · `FACT_REGISTER.md` — orphan Fact
+- `F1460` · `FACT_REGISTER.md` — orphan Fact
+- `F1461` · `FACT_REGISTER.md` — orphan Fact
+- `F1462` · `FACT_REGISTER.md` — orphan Fact
+- `F1463` · `FACT_REGISTER.md` — orphan Fact
+- `F1464` · `FACT_REGISTER.md` — orphan Fact
+- `F1465` · `FACT_REGISTER.md` — orphan Fact
+- `F1466` · `FACT_REGISTER.md` — orphan Fact
+- `F1467` · `FACT_REGISTER.md` — orphan Fact
+- `F1468` · `FACT_REGISTER.md` — orphan Fact
+- `F1469` · `FACT_REGISTER.md` — orphan Fact
+- `F1470` · `FACT_REGISTER.md` — orphan Fact
+- `F1471` · `FACT_REGISTER.md` — orphan Fact
+- `F1472` · `FACT_REGISTER.md` — orphan Fact
+- `F1473` · `FACT_REGISTER.md` — orphan Fact
+- `F1474` · `FACT_REGISTER.md` — orphan Fact
+- `F1475` · `FACT_REGISTER.md` — orphan Fact
+- `F1476` · `FACT_REGISTER.md` — orphan Fact
+- `F1477` · `FACT_REGISTER.md` — orphan Fact
+- `F1478` · `FACT_REGISTER.md` — orphan Fact
+- `F1479` · `FACT_REGISTER.md` — orphan Fact
+- `F1480` · `FACT_REGISTER.md` — orphan Fact
+- `F1481` · `FACT_REGISTER.md` — orphan Fact
+- `F1482` · `FACT_REGISTER.md` — orphan Fact
+- `F1483` · `FACT_REGISTER.md` — orphan Fact
+- `F1484` · `FACT_REGISTER.md` — orphan Fact
+- `F1485` · `FACT_REGISTER.md` — orphan Fact
+- `F1486` · `FACT_REGISTER.md` — orphan Fact
+- `F1487` · `FACT_REGISTER.md` — orphan Fact
+- `F1488` · `FACT_REGISTER.md` — orphan Fact
+- `F1489` · `FACT_REGISTER.md` — orphan Fact
+- `F1491` · `FACT_REGISTER.md` — orphan Fact
+- `F1492` · `FACT_REGISTER.md` — orphan Fact
+- `F1493` · `FACT_REGISTER.md` — orphan Fact
+- `F1494` · `FACT_REGISTER.md` — orphan Fact
+- `F1495` · `FACT_REGISTER.md` — orphan Fact
+- `F1496` · `FACT_REGISTER.md` — orphan Fact
+- `F1497` · `FACT_REGISTER.md` — orphan Fact
+- `F1498` · `FACT_REGISTER.md` — orphan Fact
+- `F1499` · `FACT_REGISTER.md` — orphan Fact
+- `F1500` · `FACT_REGISTER.md` — orphan Fact
+- `F1501` · `FACT_REGISTER.md` — orphan Fact
+- `F1502` · `FACT_REGISTER.md` — orphan Fact
+- `F1503` · `FACT_REGISTER.md` — orphan Fact
+- `F1504` · `FACT_REGISTER.md` — orphan Fact
+- `F1505` · `FACT_REGISTER.md` — orphan Fact
+- `F1506` · `FACT_REGISTER.md` — orphan Fact
+- `F1507` · `FACT_REGISTER.md` — orphan Fact
+- `F1508` · `FACT_REGISTER.md` — orphan Fact
+- `F1509` · `FACT_REGISTER.md` — orphan Fact
+- `F1510` · `FACT_REGISTER.md` — orphan Fact
+- `F1511` · `FACT_REGISTER.md` — orphan Fact
+- `F1512` · `FACT_REGISTER.md` — orphan Fact
+- `F1513` · `FACT_REGISTER.md` — orphan Fact
+- `F1514` · `FACT_REGISTER.md` — orphan Fact
+- `F1515` · `FACT_REGISTER.md` — orphan Fact
+- `F1516` · `FACT_REGISTER.md` — orphan Fact
+- `F1517` · `FACT_REGISTER.md` — orphan Fact
+- `F1518` · `FACT_REGISTER.md` — orphan Fact
+- `F1519` · `FACT_REGISTER.md` — orphan Fact
+- `F1520` · `FACT_REGISTER.md` — orphan Fact
+- `F1521` · `FACT_REGISTER.md` — orphan Fact
+- `F1522` · `FACT_REGISTER.md` — orphan Fact
+- `F1523` · `FACT_REGISTER.md` — orphan Fact
+- `F1524` · `FACT_REGISTER.md` — orphan Fact
+- `F1525` · `FACT_REGISTER.md` — orphan Fact
+- `F1526` · `FACT_REGISTER.md` — orphan Fact
+- `F1527` · `FACT_REGISTER.md` — orphan Fact
+- `F1528` · `FACT_REGISTER.md` — orphan Fact
+- `F1529` · `FACT_REGISTER.md` — orphan Fact
+- `F1530` · `FACT_REGISTER.md` — orphan Fact
+- `F1531` · `FACT_REGISTER.md` — orphan Fact
+- `F1532` · `FACT_REGISTER.md` — orphan Fact
+- `F1534` · `FACT_REGISTER.md` — orphan Fact
+- `F1535` · `FACT_REGISTER.md` — orphan Fact
+- `F1537` · `FACT_REGISTER.md` — orphan Fact
+- `F1538` · `FACT_REGISTER.md` — orphan Fact
+- `F1539` · `FACT_REGISTER.md` — orphan Fact
+- `F1540` · `FACT_REGISTER.md` — orphan Fact
+- `F1541` · `FACT_REGISTER.md` — orphan Fact
+- `F1542` · `FACT_REGISTER.md` — orphan Fact
+- `F1543` · `FACT_REGISTER.md` — orphan Fact
+- `F1544` · `FACT_REGISTER.md` — orphan Fact
+- `F1545` · `FACT_REGISTER.md` — orphan Fact
+- `F1546` · `FACT_REGISTER.md` — orphan Fact
+- `F1547` · `FACT_REGISTER.md` — orphan Fact
+- `F1548` · `FACT_REGISTER.md` — orphan Fact
+- `F1549` · `FACT_REGISTER.md` — orphan Fact
+- `F1550` · `FACT_REGISTER.md` — orphan Fact
+- `F1551` · `FACT_REGISTER.md` — orphan Fact
+- `F1552` · `FACT_REGISTER.md` — orphan Fact
+- `F1553` · `FACT_REGISTER.md` — orphan Fact
+- `F1554` · `FACT_REGISTER.md` — orphan Fact
+- `F1555` · `FACT_REGISTER.md` — orphan Fact
+- `F1556` · `FACT_REGISTER.md` — orphan Fact
+- `F1557` · `FACT_REGISTER.md` — orphan Fact
+- `F1558` · `FACT_REGISTER.md` — orphan Fact
+- `F1559` · `FACT_REGISTER.md` — orphan Fact
+- `F1560` · `FACT_REGISTER.md` — orphan Fact
+- `F1561` · `FACT_REGISTER.md` — orphan Fact
+- `F1562` · `FACT_REGISTER.md` — orphan Fact
+- `F1563` · `FACT_REGISTER.md` — orphan Fact
+- `F1564` · `FACT_REGISTER.md` — orphan Fact
+- `F1565` · `FACT_REGISTER.md` — orphan Fact
+- `F1566` · `FACT_REGISTER.md` — orphan Fact
+- `F1567` · `FACT_REGISTER.md` — orphan Fact
+- `F1568` · `FACT_REGISTER.md` — orphan Fact
+- `F1569` · `FACT_REGISTER.md` — orphan Fact
+- `F1570` · `FACT_REGISTER.md` — orphan Fact
+- `F1571` · `FACT_REGISTER.md` — orphan Fact
+- `F1572` · `FACT_REGISTER.md` — orphan Fact
+- `F1573` · `FACT_REGISTER.md` — orphan Fact
+- `F1574` · `FACT_REGISTER.md` — orphan Fact
+- `F1575` · `FACT_REGISTER.md` — orphan Fact
+- `F1576` · `FACT_REGISTER.md` — orphan Fact
+- `F1577` · `FACT_REGISTER.md` — orphan Fact
+- `F1578` · `FACT_REGISTER.md` — orphan Fact
+- `F1579` · `FACT_REGISTER.md` — orphan Fact
+- `F1580` · `FACT_REGISTER.md` — orphan Fact
+- `F1581` · `FACT_REGISTER.md` — orphan Fact
+- `F1582` · `FACT_REGISTER.md` — orphan Fact
+- `F1583` · `FACT_REGISTER.md` — orphan Fact
+- `F1584` · `FACT_REGISTER.md` — orphan Fact
+- `F1585` · `FACT_REGISTER.md` — orphan Fact
+- `F1586` · `FACT_REGISTER.md` — orphan Fact
+- `F1587` · `FACT_REGISTER.md` — orphan Fact
+- `F1588` · `FACT_REGISTER.md` — orphan Fact
+- `F1589` · `FACT_REGISTER.md` — orphan Fact
+- `F1590` · `FACT_REGISTER.md` — orphan Fact
+- `F1591` · `FACT_REGISTER.md` — orphan Fact
+- `F1592` · `FACT_REGISTER.md` — orphan Fact
+- `F1593` · `FACT_REGISTER.md` — orphan Fact
+- `F1594` · `FACT_REGISTER.md` — orphan Fact
+- `F1595` · `FACT_REGISTER.md` — orphan Fact
+- `F1596` · `FACT_REGISTER.md` — orphan Fact
+- `F1597` · `FACT_REGISTER.md` — orphan Fact
+- `F1598` · `FACT_REGISTER.md` — orphan Fact
+- `F1599` · `FACT_REGISTER.md` — orphan Fact
+- `F1600` · `FACT_REGISTER.md` — orphan Fact
+- `F1601` · `FACT_REGISTER.md` — orphan Fact
+- `F1602` · `FACT_REGISTER.md` — orphan Fact
+- `F1603` · `FACT_REGISTER.md` — orphan Fact
+- `F1604` · `FACT_REGISTER.md` — orphan Fact
+- `F1605` · `FACT_REGISTER.md` — orphan Fact
+- `F1606` · `FACT_REGISTER.md` — orphan Fact
+- `F1607` · `FACT_REGISTER.md` — orphan Fact
+- `F1608` · `FACT_REGISTER.md` — orphan Fact
+- `F1609` · `FACT_REGISTER.md` — orphan Fact
+- `F1610` · `FACT_REGISTER.md` — orphan Fact
+- `F1611` · `FACT_REGISTER.md` — orphan Fact
+- `F1612` · `FACT_REGISTER.md` — orphan Fact
+- `F1613` · `FACT_REGISTER.md` — orphan Fact
+- `F1614` · `FACT_REGISTER.md` — orphan Fact
+- `F1615` · `FACT_REGISTER.md` — orphan Fact
+- `F1616` · `FACT_REGISTER.md` — orphan Fact
+- `F1617` · `FACT_REGISTER.md` — orphan Fact
+- `F1618` · `FACT_REGISTER.md` — orphan Fact
+- `F1619` · `FACT_REGISTER.md` — orphan Fact
+- `F1620` · `FACT_REGISTER.md` — orphan Fact
+- `F1621` · `FACT_REGISTER.md` — orphan Fact
+- `F1622` · `FACT_REGISTER.md` — orphan Fact
+- `F1623` · `FACT_REGISTER.md` — orphan Fact
+- `F1624` · `FACT_REGISTER.md` — orphan Fact
+- `F1625` · `FACT_REGISTER.md` — orphan Fact
+- `F1626` · `FACT_REGISTER.md` — orphan Fact
+- `F1627` · `FACT_REGISTER.md` — orphan Fact
+- `F1628` · `FACT_REGISTER.md` — orphan Fact
+- `F1629` · `FACT_REGISTER.md` — orphan Fact
+- `F1630` · `FACT_REGISTER.md` — orphan Fact
+- `F1631` · `FACT_REGISTER.md` — orphan Fact
+- `F1632` · `FACT_REGISTER.md` — orphan Fact
+- `F1633` · `FACT_REGISTER.md` — orphan Fact
+- `F1634` · `FACT_REGISTER.md` — orphan Fact
+- `F1635` · `FACT_REGISTER.md` — orphan Fact
+- `F1636` · `FACT_REGISTER.md` — orphan Fact
+- `F1637` · `FACT_REGISTER.md` — orphan Fact
+- `F1638` · `FACT_REGISTER.md` — orphan Fact
+- `F1639` · `FACT_REGISTER.md` — orphan Fact
+- `F1640` · `FACT_REGISTER.md` — orphan Fact
+- `F1641` · `FACT_REGISTER.md` — orphan Fact
+- `F1642` · `FACT_REGISTER.md` — orphan Fact
+- `F1643` · `FACT_REGISTER.md` — orphan Fact
+- `F1644` · `FACT_REGISTER.md` — orphan Fact
+- `F1645` · `FACT_REGISTER.md` — orphan Fact
+- `F1646` · `FACT_REGISTER.md` — orphan Fact
+- `F1647` · `FACT_REGISTER.md` — orphan Fact
+- `F1648` · `FACT_REGISTER.md` — orphan Fact
+- `F1649` · `FACT_REGISTER.md` — orphan Fact
+- `F1650` · `FACT_REGISTER.md` — orphan Fact
+- `F1651` · `FACT_REGISTER.md` — orphan Fact
+- `F1652` · `FACT_REGISTER.md` — orphan Fact
+- `F1653` · `FACT_REGISTER.md` — orphan Fact
+- `F1654` · `FACT_REGISTER.md` — orphan Fact
+- `F1655` · `FACT_REGISTER.md` — orphan Fact
+- `F1656` · `FACT_REGISTER.md` — orphan Fact
+- `F1657` · `FACT_REGISTER.md` — orphan Fact
+- `F1658` · `FACT_REGISTER.md` — orphan Fact
+- `F1659` · `FACT_REGISTER.md` — orphan Fact
+- `F1660` · `FACT_REGISTER.md` — orphan Fact
+- `F1661` · `FACT_REGISTER.md` — orphan Fact
+- `F1662` · `FACT_REGISTER.md` — orphan Fact
+- `F1663` · `FACT_REGISTER.md` — orphan Fact
+- `F1664` · `FACT_REGISTER.md` — orphan Fact
+- `F1665` · `FACT_REGISTER.md` — orphan Fact
+- `F1666` · `FACT_REGISTER.md` — orphan Fact
+- `F1667` · `FACT_REGISTER.md` — orphan Fact
+- `F1668` · `FACT_REGISTER.md` — orphan Fact
+- `F1669` · `FACT_REGISTER.md` — orphan Fact
+- `F1670` · `FACT_REGISTER.md` — orphan Fact
+- `F1671` · `FACT_REGISTER.md` — orphan Fact
+- `F1672` · `FACT_REGISTER.md` — orphan Fact
+- `F1673` · `FACT_REGISTER.md` — orphan Fact
+- `F1674` · `FACT_REGISTER.md` — orphan Fact
+- `F1675` · `FACT_REGISTER.md` — orphan Fact
+- `F1676` · `FACT_REGISTER.md` — orphan Fact
+- `F1677` · `FACT_REGISTER.md` — orphan Fact
+- `F1678` · `FACT_REGISTER.md` — orphan Fact
+- `F1679` · `FACT_REGISTER.md` — orphan Fact
+- `F1680` · `FACT_REGISTER.md` — orphan Fact
+- `F1681` · `FACT_REGISTER.md` — orphan Fact
+- `F1682` · `FACT_REGISTER.md` — orphan Fact
+- `F1683` · `FACT_REGISTER.md` — orphan Fact
+- `F1684` · `FACT_REGISTER.md` — orphan Fact
+- `F1685` · `FACT_REGISTER.md` — orphan Fact
+- `F1686` · `FACT_REGISTER.md` — orphan Fact
+- `F1687` · `FACT_REGISTER.md` — orphan Fact
+- `F1688` · `FACT_REGISTER.md` — orphan Fact
+- `F1689` · `FACT_REGISTER.md` — orphan Fact
+- `F1690` · `FACT_REGISTER.md` — orphan Fact
+- `F1691` · `FACT_REGISTER.md` — orphan Fact
+- `F1692` · `FACT_REGISTER.md` — orphan Fact
+- `F1693` · `FACT_REGISTER.md` — orphan Fact
+- `F1694` · `FACT_REGISTER.md` — orphan Fact
+- `F1695` · `FACT_REGISTER.md` — orphan Fact
+- `F1696` · `FACT_REGISTER.md` — orphan Fact
+- `F1697` · `FACT_REGISTER.md` — orphan Fact
+- `F1698` · `FACT_REGISTER.md` — orphan Fact
+- `F1699` · `FACT_REGISTER.md` — orphan Fact
+- `F1700` · `FACT_REGISTER.md` — orphan Fact
+- `F1701` · `FACT_REGISTER.md` — orphan Fact
+- `F1702` · `FACT_REGISTER.md` — orphan Fact
+- `F1703` · `FACT_REGISTER.md` — orphan Fact
+- `F1704` · `FACT_REGISTER.md` — orphan Fact
+- `F1705` · `FACT_REGISTER.md` — orphan Fact
+- `F1706` · `FACT_REGISTER.md` — orphan Fact
+- `F1707` · `FACT_REGISTER.md` — orphan Fact
+- `F1708` · `FACT_REGISTER.md` — orphan Fact
+- `F1709` · `FACT_REGISTER.md` — orphan Fact
+- `F1710` · `FACT_REGISTER.md` — orphan Fact
+- `F1711` · `FACT_REGISTER.md` — orphan Fact
+- `F1712` · `FACT_REGISTER.md` — orphan Fact
+- `F1713` · `FACT_REGISTER.md` — orphan Fact
+- `F1714` · `FACT_REGISTER.md` — orphan Fact
+- `F1715` · `FACT_REGISTER.md` — orphan Fact
+- `F1716` · `FACT_REGISTER.md` — orphan Fact
+- `F1717` · `FACT_REGISTER.md` — orphan Fact
+- `F1718` · `FACT_REGISTER.md` — orphan Fact
+- `F1719` · `FACT_REGISTER.md` — orphan Fact
+- `F1721` · `FACT_REGISTER.md` — orphan Fact
+- `F1722` · `FACT_REGISTER.md` — orphan Fact
+- `F1723` · `FACT_REGISTER.md` — orphan Fact
+- `F1724` · `FACT_REGISTER.md` — orphan Fact
+- `F1725` · `FACT_REGISTER.md` — orphan Fact
+- `F1726` · `FACT_REGISTER.md` — orphan Fact
+- `F1727` · `FACT_REGISTER.md` — orphan Fact
+- `F1728` · `FACT_REGISTER.md` — orphan Fact
+- `F1729` · `FACT_REGISTER.md` — orphan Fact
+- `F1730` · `FACT_REGISTER.md` — orphan Fact
+- `F1731` · `FACT_REGISTER.md` — orphan Fact
+- `F1732` · `FACT_REGISTER.md` — orphan Fact
+- `F1733` · `FACT_REGISTER.md` — orphan Fact
+- `F1734` · `FACT_REGISTER.md` — orphan Fact
+- `F1735` · `FACT_REGISTER.md` — orphan Fact
+- `F1736` · `FACT_REGISTER.md` — orphan Fact
+- `F1737` · `FACT_REGISTER.md` — orphan Fact
+- `F1738` · `FACT_REGISTER.md` — orphan Fact
+- `F1739` · `FACT_REGISTER.md` — orphan Fact
+- `F1746` · `FACT_REGISTER.md` — orphan Fact
+- `F1747` · `FACT_REGISTER.md` — orphan Fact
+- `F1748` · `FACT_REGISTER.md` — orphan Fact
+- `F1749` · `FACT_REGISTER.md` — orphan Fact
+- `F1750` · `FACT_REGISTER.md` — orphan Fact
+- `F1751` · `FACT_REGISTER.md` — orphan Fact
+- `F1752` · `FACT_REGISTER.md` — orphan Fact
+- `F1753` · `FACT_REGISTER.md` — orphan Fact
+- `F1754` · `FACT_REGISTER.md` — orphan Fact
+- `F1755` · `FACT_REGISTER.md` — orphan Fact
+- `F1756` · `FACT_REGISTER.md` — orphan Fact
+- `F1757` · `FACT_REGISTER.md` — orphan Fact
+- `F1758` · `FACT_REGISTER.md` — orphan Fact
+- `F1759` · `FACT_REGISTER.md` — orphan Fact
+- `F1760` · `FACT_REGISTER.md` — orphan Fact
+- `F1761` · `FACT_REGISTER.md` — orphan Fact
+- `F1762` · `FACT_REGISTER.md` — orphan Fact
+- `F1763` · `FACT_REGISTER.md` — orphan Fact
+- `F1764` · `FACT_REGISTER.md` — orphan Fact
+- `F1765` · `FACT_REGISTER.md` — orphan Fact
+- `F1766` · `FACT_REGISTER.md` — orphan Fact
+- `F1767` · `FACT_REGISTER.md` — orphan Fact
+- `F1768` · `FACT_REGISTER.md` — orphan Fact
+- `F1769` · `FACT_REGISTER.md` — orphan Fact
+- `F1770` · `FACT_REGISTER.md` — orphan Fact
+- `F1771` · `FACT_REGISTER.md` — orphan Fact
+- `F1772` · `FACT_REGISTER.md` — orphan Fact
+- `F1773` · `FACT_REGISTER.md` — orphan Fact
+- `F1774` · `FACT_REGISTER.md` — orphan Fact
+- `F1775` · `FACT_REGISTER.md` — orphan Fact
+- `F1776` · `FACT_REGISTER.md` — orphan Fact
+- `F1777` · `FACT_REGISTER.md` — orphan Fact
+- `F1778` · `FACT_REGISTER.md` — orphan Fact
+- `F1779` · `FACT_REGISTER.md` — orphan Fact
+- `F1780` · `FACT_REGISTER.md` — orphan Fact
+- `F1781` · `FACT_REGISTER.md` — orphan Fact
+- `F1782` · `FACT_REGISTER.md` — orphan Fact
+- `F1783` · `FACT_REGISTER.md` — orphan Fact
+- `F1784` · `FACT_REGISTER.md` — orphan Fact
+- `F1785` · `FACT_REGISTER.md` — orphan Fact
+- `F1786` · `FACT_REGISTER.md` — orphan Fact
+- `F1787` · `FACT_REGISTER.md` — orphan Fact
+- `F1788` · `FACT_REGISTER.md` — orphan Fact
+- `F1789` · `FACT_REGISTER.md` — orphan Fact
+- `F1790` · `FACT_REGISTER.md` — orphan Fact
+- `F1791` · `FACT_REGISTER.md` — orphan Fact
+- `F1792` · `FACT_REGISTER.md` — orphan Fact
+- `F1793` · `FACT_REGISTER.md` — orphan Fact
+- `F1794` · `FACT_REGISTER.md` — orphan Fact
+- `F1795` · `FACT_REGISTER.md` — orphan Fact
+- `F1796` · `FACT_REGISTER.md` — orphan Fact
+- `F1797` · `FACT_REGISTER.md` — orphan Fact
+- `F1798` · `FACT_REGISTER.md` — orphan Fact
+- `F1799` · `FACT_REGISTER.md` — orphan Fact
+- `F1800` · `FACT_REGISTER.md` — orphan Fact
+- `F1801` · `FACT_REGISTER.md` — orphan Fact
+- `F1802` · `FACT_REGISTER.md` — orphan Fact
+- `F1803` · `FACT_REGISTER.md` — orphan Fact
+- `F1804` · `FACT_REGISTER.md` — orphan Fact
+- `F1805` · `FACT_REGISTER.md` — orphan Fact
+- `F1806` · `FACT_REGISTER.md` — orphan Fact
+- `F1807` · `FACT_REGISTER.md` — orphan Fact
+- `F1808` · `FACT_REGISTER.md` — orphan Fact
+- `F1809` · `FACT_REGISTER.md` — orphan Fact
+- `F1810` · `FACT_REGISTER.md` — orphan Fact
+- `F1811` · `FACT_REGISTER.md` — orphan Fact
+- `F1812` · `FACT_REGISTER.md` — orphan Fact
+- `F1813` · `FACT_REGISTER.md` — orphan Fact
+- `F1814` · `FACT_REGISTER.md` — orphan Fact
+- `F1817` · `FACT_REGISTER.md` — orphan Fact
+- `F1818` · `FACT_REGISTER.md` — orphan Fact
+- `F1819` · `FACT_REGISTER.md` — orphan Fact
+- `F1823` · `FACT_REGISTER.md` — orphan Fact
+- `F1824` · `FACT_REGISTER.md` — orphan Fact
+- `F1825` · `FACT_REGISTER.md` — orphan Fact
+- `F1826` · `FACT_REGISTER.md` — orphan Fact
+- `F1827` · `FACT_REGISTER.md` — orphan Fact
+- `F1828` · `FACT_REGISTER.md` — orphan Fact
+- `F1829` · `FACT_REGISTER.md` — orphan Fact
+- `F1830` · `FACT_REGISTER.md` — orphan Fact
+- `F1831` · `FACT_REGISTER.md` — orphan Fact
+- `F1832` · `FACT_REGISTER.md` — orphan Fact
+- `F1833` · `FACT_REGISTER.md` — orphan Fact
+- `F1834` · `FACT_REGISTER.md` — orphan Fact
+- `F1835` · `FACT_REGISTER.md` — orphan Fact
+- `F1836` · `FACT_REGISTER.md` — orphan Fact
+- `F1837` · `FACT_REGISTER.md` — orphan Fact
+- `F1838` · `FACT_REGISTER.md` — orphan Fact
+- `F1839` · `FACT_REGISTER.md` — orphan Fact
+- `F1840` · `FACT_REGISTER.md` — orphan Fact
+- `F1841` · `FACT_REGISTER.md` — orphan Fact
+- `F1842` · `FACT_REGISTER.md` — orphan Fact
+- `F1843` · `FACT_REGISTER.md` — orphan Fact
+- `F1844` · `FACT_REGISTER.md` — orphan Fact
+- `F1845` · `FACT_REGISTER.md` — orphan Fact
+- `F1846` · `FACT_REGISTER.md` — orphan Fact
+- `F1847` · `FACT_REGISTER.md` — orphan Fact
+- `F1848` · `FACT_REGISTER.md` — orphan Fact
+- `F1849` · `FACT_REGISTER.md` — orphan Fact
+- `F1850` · `FACT_REGISTER.md` — orphan Fact
+- `F1851` · `FACT_REGISTER.md` — orphan Fact
+- `F1852` · `FACT_REGISTER.md` — orphan Fact
+- `F1853` · `FACT_REGISTER.md` — orphan Fact
+- `F1854` · `FACT_REGISTER.md` — orphan Fact
+- `F1855` · `FACT_REGISTER.md` — orphan Fact
+- `F1856` · `FACT_REGISTER.md` — orphan Fact
+- `F1857` · `FACT_REGISTER.md` — orphan Fact
+- `F1858` · `FACT_REGISTER.md` — orphan Fact
+- `F1859` · `FACT_REGISTER.md` — orphan Fact
+- `F1860` · `FACT_REGISTER.md` — orphan Fact
+- `F1861` · `FACT_REGISTER.md` — orphan Fact
+- `F1862` · `FACT_REGISTER.md` — orphan Fact
+- `F1863` · `FACT_REGISTER.md` — orphan Fact
+- `F1864` · `FACT_REGISTER.md` — orphan Fact
+- `F1865` · `FACT_REGISTER.md` — orphan Fact
+- `F1866` · `FACT_REGISTER.md` — orphan Fact
+- `F1867` · `FACT_REGISTER.md` — orphan Fact
+- `F1868` · `FACT_REGISTER.md` — orphan Fact
+- `F1869` · `FACT_REGISTER.md` — orphan Fact
+- `F1870` · `FACT_REGISTER.md` — orphan Fact
+- `F1871` · `FACT_REGISTER.md` — orphan Fact
+- `F1874` · `FACT_REGISTER.md` — orphan Fact
+- `F1877` · `FACT_REGISTER.md` — orphan Fact
+- `F1878` · `FACT_REGISTER.md` — orphan Fact
+- `F1879` · `FACT_REGISTER.md` — orphan Fact
+- `F1880` · `FACT_REGISTER.md` — orphan Fact
+- `F1884` · `FACT_REGISTER.md` — orphan Fact
+- `F1885` · `FACT_REGISTER.md` — orphan Fact
+- `F1887` · `FACT_REGISTER.md` — orphan Fact
+- `F1888` · `FACT_REGISTER.md` — orphan Fact
+- `F1890` · `FACT_REGISTER.md` — orphan Fact
+- `ART18250804-20250804-0008` · `sources-consolidated-evidence-corpus.md` — duplicate substantive text also present in ART16250612-20250612-0008
+- `GDPR260127-20260127-0008` · `sources-consolidated-evidence-corpus.md` — duplicate substantive text also present in ART16260114-20260114-0008
+- `GDPR260127-20260127-0009` · `sources-consolidated-evidence-corpus.md` — duplicate substantive text also present in DPC260113-20260113-0009
+- `MCCOUN25-20250729-0009` · `sources-consolidated-evidence-corpus.md` — duplicate substantive text also present in ART16QPS250906-20250906-0009
+- `N18-20180424-0054` · `sources-consolidated-evidence-corpus.md` — duplicate substantive text also present in N18-20180424-0031
+- `N19-20190228-0267` · `sources-consolidated-evidence-corpus.md` — duplicate substantive text also present in DS17-GEN-1110
+- `N23-GEN-0123` · `sources-consolidated-evidence-corpus.md` — duplicate substantive text also present in N17-20170713-0030
+- `QPS250415-20250415-0008` · `sources-consolidated-evidence-corpus.md` — duplicate substantive text also present in ART16QPS250906-20250906-0009
+- `QPS250530-20250530-0004` · `sources-consolidated-evidence-corpus.md` — duplicate substantive text also present in QPS250415-20250415-0004
+- `QPS250613-20250613-0004` · `sources-consolidated-evidence-corpus.md` — duplicate substantive text also present in QPS250415-20250415-0004
+
+## Unresolved references
+
+- `F0001` — unresolved non-canonical evidence identifier GP17-GEN-0001
+- `F0002` — unresolved non-canonical evidence identifier GP17-20170410-0001
+- `F0003` — unresolved non-canonical evidence identifier GP17-20170410-0001
+- `F0004` — unresolved non-canonical evidence identifier GP17-20170410-0001
+- `F0005` — unresolved non-canonical evidence identifier GP17-20170410-0001
+- `F0006` — unresolved non-canonical evidence identifier GP17-20170410-0001
+- `F0007` — unresolved non-canonical evidence identifier GP17-20170410-0001
+- `F0008` — unresolved non-canonical evidence identifier GP17-20170601-0001
+- `F0009` — unresolved non-canonical evidence identifier GP17-20170601-0001
+- `F0010` — unresolved non-canonical evidence identifier GP17-20170601-0001
+- `F0011` — unresolved non-canonical evidence identifier GP17-20170601-0001
+- `F0012` — unresolved non-canonical evidence identifier GP17-20170601-0001
+- `F0013` — unresolved non-canonical evidence identifier GP17-20170601-0001
+- `F0014` — unresolved non-canonical evidence identifier GP17-20170601-0001
+- `F0015` — unresolved non-canonical evidence identifier GP17-20170608-0001
+- `F0016` — unresolved non-canonical evidence identifier GP17-20170608-0002
+- `F0017` — unresolved non-canonical evidence identifier GP17-20170608-0002
+- `F0018` — unresolved non-canonical evidence identifier GP17-20170608-0002
+- `F0019` — unresolved non-canonical evidence identifier GP17-20170608-0002
+- `F0020` — unresolved non-canonical evidence identifier GP17-20170612-0001
+- `F0021` — unresolved non-canonical evidence identifier GP17-20170612-0001
+- `F0022` — unresolved non-canonical evidence identifier GP17-20170612-0001
+- `F0023` — unresolved non-canonical evidence identifier GP17-20170612-0001
+- `F0024` — unresolved non-canonical evidence identifier GP17-20170612-0001
+- `F0025` — unresolved non-canonical evidence identifier GP17-20170612-0001
+- `F0026` — unresolved non-canonical evidence identifier GP17-20170612-0002
+- `F0027` — unresolved non-canonical evidence identifier GP17-20170612-0002
+- `F0028` — unresolved non-canonical evidence identifier GP17-20170620-0001
+- `F0029` — unresolved non-canonical evidence identifier GP17-20170620-0002
+- `F0030` — unresolved non-canonical evidence identifier GP17-20170620-0003
+- `F0031` — unresolved non-canonical evidence identifier GP17-20170623-0001
+- `F0032` — unresolved non-canonical evidence identifier GP17-20170623-0001
+- `F0033` — unresolved non-canonical evidence identifier GP17-20170623-0001
+- `F0034` — unresolved non-canonical evidence identifier GP17-20170623-0001
+- `F0035` — unresolved non-canonical evidence identifier GP17-20170623-0001
+- `F0036` — unresolved non-canonical evidence identifier GP17-20170623-0001
+- `F0037` — unresolved non-canonical evidence identifier GP17-20170629-0001
+- `F0038` — unresolved non-canonical evidence identifier GP17-20170629-0001
+- `F0039` — unresolved non-canonical evidence identifier GP17-20170629-0001
+- `F0040` — unresolved non-canonical evidence identifier GP17-20170629-0001
+- `F0041` — unresolved non-canonical evidence identifier GP17-20170629-0002
+- `F0042` — unresolved non-canonical evidence identifier GP17-20170706-0001
+- `F0043` — unresolved non-canonical evidence identifier GP17-20170711-0001
+- `F0044` — unresolved non-canonical evidence identifier GP17-20170713-0001
+- `F0045` — unresolved non-canonical evidence identifier GP17-20170714-0001
+- `F0046` — unresolved non-canonical evidence identifier GP17-20170714-0001
+- `F0047` — unresolved non-canonical evidence identifier GP17-20170717-0001
+- `F0048` — unresolved non-canonical evidence identifier GP17-20170717-0001
+- `F0049` — unresolved non-canonical evidence identifier GP17-20170717-0001
+- `F0050` — unresolved non-canonical evidence identifier GP17-20170717-0002
+- `F0051` — unresolved non-canonical evidence identifier GP17-20170718-0001
+- `F0052` — unresolved non-canonical evidence identifier GP17-20170718-0001
+- `F0053` — unresolved non-canonical evidence identifier GP17-20170718-0002
+- `F0054` — unresolved non-canonical evidence identifier GP17-20170803-0001
+- `F0055` — unresolved non-canonical evidence identifier GP17-20170803-0001
+- `F0056` — unresolved non-canonical evidence identifier GP17-20170803-0001
+- `F0057` — unresolved non-canonical evidence identifier GP17-20170810-0001
+- `F0058` — unresolved non-canonical evidence identifier GP17-20170810-0001
+- `F0059` — unresolved non-canonical evidence identifier GP17-20170810-0002
+- `F0060` — unresolved non-canonical evidence identifier GP17-20170817-0001
+- `F0061` — unresolved non-canonical evidence identifier GP17-20170901-0001
+- `F0062` — unresolved non-canonical evidence identifier GP17-20170907-0001
+- `F0063` — unresolved non-canonical evidence identifier GP17-20170907-0001
+- `F0064` — unresolved non-canonical evidence identifier GP17-20170914-0001
+- `F0065` — unresolved non-canonical evidence identifier GP17-20170914-0002
+- `F0066` — unresolved non-canonical evidence identifier GP17-20170925-0001
+- `F0067` — unresolved non-canonical evidence identifier GP17-20170925-0001
+- `F0068` — unresolved non-canonical evidence identifier GP17-20170925-0001
+- `F0069` — unresolved non-canonical evidence identifier GP17-20171005-0001
+- `F0070` — unresolved non-canonical evidence identifier GP17-20171012-0001
+- `F0071` — unresolved non-canonical evidence identifier GP17-20171018-0001
+- `F0072` — unresolved non-canonical evidence identifier GP17-20171026-0001
+- `F0073` — unresolved non-canonical evidence identifier GP17-20171102-0001
+- `F0074` — unresolved non-canonical evidence identifier GP17-20171106-0001
+- `F0075` — unresolved non-canonical evidence identifier GP17-20171106-0001
+- `F0076` — unresolved non-canonical evidence identifier GP17-20171106-0001
+- `F0077` — unresolved non-canonical evidence identifier GP17-20171110-0001
+- `F0078` — unresolved non-canonical evidence identifier GP17-20171116-0001
+- `F0079` — unresolved non-canonical evidence identifier GP17-20171123-0001
+- `F0080` — unresolved non-canonical evidence identifier GP17-20171130-0001
+- `F0081` — unresolved non-canonical evidence identifier GP17-20171130-0001
+- `F0082` — unresolved non-canonical evidence identifier GP17-20171130-0001
+
+## Duplicate checks
+
+Duplicate normalized IDs and canonical URLs are fatal. Duplicate substantive text is a warning for review.
+
+## Normalization mappings used
+
+- `tension_type_source_component_map`
+- `resolution_status_source_map`
+- `defence_position_source_map`
+- `proposition_strength`
+
+## Source grammar exceptions
+
+- Supporting propositions use prose bodies plus Facts/Tension fields
+- Argument stages use section headings rather than bold fields
+- Audit Fact references may use numeric ranges
+- Adjudication classes may be composite (for example B + C)
+
+## Provenance limitations
+
+- None
+
+## Final gate verdict
+
+PARSER GATE PASSED
