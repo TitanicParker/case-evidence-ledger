@@ -32,6 +32,22 @@ def _bounded_field_map(block: str):
 _impl.field_map = _bounded_field_map
 
 
+def _adjudication_fields(block: str):
+    labels = ["Defence answer", "Adjudication", "Why", "Disposition"]
+    found = {}
+    for i, label in enumerate(labels):
+        next_labels = labels[i + 1:]
+        if next_labels:
+            lookahead = "|".join(re.escape(x) for x in next_labels)
+            pattern = rf"(?ms)^\*\*{re.escape(label)}:\*\*\s*(.*?)(?=^\*\*(?:{lookahead}):\*\*)"
+        else:
+            pattern = rf"(?ms)^\*\*{re.escape(label)}:\*\*\s*(.*)$"
+        m = re.search(pattern, block)
+        if m:
+            found[label] = m.group(1).strip()
+    return found
+
+
 def _parse_adjudication():
     """Parse proposition adjudications using their actual multi-paragraph grammar."""
     path = "ADVERSE_CASE_ADJUDICATION.md"
@@ -39,10 +55,9 @@ def _parse_adjudication():
     rx = re.compile(r"(?m)^##\s+(P\d{3})\s+—\s+(.+)$")
     objects = []
     for m, block in _impl.split_heading_blocks(text, rx):
-        # The next proposition heading already bounds ordinary entries; the final
-        # P-entry is additionally bounded before the later D-series section.
         block = re.split(r"(?m)^#\s+\d+\.\s+", block, maxsplit=1)[0]
-        fields = _original_field_map(block)
+        block = re.split(r"(?m)^---\s*$", block, maxsplit=1)[0]
+        fields = _adjudication_fields(block)
         required = ["Defence answer", "Adjudication", "Why", "Disposition"]
         missing = [x for x in required if x not in fields]
         if missing:
@@ -69,8 +84,6 @@ def _parse_adjudication():
 
 _impl.parse_adjudication = _parse_adjudication
 
-# Re-export the implementation API so tests and documented imports continue to
-# use scripts/build_evidence_graph.py as the stable entrypoint.
 for _name in dir(_impl):
     if not _name.startswith("_"):
         globals()[_name] = getattr(_impl, _name)
