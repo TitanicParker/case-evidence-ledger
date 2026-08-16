@@ -1,5 +1,43 @@
-const { withBase } = require("./_lib/paths.js");
+const fs = require("node:fs");
+const path = require("node:path");
 const { esc, header, footer, head } = require("./_lib/public-shell.js");
+
+function inlineMarkdown(value) {
+  return esc(value).replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
+}
+
+function renderMarkdown(markdown) {
+  const lines = markdown.replace(/\r\n/g, "\n").split("\n");
+  const blocks = [];
+  let paragraph = [];
+
+  const flush = () => {
+    if (!paragraph.length) return;
+    blocks.push(`<p>${inlineMarkdown(paragraph.join(" ").trim())}</p>`);
+    paragraph = [];
+  };
+
+  for (const raw of lines) {
+    const line = raw.trim();
+    if (!line) {
+      flush();
+      continue;
+    }
+    if (line.startsWith("# ")) {
+      flush();
+      blocks.push(`<h1>${inlineMarkdown(line.slice(2))}</h1>`);
+      continue;
+    }
+    if (line.startsWith("## ")) {
+      flush();
+      blocks.push(`<h2>${inlineMarkdown(line.slice(3))}</h2>`);
+      continue;
+    }
+    paragraph.push(line);
+  }
+  flush();
+  return blocks.join("\n");
+}
 
 module.exports = class {
   data() {
@@ -7,35 +45,17 @@ module.exports = class {
   }
 
   render() {
-    const portals = [
-      {
-        number: "01",
-        title: "For Counsel",
-        path: "/counsel/",
-        purpose: "Argument architecture, documentary sequence, adverse case and adjudicated propositions.",
-        details: ["Case theory", "Proposition sequence", "Documentary support", "Adverse case", "Expert-gated boundaries"],
-        action: "Enter counsel view"
-      },
-      {
-        number: "02",
-        title: "For Expert Review",
-        path: "/expert/",
-        purpose: "Clinical chronology, disputed relationships and questions requiring specialist opinion.",
-        details: ["Source-led chronology", "Medication-state evidence", "Unresolved clinical relationships", "Expert questions", "Limits of inference"],
-        action: "Enter expert view"
-      },
-      {
-        number: "03",
-        title: "Governance & Regulatory",
-        path: "/governance/",
-        purpose: "Record integrity, administrative sequence, data governance and institutional decision-making.",
-        details: ["Accuracy and completeness", "Administrative sequence", "Complaints / governance", "Reliance", "Regulatory questions"],
-        action: "Enter governance view"
-      }
-    ];
+    const sourcePath = path.join(process.cwd(), "The Case in Plain Language.md");
+    const document = fs.readFileSync(sourcePath, "utf8");
+    const body = renderMarkdown(document);
+    const styles = `<style>
+      .plain-language-main{max-width:78rem;margin:0 auto;padding:4.5rem 2rem 7rem}.plain-language-document{max-width:50rem;margin:0 auto}.plain-language-document h1{margin:0 0 2.4rem;font:500 clamp(3.2rem,7vw,6.2rem)/.94 var(--serif);letter-spacing:-.045em}.plain-language-document h2{margin:4.2rem 0 1.2rem;padding-top:1.8rem;border-top:1px solid var(--line-strong);font:500 clamp(2rem,4vw,3rem)/1 var(--serif);letter-spacing:-.03em}.plain-language-document p{margin:0 0 1.25rem;font-size:1.05rem;line-height:1.72;color:var(--ink-soft)}.plain-language-document strong{color:var(--ink);font-weight:700}.plain-language-note{max-width:50rem;margin:0 auto 2.4rem;padding-bottom:1rem;border-bottom:1px solid var(--line);font:700 .68rem/1.4 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft)}@media(max-width:720px){.plain-language-main{padding:2.8rem 1.1rem 5rem}.plain-language-document h1{font-size:clamp(2.8rem,14vw,4.3rem)}.plain-language-document h2{margin-top:3.2rem}.plain-language-document p{font-size:1rem;line-height:1.68}}
+    </style>`;
+    const pageHead = head(
+      "The Case in Plain Language",
+      "A careful plain-language statement of the documentary case, its limits, the expert questions and the incremental harm theory."
+    ).replace("</head>", `${styles}</head>`);
 
-    const cards = portals.map(portal => `<a class="portal-card" href="${esc(withBase(portal.path))}"><span class="portal-number">${portal.number}</span><h2>${esc(portal.title)}</h2><p>${esc(portal.purpose)}</p><div class="portal-detail">${portal.details.map(detail => `<span>${esc(detail)}</span>`).join("")}</div><span class="portal-action">${esc(portal.action)}</span></a>`).join("");
-
-    return `<!doctype html><html lang="en">${head("A Controlled Documentary Record", "One controlled evidential foundation presented through three professional reader routes.")}<body class="route-home"><a class="skip-link" href="#content">Skip to content</a>${header("home")}<main id="content" class="home-main"><section class="home-hero"><div class="eyebrow">Case Evidence Ledger</div><h1>A Controlled Documentary Record</h1><div class="home-intro"><p class="strap">One evidential foundation, presented through three reader-specific routes.</p><p>The represented record is separated into source evidence, controlled facts, evidential tensions and propositions so that interpretation remains distinguishable from documentary fact and each proposition can be traced back to the record.</p></div></section><section class="portal-section" aria-label="Three professional routes into the record"><div class="portal-section-heading"><div class="eyebrow">Three professional routes</div><p>Different readings. One controlled evidence base.</p></div><div class="portal-grid">${cards}</div></section><section class="foundation-band" aria-labelledby="foundation-heading"><div><div class="eyebrow">Common infrastructure</div><h2 id="foundation-heading">One Evidential Foundation</h2></div><div class="foundation-copy"><p>All three routes are generated from the same controlled evidence graph. Reader-specific views do not create separate versions of the evidence.</p><div class="foundation-links"><a href="${esc(withBase('/evidence/'))}">Browse Evidence Foundation</a><a href="${esc(withBase('/search/'))}">Search the Evidence</a><a href="${esc(withBase('/case-evidence-ledger_timeline.html'))}">View Timeline</a><a href="${esc(withBase('/method/'))}">Read Methodology</a></div></div></section></main>${footer()}</body></html>`;
+    return `<!doctype html><html lang="en">${pageHead}<body class="route-home"><a class="skip-link" href="#content">Skip to content</a>${header("home")}<main id="content" class="plain-language-main"><div class="plain-language-note">Plain-language orientation · source: repository root document</div><article class="plain-language-document">${body}</article></main>${footer()}</body></html>`;
   }
 };
