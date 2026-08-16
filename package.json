@@ -1,0 +1,14 @@
+{
+  "name": "case-evidence-ledger-foundation",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Canonical Evidence Foundation static-site build",
+  "scripts": {
+    "build": "eleventy",
+    "check": "python3 scripts/check_evidence_site.py"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "3.1.2",
+    "playwright": "1.55.0"
+  }
+}
