@@ -1,8 +1,8 @@
 {
   "generated": true,
-  "generated_at": "2026-08-16T16:10:59+01:00",
+  "generated_at": "2026-08-16T16:16:21+01:00",
   "parser_version": "1.0.0",
   "repository": "TitanicParker/case-evidence-ledger",
   "schema_version": "1.0.0",
-  "site_build_commit": "7dc697b3bffa610270092c481e6f50b861e7b194"
+  "site_build_commit": "119fd782cad33ebc8bee903de5b3dd641ca2a8bc"
 }
