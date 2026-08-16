@@ -25,7 +25,7 @@ function objectLabel(object) { return LABELS[object.object_type] || object.objec
 function notice() { return `<p class="generated-notice">Generated from the controlled repository evidence graph. This page is an interface view, not an independent evidential source.</p>`; }
 function header(current = "evidence") {
   const item = (key, label, path) => `<a${current === key ? ' aria-current="page"' : ""} href="${esc(withBase(path))}">${label}</a>`;
-  return `<header class="site-header"><a class="brand" href="${esc(withBase('/evidence/'))}"><span>Case Evidence Ledger</span><small>Controlled documentary system</small></a><nav aria-label="Primary">${item("evidence","Evidence","/evidence/")}${item("search","Search","/search/")}${item("timeline","Timeline","/case-evidence-ledger_timeline.html")}${item("method","Method","/method/")}<a href="https://github.com/TitanicParker/case-evidence-ledger">Repository</a></nav></header>`;
+  return `<header class="site-header public-header"><a class="brand" href="${esc(withBase('/'))}"><span>Case Evidence Ledger</span><small>Controlled documentary record</small></a><nav aria-label="Primary">${item("home","Home","/")}${item("counsel","Counsel","/counsel/")}${item("expert","Expert","/expert/")}${item("governance","Governance","/governance/")}${item("evidence","Evidence","/evidence/")}${item("search","Search","/search/")}</nav></header>`;
 }
 function provenance(object, version) {
   const prov = object?.provenance || {};
@@ -34,8 +34,8 @@ function provenance(object, version) {
 function shell(route, body, version, object = null) {
   const title = route.title || "Evidence Foundation";
   const klass = object ? ` object-${object.object_type}` : ` route-${route.kind}`;
-  const current = route.kind === "method" ? "method" : "evidence";
-  return `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><title>${esc(title)} · Case Evidence Ledger</title><meta name="description" content="Canonical Evidence Foundation for the Case Evidence Ledger"><link rel="stylesheet" href="${esc(withBase('/assets/styles.css'))}"></head><body class="${klass}"><a class="skip-link" href="#content">Skip to evidence</a>${header(current)}<main id="content">${body}</main><footer class="site-footer"><span>Case Evidence Ledger</span><span>Schema ${esc(version.schema_version || "1.0.0")}</span><span>Generated documentary interface</span></footer></body></html>`;
+  const current = route.kind === "landing" || route.kind === "collection" || object ? "evidence" : "";
+  return `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><title>${esc(title)} · Case Evidence Ledger</title><meta name="description" content="Canonical Evidence Foundation for the Case Evidence Ledger"><link rel="stylesheet" href="${esc(withBase('/assets/styles.css'))}"><link rel="stylesheet" href="${esc(withBase('/assets/public.css'))}"></head><body class="${klass}"><a class="skip-link" href="#content">Skip to evidence</a>${header(current)}<main id="content">${body}</main><footer class="site-footer"><span>Case Evidence Ledger</span><span><a href="${esc(withBase('/case-evidence-ledger_timeline.html'))}">Timeline</a> · <a href="${esc(withBase('/method/'))}">Methodology</a></span><span>Schema ${esc(version.schema_version || "1.0.0")}</span></footer></body></html>`;
 }
 function identity(object) { return `<div class="object-kicker"><span class="object-type">${esc(objectLabel(object))}</span><code class="object-id">${esc(object.id)}</code></div>${object.title ? `<h1>${esc(object.title)}</h1>` : `<h1>${esc(object.id)}</h1>`}`; }
 function refs(title, items, open = false) {

@@ -3,6 +3,7 @@ import fs from "node:fs/promises";
 
 const base = process.env.SITE_URL || "http://127.0.0.1:8080";
 const shots = [
+  ["home", "/"],
   ["foundation", "/evidence/"],
   ["P001", "/evidence/propositions/P001/"],
   ["P003", "/evidence/propositions/P003/"],
