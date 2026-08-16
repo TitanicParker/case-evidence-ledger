@@ -1,0 +1,148 @@
+name: Evidence Search gate
+
+on:
+  pull_request:
+    paths:
+      - 'site/**'
+      - 'scripts/check_evidence_site.py'
+      - 'scripts/check_evidence_search.py'
+      - 'scripts/check_search_browser.mjs'
+      - 'scripts/capture_search_screenshots.mjs'
+      - 'scripts/measure_search.mjs'
+      - 'site-data/generated/**'
+      - 'schema/**'
+      - 'scripts/build_evidence_graph.py'
+      - 'scripts/evidence_graph_impl.py'
+      - 'package.json'
+      - '.eleventy.js'
+      - '.github/workflows/evidence-search.yml'
+      - '.github/workflows/pages.yml'
+      - '*.md'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  search-gate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Run parser tests
+        run: python -m unittest discover -s tests -p 'test_*.py'
+
+      - name: Validate evidence graph
+        run: python scripts/build_evidence_graph.py --validate
+
+      - name: Build evidence graph
+        run: python scripts/build_evidence_graph.py --build
+
+      - name: Verify parser artifacts remain current
+        run: git diff --exit-code -- site-data/generated PARSER_VALIDATION_REPORT.md
+
+      - name: Install site dependencies
+        run: npm install --ignore-scripts --no-audit --no-fund
+
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+
+      - name: Build and index root-host mode
+        env:
+          SITE_BASE_PATH: /
+          SITE_OUTPUT_DIR: _site-root
+        run: |
+          npm run build
+          npm run search:index
+          python scripts/check_evidence_site.py
+          python scripts/check_evidence_search.py
+
+      - name: Browser-check root-host mode
+        shell: bash
+        env:
+          SITE_BASE_PATH: /
+          SITE_OUTPUT_DIR: _site-root
+          SITE_URL: http://127.0.0.1:8080
+        run: |
+          python -m http.server 8080 --directory _site-root >/tmp/root-site.log 2>&1 &
+          server_pid=$!
+          trap 'kill $server_pid || true' EXIT
+          for i in {1..30}; do if curl --fail --silent http://127.0.0.1:8080/search/ >/dev/null; then break; fi; sleep 1; done
+          set +e
+          node scripts/check_search_browser.mjs 2>&1 | tee /tmp/search-browser-root.log
+          browser_status=${PIPESTATUS[0]}
+          set -e
+          if [ "$browser_status" -ne 0 ]; then
+            while IFS= read -r line; do
+              printf '::error title=Browser-check root-host::%s\n' "$line"
+            done < /tmp/search-browser-root.log
+            exit "$browser_status"
+          fi
+
+      - name: Build and index project-Pages mode
+        env:
+          SITE_BASE_PATH: /case-evidence-ledger/
+          SITE_OUTPUT_DIR: _site-project
+        run: |
+          npm run build
+          npm run search:index
+          python scripts/check_evidence_site.py
+          python scripts/check_evidence_search.py
+
+      - name: Browser-check project-Pages mode
+        shell: bash
+        env:
+          SITE_BASE_PATH: /case-evidence-ledger/
+          SITE_URL: http://127.0.0.1:8081
+        run: |
+          mkdir -p _serve-project/case-evidence-ledger
+          cp -R _site-project/. _serve-project/case-evidence-ledger/
+          python -m http.server 8081 --directory _serve-project >/tmp/project-site.log 2>&1 &
+          server_pid=$!
+          trap 'kill $server_pid || true' EXIT
+          for i in {1..30}; do if curl --fail --silent http://127.0.0.1:8081/case-evidence-ledger/search/ >/dev/null; then break; fi; sleep 1; done
+          node scripts/check_search_browser.mjs
+          node scripts/measure_search.mjs
+          node scripts/capture_search_screenshots.mjs
+          du -sk _site-project/pagefind | awk '{print $1}' > pagefind-size-kb.txt
+          wc -c _site-project/assets/search.js > search-js-bytes.txt
+
+      - name: Confirm no substantive evidence files changed in Gate 4
+        shell: bash
+        run: |
+          git diff --name-only origin/${{ github.base_ref }}...HEAD > /tmp/gate4-files.txt
+          forbidden='^(sources-consolidated-evidence-corpus\.md|FACT_REGISTER\.md|EVIDENTIAL_TENSIONS\.md|PROPOSITION_REGISTER\.md|CASE_ARGUMENT_ARCHITECTURE\.md|DEFENCE_ADVERSE_CASE_AUDIT\.md|ADVERSE_CASE_ADJUDICATION\.md|case-evidence-ledger_timeline\.html)$'
+          if grep -E "$forbidden" /tmp/gate4-files.txt; then
+            echo 'Substantive evidence/timeline change detected.'
+            exit 1
+          fi
+
+      - name: Upload Search review bundle
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: evidence-search-review
+          path: |
+            screenshots-search/
+            search-metrics.json
+            pagefind-size-kb.txt
+            search-js-bytes.txt
+            _site-project/search/
+            _site-project/pagefind/
+            _site-project/assets/search.js
+            _site-project/assets/search.css
+            _site-project/404.html
+          if-no-files-found: error
