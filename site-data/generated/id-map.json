@@ -1,6 +1,6 @@
 {
   "generated": true,
-  "generated_at": "2026-08-16T20:17:21+01:00",
+  "generated_at": "2026-08-16T20:40:22+01:00",
   "id_map": {
     "ART15250707-20250707-0001": {
       "canonical_url": "/evidence/euids/ART15250707-20250707-0001/",
@@ -7514,63 +7514,63 @@
       "source_file": "sources-consolidated-evidence-corpus.md"
     },
     "EQ001": {
-      "canonical_url": null,
+      "canonical_url": "/evidence/expert-questions/EQ001/",
       "id_kind": "evidential",
       "object_type": "expert_question",
       "source_anchor": "EQ001",
       "source_file": "EXPERT_QUESTION_REGISTER.md"
     },
     "EQ002": {
-      "canonical_url": null,
+      "canonical_url": "/evidence/expert-questions/EQ002/",
       "id_kind": "evidential",
       "object_type": "expert_question",
       "source_anchor": "EQ002",
       "source_file": "EXPERT_QUESTION_REGISTER.md"
     },
     "EQ003": {
-      "canonical_url": null,
+      "canonical_url": "/evidence/expert-questions/EQ003/",
       "id_kind": "evidential",
       "object_type": "expert_question",
       "source_anchor": "EQ003",
       "source_file": "EXPERT_QUESTION_REGISTER.md"
     },
     "EQ004": {
-      "canonical_url": null,
+      "canonical_url": "/evidence/expert-questions/EQ004/",
       "id_kind": "evidential",
       "object_type": "expert_question",
       "source_anchor": "EQ004",
       "source_file": "EXPERT_QUESTION_REGISTER.md"
     },
     "EQ005": {
-      "canonical_url": null,
+      "canonical_url": "/evidence/expert-questions/EQ005/",
       "id_kind": "evidential",
       "object_type": "expert_question",
       "source_anchor": "EQ005",
       "source_file": "EXPERT_QUESTION_REGISTER.md"
     },
     "EQ006": {
-      "canonical_url": null,
+      "canonical_url": "/evidence/expert-questions/EQ006/",
       "id_kind": "evidential",
       "object_type": "expert_question",
       "source_anchor": "EQ006",
       "source_file": "EXPERT_QUESTION_REGISTER.md"
     },
     "EQ007": {
-      "canonical_url": null,
+      "canonical_url": "/evidence/expert-questions/EQ007/",
       "id_kind": "evidential",
       "object_type": "expert_question",
       "source_anchor": "EQ007",
       "source_file": "EXPERT_QUESTION_REGISTER.md"
     },
     "EQ008": {
-      "canonical_url": null,
+      "canonical_url": "/evidence/expert-questions/EQ008/",
       "id_kind": "evidential",
       "object_type": "expert_question",
       "source_anchor": "EQ008",
       "source_file": "EXPERT_QUESTION_REGISTER.md"
     },
     "EQ009": {
-      "canonical_url": null,
+      "canonical_url": "/evidence/expert-questions/EQ009/",
       "id_kind": "evidential",
       "object_type": "expert_question",
       "source_anchor": "EQ009",
@@ -34761,5 +34761,5 @@
   "parser_version": "1.0.0",
   "repository": "TitanicParker/case-evidence-ledger",
   "schema_version": "1.0.0",
-  "site_build_commit": "66a6ca0496cf71dee0591c2774fe81dc70a8130c"
+  "site_build_commit": "48dc79bdfeeff8e2c50703e55b6276d665536a9b"
 }
