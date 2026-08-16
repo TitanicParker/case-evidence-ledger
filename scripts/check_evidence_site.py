@@ -66,8 +66,8 @@ def main():
     for url in required:
         if not file_for(url).exists(): errors.append(f"missing site route {url}")
     home = file_for("/").read_text(encoding="utf-8") if file_for("/").exists() else ""
-    for phrase in ["For Counsel", "For Expert Review", "Governance &amp; Regulatory", "One Evidential Foundation"]:
-        if phrase not in home: errors.append(f"homepage hierarchy missing: {phrase}")
+    for phrase in ["The Case in Plain Language", "The central problem", "The negligence question", "The harm has to be incremental", "That is the argument."]:
+        if phrase not in home: errors.append(f"plain-language homepage missing: {phrase}")
     if not (OUT / "404.html").exists(): errors.append("missing object handling / 404.html")
     for oid in ["P001","P003","P024","F0162","T002","T022","S001"]:
         if oid not in by_id: errors.append(f"representative object absent from graph: {oid}")
