@@ -90,7 +90,7 @@ function renderExactMissing(query) {
   count.textContent = "Exact identifier not found.";
 }
 function renderZero(query, filtered) {
-  clearOutput();
+  results.replaceChildren();
   status.className = "search-status zero-state";
   status.innerHTML = `<h3>No matching controlled evidence found.</h3><p>${filtered ? "The current evidence-layer filters may exclude otherwise matching results." : "No indexed controlled evidence matched this query."}</p><p><button type="button" id="zero-clear" class="text-button">Clear filters</button> · <a href="${escapeHtml(withBase('/evidence/'))}">Evidence Foundation</a></p><p class="search-examples-inline">Try <button type="button" data-search-example="PRKN">PRKN</button>, <button type="button" data-search-example="Podiatry">Podiatry</button> or <button type="button" data-search-example="Procyclidine">Procyclidine</button>.</p>`;
   count.textContent = `No results for “${query}”.`;
