@@ -81,7 +81,16 @@ jobs:
           server_pid=$!
           trap 'kill $server_pid || true' EXIT
           for i in {1..30}; do if curl --fail --silent http://127.0.0.1:8080/search/ >/dev/null; then break; fi; sleep 1; done
-          node scripts/check_search_browser.mjs
+          set +e
+          node scripts/check_search_browser.mjs 2>&1 | tee /tmp/search-browser-root.log
+          browser_status=${PIPESTATUS[0]}
+          set -e
+          if [ "$browser_status" -ne 0 ]; then
+            while IFS= read -r line; do
+              printf '::error title=Browser-check root-host::%s\n' "$line"
+            done < /tmp/search-browser-root.log
+            exit "$browser_status"
+          fi
 
       - name: Build and index project-Pages mode
         env:
