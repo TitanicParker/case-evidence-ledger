@@ -2,10 +2,11 @@
 from __future__ import annotations
 import html
 import json
+import os
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-OUT = ROOT / "_site"
+OUT = ROOT / os.environ.get("SITE_OUTPUT_DIR", "_site")
 OBJECTS = ROOT / "site-data/generated/objects.json"
 NOTICE = "Generated from the controlled repository evidence graph. This page is an interface view, not an independent evidential source."
 
@@ -60,7 +61,7 @@ def main():
                 related = by_id.get(ref)
                 related_url = canonical(related)
                 if related_url and not file_for(related_url).exists(): errors.append(f"broken relationship {o['id']} -> {ref}")
-    required = ["/evidence/", "/evidence/facts/", "/evidence/tensions/", "/evidence/propositions/", "/evidence/euids/", "/method/"]
+    required = ["/evidence/", "/evidence/facts/", "/evidence/tensions/", "/evidence/propositions/", "/evidence/euids/", "/method/", "/search/"]
     for url in required:
         if not file_for(url).exists(): errors.append(f"missing foundation route {url}")
     if not (OUT / "404.html").exists(): errors.append("missing object handling / 404.html")
@@ -71,7 +72,7 @@ def main():
             if not url or not file_for(url).exists(): errors.append(f"representative page not rendered: {oid}")
     props_index = file_for("/evidence/propositions/").read_text(encoding="utf-8") if file_for("/evidence/propositions/").exists() else ""
     if 'id="C001"' not in props_index: errors.append("representative control rule C001 not rendered on propositions index")
-    print(f"Checked {len(urls)} canonical evidence pages and {len(required)} foundation routes.")
+    print(f"Checked {len(urls)} canonical evidence pages and {len(required)} foundation routes in {OUT.name}.")
     if errors:
         for error in errors: print(f"ERROR: {error}")
         return 1
