@@ -82,7 +82,7 @@ const types = await page.locator("#search-results .result-type").allTextContents
 assert(types.every(t => t.includes("PROPOSITION")), `filtered results leaked other layers: ${types.join(", ")}`);
 assert(new URL(page.url()).searchParams.getAll("type").includes("proposition"), "filter state is not shareable in URL");
 
-await query("definitely-no-controlled-evidence-zzqxy");
+await query("zzqxyvbnmqwertyuiopasdfgh");
 assert((await page.locator("#search-status").textContent()).includes("No matching controlled evidence found"), "zero-result state missing");
 
 await page.goto(path("/evidence/"), { waitUntil: "networkidle" });
