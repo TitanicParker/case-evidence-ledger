@@ -37,9 +37,12 @@ for (const [id, expected] of [
 ]) {
   await openSearch();
   await page.locator("#evidence-query").fill(` ${id.toLowerCase()} `);
-  await page.locator("#search-form").evaluate(form => form.requestSubmit());
-  await page.waitForLoadState("networkidle");
-  assert(new URL(page.url()).pathname.endsWith(expected), `exact Enter failed for ${id}: ${page.url()}`);
+  const expectedUrl = path(expected);
+  await Promise.all([
+    page.waitForURL(url => url.pathname.endsWith(expected), { waitUntil: "networkidle" }),
+    page.locator("#search-form").evaluate(form => form.requestSubmit()),
+  ]);
+  assert(page.url().startsWith(expectedUrl), `exact Enter failed for ${id}: ${page.url()}`);
 }
 
 await openSearch("C001");
