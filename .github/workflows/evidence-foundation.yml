@@ -1,0 +1,88 @@
+name: Evidence Foundation gate
+
+on:
+  pull_request:
+    paths:
+      - 'site/**'
+      - 'scripts/check_evidence_site.py'
+      - 'scripts/capture_site_screenshots.mjs'
+      - 'site-data/generated/**'
+      - 'schema/**'
+      - 'scripts/build_evidence_graph.py'
+      - 'scripts/evidence_graph_impl.py'
+      - 'package.json'
+      - '.eleventy.js'
+      - '.github/workflows/evidence-foundation.yml'
+      - '*.md'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  evidence-foundation-gate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Run parser tests
+        run: python -m unittest discover -s tests -p 'test_*.py'
+
+      - name: Validate evidence graph
+        run: python scripts/build_evidence_graph.py --validate
+
+      - name: Build evidence graph
+        run: python scripts/build_evidence_graph.py --build
+
+      - name: Verify parser artifacts remain current
+        shell: bash
+        run: git diff --exit-code -- site-data/generated PARSER_VALIDATION_REPORT.md
+
+      - name: Install site dependencies
+        run: npm install --ignore-scripts --no-audit --no-fund
+
+      - name: Build canonical Evidence Foundation
+        run: npm run build
+
+      - name: Check canonical routes and preserved evidence
+        run: npm run check
+
+      - name: Install Chromium for visual review
+        run: npx playwright install --with-deps chromium
+
+      - name: Capture representative responsive screenshots
+        shell: bash
+        run: |
+          python -m http.server 8080 --directory _site >/tmp/evidence-site.log 2>&1 &
+          server_pid=$!
+          trap 'kill $server_pid || true' EXIT
+          for i in {1..20}; do
+            if curl --fail --silent http://127.0.0.1:8080/evidence/ >/dev/null; then break; fi
+            sleep 1
+          done
+          node scripts/capture_site_screenshots.mjs
+
+      - name: Upload Evidence Foundation review bundle
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: evidence-foundation-review
+          path: |
+            screenshots/
+            _site/evidence/
+            _site/method/
+            _site/404.html
+          if-no-files-found: error
