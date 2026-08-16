@@ -12,6 +12,7 @@
 - `CASE_ARGUMENT_ARCHITECTURE.md`
 - `DEFENCE_ADVERSE_CASE_AUDIT.md`
 - `ADVERSE_CASE_ADJUDICATION.md`
+- `EXPERT_QUESTION_REGISTER.md`
 
 ## Object counts
 
@@ -19,6 +20,7 @@
 - `argument_stage`: 6
 - `control_rule`: 5
 - `defence_audit`: 25
+- `expert_question`: 9
 - `fact`: 1890
 - `proposition`: 25
 - `source_euid`: 2950
@@ -28,9 +30,9 @@
 ## Relationship counts
 
 - `fact_ids`: 446
-- `proposition_ids`: 81
+- `proposition_ids`: 129
 - `source_euids`: 4632
-- `tension_ids`: 101
+- `tension_ids`: 144
 
 ## Fatal errors
 

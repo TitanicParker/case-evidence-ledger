@@ -1,6 +1,6 @@
 {
   "generated": true,
-  "generated_at": "2026-08-16T16:16:21+01:00",
+  "generated_at": "2026-08-16T20:17:21+01:00",
   "parser_version": "1.0.0",
   "relationships": [
     {
@@ -917,6 +917,205 @@
         ],
         "tension_ids": [
           "T017"
+        ]
+      },
+      "reverse_relationships": {}
+    },
+    {
+      "generated_reverse_relationships": true,
+      "id": "EQ001",
+      "relationships": {
+        "fact_ids": [],
+        "proposition_ids": [
+          "P001",
+          "P002",
+          "P003"
+        ],
+        "tension_ids": [
+          "T001",
+          "T002",
+          "T004"
+        ]
+      },
+      "reverse_relationships": {}
+    },
+    {
+      "generated_reverse_relationships": true,
+      "id": "EQ002",
+      "relationships": {
+        "fact_ids": [],
+        "proposition_ids": [
+          "P003",
+          "P004",
+          "P005"
+        ],
+        "tension_ids": [
+          "T001",
+          "T002",
+          "T003",
+          "T004"
+        ]
+      },
+      "reverse_relationships": {}
+    },
+    {
+      "generated_reverse_relationships": true,
+      "id": "EQ003",
+      "relationships": {
+        "fact_ids": [],
+        "proposition_ids": [
+          "P009",
+          "P010",
+          "P011"
+        ],
+        "tension_ids": [
+          "T006",
+          "T007"
+        ]
+      },
+      "reverse_relationships": {}
+    },
+    {
+      "generated_reverse_relationships": true,
+      "id": "EQ004",
+      "relationships": {
+        "fact_ids": [],
+        "proposition_ids": [
+          "P016",
+          "P017",
+          "P023"
+        ],
+        "tension_ids": [
+          "T009",
+          "T010",
+          "T022"
+        ]
+      },
+      "reverse_relationships": {}
+    },
+    {
+      "generated_reverse_relationships": true,
+      "id": "EQ005",
+      "relationships": {
+        "fact_ids": [],
+        "proposition_ids": [
+          "P018",
+          "P019",
+          "P020",
+          "P021",
+          "P022",
+          "P023"
+        ],
+        "tension_ids": [
+          "T011",
+          "T012",
+          "T013",
+          "T014",
+          "T015",
+          "T016",
+          "T022"
+        ]
+      },
+      "reverse_relationships": {}
+    },
+    {
+      "generated_reverse_relationships": true,
+      "id": "EQ006",
+      "relationships": {
+        "fact_ids": [],
+        "proposition_ids": [
+          "P012",
+          "P014",
+          "P015",
+          "P025"
+        ],
+        "tension_ids": [
+          "T008",
+          "T017"
+        ]
+      },
+      "reverse_relationships": {}
+    },
+    {
+      "generated_reverse_relationships": true,
+      "id": "EQ007",
+      "relationships": {
+        "fact_ids": [],
+        "proposition_ids": [
+          "P023",
+          "P024",
+          "P025"
+        ],
+        "tension_ids": [
+          "T011",
+          "T014",
+          "T016",
+          "T017",
+          "T022"
+        ]
+      },
+      "reverse_relationships": {}
+    },
+    {
+      "generated_reverse_relationships": true,
+      "id": "EQ008",
+      "relationships": {
+        "fact_ids": [],
+        "proposition_ids": [
+          "P009",
+          "P010",
+          "P011",
+          "P012",
+          "P013",
+          "P014",
+          "P015",
+          "P016",
+          "P017",
+          "P018",
+          "P019",
+          "P020",
+          "P021",
+          "P022",
+          "P023",
+          "P024",
+          "P025"
+        ],
+        "tension_ids": [
+          "T006",
+          "T007",
+          "T008",
+          "T009",
+          "T010",
+          "T011",
+          "T012",
+          "T013",
+          "T014",
+          "T015",
+          "T016",
+          "T017",
+          "T022"
+        ]
+      },
+      "reverse_relationships": {}
+    },
+    {
+      "generated_reverse_relationships": true,
+      "id": "EQ009",
+      "relationships": {
+        "fact_ids": [],
+        "proposition_ids": [
+          "P006",
+          "P009",
+          "P012",
+          "P013",
+          "P014",
+          "P015"
+        ],
+        "tension_ids": [
+          "T004",
+          "T005",
+          "T006",
+          "T008"
         ]
       },
       "reverse_relationships": {}
@@ -24002,6 +24201,7 @@
       },
       "reverse_relationships": {
         "used_by_objects": [
+          "EQ001",
           "impl:adjudication:ADVERSE_CASE_ADJUDICATION.md#p001-integrated-neurological-entry-state",
           "impl:argument_stage:CASE_ARGUMENT_ARCHITECTURE.md#2-stage-one-what-entered-neurology",
           "impl:defence_audit:DEFENCE_ADVERSE_CASE_AUDIT.md#p001-integrated-neurological-entry-state"
@@ -24026,6 +24226,7 @@
       },
       "reverse_relationships": {
         "used_by_objects": [
+          "EQ001",
           "impl:adjudication:ADVERSE_CASE_ADJUDICATION.md#p002-structural-foot-pathology-and-neurological-abnormality-coexisted",
           "impl:argument_stage:CASE_ARGUMENT_ARCHITECTURE.md#2-stage-one-what-entered-neurology",
           "impl:defence_audit:DEFENCE_ADVERSE_CASE_AUDIT.md#p002-structural-foot-pathology-and-neurological-abnormality-coexisted"
@@ -24050,6 +24251,8 @@
       },
       "reverse_relationships": {
         "used_by_objects": [
+          "EQ001",
+          "EQ002",
           "impl:adjudication:ADVERSE_CASE_ADJUDICATION.md#p003-july-2017-left-the-foot-neurology-relationship-unresolved",
           "impl:argument_stage:CASE_ARGUMENT_ARCHITECTURE.md#2-stage-one-what-entered-neurology",
           "impl:defence_audit:DEFENCE_ADVERSE_CASE_AUDIT.md#p003-july-2017-left-the-foot-neurology-relationship-unresolved"
@@ -24073,6 +24276,7 @@
       },
       "reverse_relationships": {
         "used_by_objects": [
+          "EQ002",
           "impl:adjudication:ADVERSE_CASE_ADJUDICATION.md#p004-operational-allocation-preceded-documentary-resolution",
           "impl:argument_stage:CASE_ARGUMENT_ARCHITECTURE.md#3-stage-two-what-happened-to-the-unresolved-presentation",
           "impl:defence_audit:DEFENCE_ADVERSE_CASE_AUDIT.md#p004-operational-allocation-preceded-documentary-resolution"
@@ -24093,6 +24297,7 @@
       },
       "reverse_relationships": {
         "used_by_objects": [
+          "EQ002",
           "impl:adjudication:ADVERSE_CASE_ADJUDICATION.md#p005-podiatry-allocation-cannot-itself-prove-neurological-separateness",
           "impl:argument_stage:CASE_ARGUMENT_ARCHITECTURE.md#3-stage-two-what-happened-to-the-unresolved-presentation",
           "impl:defence_audit:DEFENCE_ADVERSE_CASE_AUDIT.md#p005-podiatry-allocation-cannot-itself-prove-neurological-separateness"
@@ -24118,6 +24323,7 @@
       },
       "reverse_relationships": {
         "used_by_objects": [
+          "EQ009",
           "impl:adjudication:ADVERSE_CASE_ADJUDICATION.md#p006-syndrome-certainty-and-etiological-certainty-were-different",
           "impl:argument_stage:CASE_ARGUMENT_ARCHITECTURE.md#3-stage-two-what-happened-to-the-unresolved-presentation",
           "impl:defence_audit:DEFENCE_ADVERSE_CASE_AUDIT.md#p006-syndrome-certainty-and-etiological-certainty-were-different"
@@ -24188,6 +24394,9 @@
       },
       "reverse_relationships": {
         "used_by_objects": [
+          "EQ003",
+          "EQ008",
+          "EQ009",
           "impl:adjudication:ADVERSE_CASE_ADJUDICATION.md#p009-dopaminergic-deferral-was-a-deliberate-management-strategy",
           "impl:argument_stage:CASE_ARGUMENT_ARCHITECTURE.md#4-stage-three-what-management-plan-became-durable",
           "impl:defence_audit:DEFENCE_ADVERSE_CASE_AUDIT.md#p009-dopaminergic-deferral-was-a-deliberate-management-strategy"
@@ -24212,6 +24421,8 @@
       },
       "reverse_relationships": {
         "used_by_objects": [
+          "EQ003",
+          "EQ008",
           "impl:adjudication:ADVERSE_CASE_ADJUDICATION.md#p010-the-plan-contemplated-benefit-future-necessity-and-possible-regret",
           "impl:argument_stage:CASE_ARGUMENT_ARCHITECTURE.md#4-stage-three-what-management-plan-became-durable",
           "impl:defence_audit:DEFENCE_ADVERSE_CASE_AUDIT.md#p010-the-plan-expressly-contemplated-benefit-future-necessity-and-possible-regret"
@@ -24237,6 +24448,8 @@
       },
       "reverse_relationships": {
         "used_by_objects": [
+          "EQ003",
+          "EQ008",
           "impl:adjudication:ADVERSE_CASE_ADJUDICATION.md#p011-no-explicit-reopening-threshold-is-represented",
           "impl:argument_stage:CASE_ARGUMENT_ARCHITECTURE.md#4-stage-three-what-management-plan-became-durable",
           "impl:defence_audit:DEFENCE_ADVERSE_CASE_AUDIT.md#p011-no-explicit-reopening-threshold-is-represented"
@@ -24262,6 +24475,9 @@
       },
       "reverse_relationships": {
         "used_by_objects": [
+          "EQ006",
+          "EQ008",
+          "EQ009",
           "impl:adjudication:ADVERSE_CASE_ADJUDICATION.md#p012-diagnostic-information-was-valued-partly-by-management-impact",
           "impl:argument_stage:CASE_ARGUMENT_ARCHITECTURE.md#4-stage-three-what-management-plan-became-durable",
           "impl:defence_audit:DEFENCE_ADVERSE_CASE_AUDIT.md#p012-diagnostic-information-was-valued-partly-by-management-impact"
@@ -24287,6 +24503,8 @@
       },
       "reverse_relationships": {
         "used_by_objects": [
+          "EQ008",
+          "EQ009",
           "impl:adjudication:ADVERSE_CASE_ADJUDICATION.md#p013-epistemic-limitation-coexisted-with-durable-operative-authority",
           "impl:argument_stage:CASE_ARGUMENT_ARCHITECTURE.md#3-stage-two-what-happened-to-the-unresolved-presentation",
           "impl:defence_audit:DEFENCE_ADVERSE_CASE_AUDIT.md#p013-epistemic-limitation-coexisted-with-durable-operative-authority"
@@ -24310,6 +24528,9 @@
       },
       "reverse_relationships": {
         "used_by_objects": [
+          "EQ006",
+          "EQ008",
+          "EQ009",
           "impl:adjudication:ADVERSE_CASE_ADJUDICATION.md#p014-prof-healy-independently-strengthened-the-park2-prkn-branch",
           "impl:argument_stage:CASE_ARGUMENT_ARCHITECTURE.md#4-stage-three-what-management-plan-became-durable",
           "impl:argument_stage:CASE_ARGUMENT_ARCHITECTURE.md#7-stage-six-what-did-later-genetics-do-to-the-historical-record",
@@ -24333,6 +24554,9 @@
       },
       "reverse_relationships": {
         "used_by_objects": [
+          "EQ006",
+          "EQ008",
+          "EQ009",
           "impl:adjudication:ADVERSE_CASE_ADJUDICATION.md#p015-park2-prkn-remained-a-specific-live-hypothesis-in-2018",
           "impl:argument_stage:CASE_ARGUMENT_ARCHITECTURE.md#4-stage-three-what-management-plan-became-durable",
           "impl:argument_stage:CASE_ARGUMENT_ARCHITECTURE.md#7-stage-six-what-did-later-genetics-do-to-the-historical-record",
@@ -24358,6 +24582,8 @@
       },
       "reverse_relationships": {
         "used_by_objects": [
+          "EQ004",
+          "EQ008",
           "impl:adjudication:ADVERSE_CASE_ADJUDICATION.md#p016-procyclidine-was-clinically-material-to-the-recorded-motor-state",
           "impl:argument_stage:CASE_ARGUMENT_ARCHITECTURE.md#5-stage-four-what-later-evidence-bore-on-the-original-unresolved-relationship",
           "impl:defence_audit:DEFENCE_ADVERSE_CASE_AUDIT.md#p016-procyclidine-was-clinically-material-to-the-recorded-motor-state"
@@ -24380,6 +24606,8 @@
       },
       "reverse_relationships": {
         "used_by_objects": [
+          "EQ004",
+          "EQ008",
           "impl:adjudication:ADVERSE_CASE_ADJUDICATION.md#p017-procyclidine-withdrawal-generated-lower-limb-foot-specific-information",
           "impl:argument_stage:CASE_ARGUMENT_ARCHITECTURE.md#5-stage-four-what-later-evidence-bore-on-the-original-unresolved-relationship",
           "impl:defence_audit:DEFENCE_ADVERSE_CASE_AUDIT.md#p017-procyclidine-withdrawal-generated-lower-limb-foot-specific-information"
@@ -24402,6 +24630,8 @@
       },
       "reverse_relationships": {
         "used_by_objects": [
+          "EQ005",
+          "EQ008",
           "impl:adjudication:ADVERSE_CASE_ADJUDICATION.md#p018-a-later-foot-drop-like-phenomenon-was-expressly-classified-as-parkinsonian",
           "impl:argument_stage:CASE_ARGUMENT_ARCHITECTURE.md#5-stage-four-what-later-evidence-bore-on-the-original-unresolved-relationship",
           "impl:defence_audit:DEFENCE_ADVERSE_CASE_AUDIT.md#p018-2020-foot-drop-like-phenomenon-was-classified-as-parkinsonian"
@@ -24429,6 +24659,8 @@
       },
       "reverse_relationships": {
         "used_by_objects": [
+          "EQ005",
+          "EQ008",
           "impl:adjudication:ADVERSE_CASE_ADJUDICATION.md#p019-2021-levodopa-transition-was-tied-to-deterioration-and-later-dystonia-gait-reasoning",
           "impl:argument_stage:CASE_ARGUMENT_ARCHITECTURE.md#5-stage-four-what-later-evidence-bore-on-the-original-unresolved-relationship",
           "impl:defence_audit:DEFENCE_ADVERSE_CASE_AUDIT.md#p019-2021-levodopa-transition-was-tied-to-deterioration-and-later-dystonia-gait-reasoning"
@@ -24451,6 +24683,8 @@
       },
       "reverse_relationships": {
         "used_by_objects": [
+          "EQ005",
+          "EQ008",
           "impl:adjudication:ADVERSE_CASE_ADJUDICATION.md#p020-2023-clinicians-assigned-off-state-significance-to-leg-pain-and-shuffling",
           "impl:argument_stage:CASE_ARGUMENT_ARCHITECTURE.md#5-stage-four-what-later-evidence-bore-on-the-original-unresolved-relationship",
           "impl:defence_audit:DEFENCE_ADVERSE_CASE_AUDIT.md#p020-2023-clinicians-assigned-off-state-significance-to-leg-pain-and-shuffling"
@@ -24474,6 +24708,8 @@
       },
       "reverse_relationships": {
         "used_by_objects": [
+          "EQ005",
+          "EQ008",
           "impl:adjudication:ADVERSE_CASE_ADJUDICATION.md#p021-2023-morning-stalevo-change-was-response-generating",
           "impl:argument_stage:CASE_ARGUMENT_ARCHITECTURE.md#5-stage-four-what-later-evidence-bore-on-the-original-unresolved-relationship",
           "impl:defence_audit:DEFENCE_ADVERSE_CASE_AUDIT.md#p021-2023-morning-stalevo-change-was-response-generating"
@@ -24499,6 +24735,8 @@
       },
       "reverse_relationships": {
         "used_by_objects": [
+          "EQ005",
+          "EQ008",
           "impl:adjudication:ADVERSE_CASE_ADJUDICATION.md#p022-by-2025-dopaminergic-treatment-was-being-used-against-the-morning-pain-state",
           "impl:argument_stage:CASE_ARGUMENT_ARCHITECTURE.md#5-stage-four-what-later-evidence-bore-on-the-original-unresolved-relationship",
           "impl:defence_audit:DEFENCE_ADVERSE_CASE_AUDIT.md#p022-by-2025-dopaminergic-treatment-was-used-against-morning-pain"
@@ -24528,6 +24766,10 @@
       },
       "reverse_relationships": {
         "used_by_objects": [
+          "EQ004",
+          "EQ005",
+          "EQ007",
+          "EQ008",
           "impl:adjudication:ADVERSE_CASE_ADJUDICATION.md#p023-cumulative-treatment-state-evidence-bears-on-the-original-unresolved-relationship",
           "impl:argument_stage:CASE_ARGUMENT_ARCHITECTURE.md#5-stage-four-what-later-evidence-bore-on-the-original-unresolved-relationship",
           "impl:argument_stage:CASE_ARGUMENT_ARCHITECTURE.md#6-stage-five-what-happened-to-the-original-architecture-when-contrary-or-qualifying-evidence-accumulated",
@@ -24559,6 +24801,8 @@
       },
       "reverse_relationships": {
         "used_by_objects": [
+          "EQ007",
+          "EQ008",
           "impl:adjudication:ADVERSE_CASE_ADJUDICATION.md#p024-local-updating-is-documented-more-clearly-than-global-reconstruction",
           "impl:argument_stage:CASE_ARGUMENT_ARCHITECTURE.md#6-stage-five-what-happened-to-the-original-architecture-when-contrary-or-qualifying-evidence-accumulated",
           "impl:defence_audit:DEFENCE_ADVERSE_CASE_AUDIT.md#p024-local-updating-is-documented-more-clearly-than-global-reconstruction"
@@ -24582,6 +24826,9 @@
       },
       "reverse_relationships": {
         "used_by_objects": [
+          "EQ006",
+          "EQ007",
+          "EQ008",
           "impl:adjudication:ADVERSE_CASE_ADJUDICATION.md#p025-later-etiological-record-does-not-reproduce-a-simple-idiopathic-only-history",
           "impl:argument_stage:CASE_ARGUMENT_ARCHITECTURE.md#7-stage-six-what-did-later-genetics-do-to-the-historical-record",
           "impl:defence_audit:DEFENCE_ADVERSE_CASE_AUDIT.md#p025-later-etiological-record-does-not-reproduce-a-simple-idiopathic-only-history"
@@ -52979,6 +53226,8 @@
       },
       "reverse_relationships": {
         "used_by_objects": [
+          "EQ001",
+          "EQ002",
           "P001",
           "P004",
           "impl:defence_audit:DEFENCE_ADVERSE_CASE_AUDIT.md#p001-integrated-neurological-entry-state",
@@ -53002,6 +53251,8 @@
       },
       "reverse_relationships": {
         "used_by_objects": [
+          "EQ001",
+          "EQ002",
           "P003",
           "P004",
           "impl:defence_audit:DEFENCE_ADVERSE_CASE_AUDIT.md#p003-july-2017-left-the-foot-neurology-relationship-unresolved",
@@ -53025,6 +53276,7 @@
       },
       "reverse_relationships": {
         "used_by_objects": [
+          "EQ002",
           "P004",
           "P005",
           "impl:defence_audit:DEFENCE_ADVERSE_CASE_AUDIT.md#p004-operational-allocation-preceded-documentary-resolution",
@@ -53049,6 +53301,9 @@
       },
       "reverse_relationships": {
         "used_by_objects": [
+          "EQ001",
+          "EQ002",
+          "EQ009",
           "P002",
           "P003",
           "impl:defence_audit:DEFENCE_ADVERSE_CASE_AUDIT.md#p001-integrated-neurological-entry-state",
@@ -53076,6 +53331,7 @@
       },
       "reverse_relationships": {
         "used_by_objects": [
+          "EQ009",
           "P006",
           "P007",
           "P013",
@@ -53106,6 +53362,9 @@
       },
       "reverse_relationships": {
         "used_by_objects": [
+          "EQ003",
+          "EQ008",
+          "EQ009",
           "P009",
           "P010",
           "P013",
@@ -53138,6 +53397,8 @@
       },
       "reverse_relationships": {
         "used_by_objects": [
+          "EQ003",
+          "EQ008",
           "P009",
           "P010",
           "P011",
@@ -53166,6 +53427,9 @@
       },
       "reverse_relationships": {
         "used_by_objects": [
+          "EQ006",
+          "EQ008",
+          "EQ009",
           "P012",
           "P013",
           "P014",
@@ -53196,6 +53460,8 @@
       },
       "reverse_relationships": {
         "used_by_objects": [
+          "EQ004",
+          "EQ008",
           "P016",
           "impl:defence_audit:DEFENCE_ADVERSE_CASE_AUDIT.md#p016-procyclidine-was-clinically-material-to-the-recorded-motor-state"
         ],
@@ -53218,6 +53484,8 @@
       },
       "reverse_relationships": {
         "used_by_objects": [
+          "EQ004",
+          "EQ008",
           "P016",
           "P017",
           "P023",
@@ -53244,6 +53512,9 @@
       },
       "reverse_relationships": {
         "used_by_objects": [
+          "EQ005",
+          "EQ007",
+          "EQ008",
           "P018",
           "P023",
           "P024",
@@ -53273,6 +53544,8 @@
       },
       "reverse_relationships": {
         "used_by_objects": [
+          "EQ005",
+          "EQ008",
           "P019",
           "impl:defence_audit:DEFENCE_ADVERSE_CASE_AUDIT.md#p019-2021-levodopa-transition-was-tied-to-deterioration-and-later-dystonia-gait-reasoning"
         ],
@@ -53294,6 +53567,8 @@
       },
       "reverse_relationships": {
         "used_by_objects": [
+          "EQ005",
+          "EQ008",
           "P019",
           "impl:defence_audit:DEFENCE_ADVERSE_CASE_AUDIT.md#p019-2021-levodopa-transition-was-tied-to-deterioration-and-later-dystonia-gait-reasoning"
         ],
@@ -53317,6 +53592,9 @@
       },
       "reverse_relationships": {
         "used_by_objects": [
+          "EQ005",
+          "EQ007",
+          "EQ008",
           "P020",
           "P023",
           "P024",
@@ -53345,6 +53623,8 @@
       },
       "reverse_relationships": {
         "used_by_objects": [
+          "EQ005",
+          "EQ008",
           "P021",
           "impl:defence_audit:DEFENCE_ADVERSE_CASE_AUDIT.md#p021-2023-morning-stalevo-change-was-response-generating"
         ],
@@ -53366,6 +53646,9 @@
       },
       "reverse_relationships": {
         "used_by_objects": [
+          "EQ005",
+          "EQ007",
+          "EQ008",
           "P022",
           "P023",
           "P024",
@@ -53395,6 +53678,9 @@
       },
       "reverse_relationships": {
         "used_by_objects": [
+          "EQ006",
+          "EQ007",
+          "EQ008",
           "P014",
           "P015",
           "P024",
@@ -53514,6 +53800,10 @@
       },
       "reverse_relationships": {
         "used_by_objects": [
+          "EQ004",
+          "EQ005",
+          "EQ007",
+          "EQ008",
           "P002",
           "P017",
           "P022",
@@ -53537,5 +53827,5 @@
   ],
   "repository": "TitanicParker/case-evidence-ledger",
   "schema_version": "1.0.0",
-  "site_build_commit": "119fd782cad33ebc8bee903de5b3dd641ca2a8bc"
+  "site_build_commit": "66a6ca0496cf71dee0591c2774fe81dc70a8130c"
 }
