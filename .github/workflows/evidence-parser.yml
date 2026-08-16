@@ -14,7 +14,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
 
 jobs:
   parser-gate:
@@ -39,19 +39,6 @@ jobs:
 
       - name: Build derived artifacts
         run: python scripts/build_evidence_graph.py --build
-
-      - name: Commit generated artifacts when stale
-        if: github.event_name == 'pull_request'
-        shell: bash
-        run: |
-          if git diff --quiet -- site-data/generated PARSER_VALIDATION_REPORT.md; then
-            exit 0
-          fi
-          git config user.name github-actions[bot]
-          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
-          git add site-data/generated PARSER_VALIDATION_REPORT.md
-          git commit -m 'Refresh generated Expert Question canonical metadata'
-          git push origin HEAD:${{ github.event.pull_request.head.ref }}
 
       - name: Check committed generated artifacts are current
         shell: bash
