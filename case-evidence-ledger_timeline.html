@@ -1,0 +1,480 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Case Evidence Ledger — Documentary Timeline</title>
+<meta name="description" content="Document-led chronology of the clinical presentation, institutional classification, treatment architecture, later neurological foot evidence, and etiological confirmation.">
+<style>
+  :root{
+    --bg:#f6f7f9;
+    --paper:#ffffff;
+    --ink:#17202a;
+    --muted:#5d6772;
+    --line:#cfd6dd;
+    --accent:#243b53;
+    --soft:#edf2f7;
+    --warn:#fff6df;
+    --good:#eef7f0;
+    --shadow:0 8px 28px rgba(23,32,42,.08);
+    --radius:16px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    line-height:1.58;
+  }
+  a{color:inherit}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 22px 80px}
+  header{
+    background:var(--paper);
+    border-bottom:1px solid var(--line);
+  }
+  .hero{max-width:1120px;margin:0 auto;padding:54px 22px 46px}
+  .eyebrow{
+    text-transform:uppercase;
+    letter-spacing:.12em;
+    font-size:.76rem;
+    font-weight:800;
+    color:var(--muted);
+    margin-bottom:14px;
+  }
+  h1{
+    font-size:clamp(2.15rem,5vw,4.25rem);
+    line-height:1.03;
+    letter-spacing:-.035em;
+    max-width:1000px;
+    margin:0 0 22px;
+  }
+  .lede{
+    max-width:920px;
+    font-size:clamp(1.06rem,2vw,1.28rem);
+    color:#34414e;
+    margin:0;
+  }
+  .thesis{
+    margin:34px 0 0;
+    padding:24px 26px;
+    border-left:5px solid var(--accent);
+    background:var(--soft);
+    border-radius:0 12px 12px 0;
+    font-size:1.13rem;
+    font-weight:650;
+  }
+  .nav{
+    margin:28px 0 0;
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+  }
+  .nav a{
+    text-decoration:none;
+    font-size:.88rem;
+    font-weight:750;
+    background:var(--paper);
+    border:1px solid var(--line);
+    padding:8px 11px;
+    border-radius:999px;
+  }
+  .panel{
+    background:var(--paper);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+    padding:28px;
+    margin-top:28px;
+  }
+  h2{
+    font-size:1.45rem;
+    line-height:1.18;
+    margin:0 0 14px;
+  }
+  h3{
+    margin:0;
+    font-size:1.12rem;
+    line-height:1.25;
+  }
+  .control-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:14px;
+    margin-top:18px;
+  }
+  .control{
+    border:1px solid var(--line);
+    border-radius:12px;
+    padding:16px;
+    background:#fbfcfd;
+  }
+  .control strong{display:block;margin-bottom:4px}
+  .small{font-size:.88rem;color:var(--muted)}
+  .timeline{
+    position:relative;
+    margin:18px 0 0 9px;
+    padding-left:30px;
+  }
+  .timeline:before{
+    content:"";
+    position:absolute;
+    left:7px;
+    top:4px;
+    bottom:4px;
+    width:2px;
+    background:var(--line);
+  }
+  .event{
+    position:relative;
+    padding:0 0 30px 0;
+  }
+  .event:last-child{padding-bottom:0}
+  .event:before{
+    content:"";
+    position:absolute;
+    left:-29px;
+    top:6px;
+    width:14px;
+    height:14px;
+    border-radius:50%;
+    background:var(--paper);
+    border:3px solid var(--accent);
+  }
+  .date{
+    font-size:.79rem;
+    font-weight:850;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    color:var(--muted);
+    margin-bottom:3px;
+  }
+  .event p{margin:8px 0 0}
+  .source{
+    margin-top:10px;
+    padding:10px 12px;
+    border-radius:10px;
+    background:var(--soft);
+    font-size:.88rem;
+  }
+  .source b{font-weight:800}
+  .phase{
+    display:inline-block;
+    margin:2px 0 26px -4px;
+    padding:7px 10px;
+    border-radius:8px;
+    background:var(--accent);
+    color:#fff;
+    font-size:.78rem;
+    font-weight:850;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+  }
+  .state{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:16px;
+    margin-top:15px;
+  }
+  .state > div{
+    border:1px solid var(--line);
+    border-radius:12px;
+    padding:17px;
+  }
+  .state .left{background:var(--good)}
+  .state .right{background:var(--warn)}
+  .quote{
+    border-left:4px solid var(--accent);
+    padding:12px 16px;
+    margin:16px 0 0;
+    background:#fafbfd;
+    font-weight:650;
+  }
+  .conclusion{
+    font-size:1.08rem;
+  }
+  .conclusion strong{color:#111}
+  .rules{
+    margin:14px 0 0;
+    padding-left:20px;
+  }
+  footer{
+    color:var(--muted);
+    font-size:.83rem;
+    border-top:1px solid var(--line);
+    margin-top:34px;
+    padding-top:20px;
+  }
+  code{
+    font-family:ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size:.92em;
+    background:#eef1f4;
+    border-radius:5px;
+    padding:.1em .35em;
+  }
+  @media (max-width:760px){
+    .control-grid,.state{grid-template-columns:1fr}
+    .panel{padding:21px}
+    .hero{padding-top:38px}
+  }
+  @media print{
+    body{background:#fff}
+    .panel{box-shadow:none;break-inside:avoid}
+    .nav{display:none}
+    .wrap{max-width:none}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="hero">
+    <div class="eyebrow">Case Evidence Ledger · Documentary Timeline</div>
+    <h1>From one unresolved presentation to a durable institutional separation</h1>
+    <p class="lede">This timeline follows the documents before it follows the labels. It asks what the record shows the patient presenting with, what classifications and management decisions followed, what later evidence entered the same disputed lower-limb/foot domain, and whether the surviving documentary architecture was ever equivalently reconstructed.</p>
+
+    <div class="thesis">
+      The contemporaneous documentary record begins with one unresolved clinical presentation and later shows that the institution created and maintained a durable separation within that presentation before the relationship between its parts had been resolved. Subsequent documentary evidence repeatedly supplied reasons to revisit that separation, but the surviving record does not show an equivalent reconstruction of the original case.
+    </div>
+
+    <div class="nav" aria-label="Page sections">
+      <a href="#method">Method</a>
+      <a href="#timeline">Timeline</a>
+      <a href="#hinge">2017 hinge</a>
+      <a href="#later">Later reopening signals</a>
+      <a href="#conclusion">Documentary conclusion</a>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="panel" id="method">
+    <h2>How to read this page</h2>
+    <p>This is a documentary reconstruction, not a finding of negligence, dishonesty, causation or clinical standard. Structural foot pathology is real. Parkinsonism is real. The issue is narrower: what the documents establish about the relationship between the two, how unresolved uncertainty became operationally allocated, and what happened when later records supplied information capable of bearing on that original uncertainty.</p>
+    <div class="control-grid">
+      <div class="control"><strong>Source first</strong><span class="small">Contemporaneous records control over later argument.</span></div>
+      <div class="control"><strong>No false unity</strong><span class="small">The timeline does not claim every foot abnormality had one neurological cause.</span></div>
+      <div class="control"><strong>No false separation</strong><span class="small">Referral to Podiatry is not treated as proof that the feet had already been shown to be neurologically unrelated.</span></div>
+    </div>
+  </section>
+
+  <section class="panel" id="timeline">
+    <h2>The most relevant documentary timeline</h2>
+
+    <div class="timeline">
+
+      <div class="phase">Phase I · The presentation before hospital classification</div>
+
+      <article class="event">
+        <div class="date">10 April 2017</div>
+        <h3>Bilateral foot pain and abnormal gait are documented together</h3>
+        <p>The GP records abnormal gait and bilateral foot pain. There is genuine structural pathology: mallet toes, onychogryphosis, callouses and pressure areas. Podiatry is planned. At this stage the record contains a real foot problem, but not yet a settled explanation for the gait.</p>
+        <div class="source"><b>Source anchor:</b> GP canonical record, 10 Apr 2017. Structural pathology is preserved as part of the case rather than retrospectively erased.</div>
+      </article>
+
+      <article class="event">
+        <div class="date">8 June 2017</div>
+        <h3>The GP begins treating gait, feet and muscle tension as one neurological question</h3>
+        <p>The GP observes impaired fluidity in initiating movement, including the patient's strategy of timing movement on a slowing bus to help propel himself forward. The GP records an intention to seek Neurology opinion specifically for the patient's <strong>“gait, feet and ‘muscle tension’ issues.”</strong></p>
+        <div class="source"><b>Documentary significance:</b> before hospital classification, the feet are expressly carried into the contemplated neurological question.</div>
+      </article>
+
+      <article class="event">
+        <div class="date">12 June 2017</div>
+        <h3>Occupational Health independently echoes concern about the gait</h3>
+        <p>Dr Cashman contacts the GP. With the patient's consent, the GP discusses the concern and records that Dr Cashman echoes it. The GP decides to refer to Neurology immediately, before waiting for old notes.</p>
+        <div class="source"><b>Documentary significance:</b> the neurological escalation is not generated solely by retrospective interpretation; a second clinician's concern is contemporaneously recorded.</div>
+      </article>
+
+      <article class="event">
+        <div class="date">23 June 2017</div>
+        <h3>Objective neurological signs enter the same evolving presentation</h3>
+        <p>The GP records difficulty with gowning and ungowning at work, <strong>marked increased tone in both legs</strong> and brisk upper-limb reflexes. Neurology referral is already in place.</p>
+        <div class="source"><b>Documentary significance:</b> the pre-admission record is now more than pain plus structural feet; abnormal tone and functional decline are documented.</div>
+      </article>
+
+      <article class="event">
+        <div class="date">29 June 2017</div>
+        <h3>Loss of dexterity triggers direct hospital neurological assessment</h3>
+        <p>The GP records that the patient returned to work but could not perform the job because dexterity had worsened. The GP speaks with a consultant and arranges direct assessment in the Acute Medical Unit. Illness certification is restarted for <strong>“Neurological investigations.”</strong></p>
+        <div class="source"><b>Entry state:</b> by the point of hospital referral, feet, gait, tone, movement initiation, dexterity and work failure form one evolving presentation requiring neurological investigation.</div>
+      </article>
+
+      <div class="phase" id="hinge">Phase II · July 2017: recognition, uncertainty and allocation</div>
+
+      <article class="event">
+        <div class="date">3–11 July 2017</div>
+        <h3>Neurology recognises severe Parkinsonism but does not resolve the feet</h3>
+        <p>The inpatient record recognises severe young-onset Parkinsonism. It also records a striking foot-drop-like gait considered suggestive of dystonic posture, genuine structural abnormalities of the feet, and an unresolved relationship between the foot/lower-limb problem and the neurological syndrome.</p>
+        <div class="quote">The documentary state of the relationship is: <strong>“Not clear.”</strong></div>
+        <div class="source"><b>Key point:</b> the hospital record does not establish “feet are separate.” It records uncertainty.</div>
+      </article>
+
+      <article class="event">
+        <div class="date">6 July 2017</div>
+        <h3>Podiatry is prioritised “as Parkinson's”</h3>
+        <p>During the admission, the GP records: <strong>“Phoned podiatry to discuss case - will mark as priority case and as Parkinson's - should be called mid September.”</strong></p>
+        <div class="source"><b>Documentary significance:</b> the Podiatry pathway itself cannot safely be used as retrospective proof that the feet had already been clinically separated from Parkinsonism.</div>
+      </article>
+
+      <article class="event">
+        <div class="date">July 2017</div>
+        <h3>A deliberate dopaminergic-deferral strategy becomes operative</h3>
+        <p>The hospital record documents a strategy of holding levodopa and dopamine agonists back because of the patient's unusually young onset and concern about long-term complications. The same reasoning accepts that dopamine replacement will probably become necessary, may produce substantial benefit, and may later be regretted as having been delayed.</p>
+        <div class="source"><b>Documentary significance:</b> management is capable of becoming stable while diagnosis, genetics and the foot relationship remain unresolved.</div>
+      </article>
+
+      <article class="event">
+        <div class="date">9 July 2017</div>
+        <h3>Parkinson's becomes an operative administrative category</h3>
+        <p>The native Long Term Illness material is dated 9 July and uses Parkinson's disease as the qualifying category. This is an administrative act, not proof that aetiology or the foot relationship had been finally resolved.</p>
+        <div class="source"><b>Documentary significance:</b> clinical uncertainty and administrative certainty coexist.</div>
+      </article>
+
+      <article class="event">
+        <div class="date">11 July 2017</div>
+        <h3>Physical discharge occurs while the documentary record remains unfinished</h3>
+        <p>The GP-system discharge message identifies 11 July as the discharge date. Its progress section says clonazepam was used for leg tension and that Podiatry was asked to review issues with the feet reported by the patient. Parkinson's Disease is the primary diagnosis.</p>
+        <div class="source"><b>Decision-state / document-state distinction:</b> physical discharge is not the same event as completion of the durable discharge account.</div>
+      </article>
+
+      <article class="event">
+        <div class="date">13 July 2017</div>
+        <h3>DaTSCAN supplies strong post-discharge dopaminergic evidence</h3>
+        <p>The DaTSCAN is abnormal with marked bilateral findings, described in the later record as <strong>“abnormal as was expected.”</strong> It confirms the Parkinsonian dopaminergic disorder expected by the treating team. It does not by itself resolve the genetic aetiology or the precise relationship of all foot pathology to the neurological syndrome.</p>
+        <div class="source"><b>Ordering point:</b> this evidence arrives after physical discharge and cannot be silently projected backward into earlier decisions.</div>
+      </article>
+
+      <article class="event">
+        <div class="date">14 July 2017</div>
+        <h3>The GP is still awaiting formal neurological correspondence</h3>
+        <p>In discussion with Occupational Health, the GP records that the patient has been seen by Neurology but that formal correspondence is still awaited.</p>
+        <div class="source"><b>Documentary significance:</b> an independent external record confirms that the hospital's durable communication had not simply been completed and handed over at discharge.</div>
+      </article>
+
+      <article class="event">
+        <div class="date">17 July 2017</div>
+        <h3>The GP records “no formal discharge received as yet”</h3>
+        <p>The patient is out of hospital. The GP records that DaTSCAN results are awaited and that Azilect and Procyclidine are due to start after Neurology follow-up. The same entry says <strong>“no formal discharge received as yet.”</strong></p>
+        <div class="source"><b>Same-day document fact:</b> the hospital discharge summary records confirmation on 17 July at 19:30. The exact time of the GP entry is not established here, so no finer ordering is asserted.</div>
+      </article>
+
+      <article class="event">
+        <div class="date">17 July 2017 · 19:30</div>
+        <h3>The durable discharge account is confirmed</h3>
+        <p>The hospital summary reaches its confirmed documentary state after physical discharge and after the DaTSCAN had been performed. It presents a coherent account combining diagnosis, investigation, management, referral and later-added information.</p>
+        <div class="source"><b>Core documentary question:</b> what was the state of the case when decisions were made, and what was the state of the document when those decisions were later represented?</div>
+      </article>
+
+      <div class="state">
+        <div class="left">
+          <strong>Documentary state</strong><br>
+          Severe Parkinsonism + real structural foot pathology + dystonic-looking lower-limb features + relationship <strong>“Not clear.”</strong>
+        </div>
+        <div class="right">
+          <strong>Operative state</strong><br>
+          Parkinsonism under Neurology + feet through Podiatry + prolonged dopaminergic deferral + Parkinson's administrative classification.
+        </div>
+      </div>
+
+      <div class="phase" id="later" style="margin-top:34px">Phase III · Later evidence capable of reopening the original relationship</div>
+
+      <article class="event">
+        <div class="date">August–November 2017</div>
+        <h3>Neurological treatment produces documented improvement</h3>
+        <p>Procyclidine is introduced under the Parkinsonism pathway. On 7 September the GP records <strong>“Doing well on Procyclidine”</strong> and the patient's wish not to escalate further while doing well. By 6 November the GP records that <strong>“symptom control is good at present”</strong> and return-to-work planning is underway.</p>
+        <div class="source"><b>Documentary significance:</b> the integrated presentation proves pharmacologically modifiable at least at the level of overall Parkinsonian function; later records become more specific about the lower-limb/foot domain.</div>
+      </article>
+
+      <article class="event">
+        <div class="date">12 September 2017</div>
+        <h3>Independent specialist opinion: probable PARK II</h3>
+        <p>Prof Daniel Healy records that the patient probably has PARK II and recommends PARK II testing first. He also describes patients with PARK II as capable of doing well for long periods on relatively low doses of dopamine replacement while warning against over-use because of dyskinesia.</p>
+        <div class="source"><b>Documentary significance:</b> the PRKN/PARK2 branch is contemporaneous, specialist-supported and not a hindsight construction.</div>
+      </article>
+
+      <article class="event">
+        <div class="date">24 April 2018</div>
+        <h3>Medication-state change reaches the disputed lower-limb domain</h3>
+        <p>The Neurology record documents deterioration when Procyclidine was withdrawn and improvement when it was restored, including the disputed lower-limb/foot phenomenon. The same note records PARK2/PRKN as what Galway and Prof Healy suspect is the cause and states that levodopa or another dopamine agonist could make the patient <strong>“very much better”</strong>, while continuing the policy of not using it for quite some time.</p>
+        <div class="source"><b>Documentary significance:</b> relevant contrary or qualifying evidence arrives, but the surviving record does not show a corresponding global reconstruction of the July architecture.</div>
+      </article>
+
+      <article class="event">
+        <div class="date">2020</div>
+        <h3>A foot movement is explicitly interpreted as parkinsonian</h3>
+        <p>The treating neurologist records that the foot “throw” is <strong>“actually parkinsonian”</strong>, relying in part on normal power.</p>
+        <div class="source"><b>Boundary:</b> this is evidence of a later neurological interpretation of a foot phenomenon, not proof that every historical structural or painful foot symptom had the same generator.</div>
+      </article>
+
+      <article class="event">
+        <div class="date">2021</div>
+        <h3>Ordinary levodopa treatment enters the longitudinal record</h3>
+        <p>Sinemet becomes part of treatment. From this point, the record can directly observe the patient's ordinary dopaminergic treatment state rather than only discuss levodopa as a future exposure to defer.</p>
+        <div class="source"><b>Documentary significance:</b> treatment-state information capable of bearing on the phenotype now becomes routinely available.</div>
+      </article>
+
+      <article class="event">
+        <div class="date">2023</div>
+        <h3>Severe foot pain is documented within OFF/dystonia questions</h3>
+        <p>The record contains severe bilateral foot pain, toe curling/clawing and consideration of OFF-related dystonia and medication-state effects. Treatment is altered locally.</p>
+        <div class="source"><b>Pattern:</b> later records increasingly rejoin what the 2017 operative architecture had separated.</div>
+      </article>
+
+      <article class="event">
+        <div class="date">March 2025</div>
+        <h3>Dopamine timing is deliberately used against severe morning foot pain</h3>
+        <p>The record documents extreme morning foot pain, improvement when Parkinson's medication takes effect, and a deliberate Sinemet CR strategy to extend dopaminergic coverage overnight and into the morning. The subsequent response is described as profound.</p>
+        <div class="source"><b>Documentary significance:</b> the foot domain is now expressly being managed through dopamine-state reasoning. This does not prove one exclusive pain generator; it does make the neurological relationship operationally significant.</div>
+      </article>
+
+      <article class="event">
+        <div class="date">25 March 2025</div>
+        <h3>A later retrospective account describes the historical diagnosis as idiopathic Parkinson's disease</h3>
+        <p>The clinician's complaint response presents an idiopathic-Parkinson's understanding of the earlier history. The documentary sequence nevertheless contains PRKN/PARK2 as a live 2017 possibility, probable PARK II in Healy's September 2017 opinion, and suspected PARK2/PRKN in Galway's 2018 record.</p>
+        <div class="source"><b>Documentary question:</b> where is the source explaining when, why and on what evidence the etiological framing changed?</div>
+      </article>
+
+      <article class="event">
+        <div class="date">4 February 2026</div>
+        <h3>Genetic testing confirms the PRKN branch</h3>
+        <p>St Vincent's records compound-heterozygous pathogenic Parkin variants and concludes that the patient's Parkinsonism and dystonia are due to Parkin mutations.</p>
+        <div class="source"><b>Boundary:</b> later genetic confirmation does not convert every historical foot abnormality into dystonia. It does establish that the genetic branch already present in the 2017–2018 documentary record was etiologically real.</div>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="panel" id="conclusion">
+    <h2>The documentary case in its shortest defensible form</h2>
+    <p class="conclusion"><strong>The patient entered Neurology as one evolving unresolved presentation.</strong> The GP record had already brought gait, feet, muscle tension, abnormal movement initiation, increased tone, dexterity loss and work failure into a single neurological referral pathway.</p>
+    <p class="conclusion"><strong>The hospital recognised severe Parkinsonism and genuine structural foot pathology but did not resolve their relationship.</strong> Its own recorded state was <strong>“Not clear.”</strong></p>
+    <p class="conclusion"><strong>Nevertheless, an operative separation became durable.</strong> Parkinsonism sat with Neurology; the feet moved through Podiatry; dopaminergic treatment was deliberately deferred; and Parkinson's became an administrative category.</p>
+    <p class="conclusion"><strong>Later records repeatedly supplied information bearing on the original unresolved relationship.</strong> Neurological medication changed the lower-limb/foot phenotype; a later foot movement was called parkinsonian; OFF/dystonia reasoning entered the pain record; dopamine timing was eventually used deliberately against severe foot pain; and the PRKN branch was ultimately genetically confirmed.</p>
+
+    <div class="thesis" style="margin-top:24px">
+      The central documentary question is therefore not whether every foot symptom was neurological. It is what evidence justified converting uncertainty about the relationship into a durable management separation, and where the surviving record shows that later neurological, pharmacological and etiological evidence was permitted to reconstruct the original case rather than merely alter local treatment.
+    </div>
+
+    <h2 style="margin-top:30px">The governing distinction</h2>
+    <div class="quote">What the organism did versus what the record said the organism meant.</div>
+
+    <h2 style="margin-top:30px">What this timeline does not require</h2>
+    <ul class="rules">
+      <li>It does not require proof that every corn, callus, toe deformity or pain episode was neurological.</li>
+      <li>It does not require proof that Podiatry was inherently inappropriate.</li>
+      <li>It does not require proof that levodopa had to be started in July 2017.</li>
+      <li>It does not require proof of negligence, concealment, motive or dishonesty.</li>
+      <li>It does not depend on the reported bedside protest to establish the basic documentary architecture.</li>
+    </ul>
+  </section>
+
+  <footer>
+    <strong>Case Evidence Ledger.</strong> Documentary reconstruction only. Source records and EUID corpus remain controlling over this reader-facing chronology. Any proposition that exceeds what an identified source establishes should be treated as inference and separately tested.
+  </footer>
+
+</main>
+</body>
+</html>
