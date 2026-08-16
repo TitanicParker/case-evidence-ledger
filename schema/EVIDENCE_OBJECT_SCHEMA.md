@@ -1,6 +1,6 @@
 # Evidence Object Schema
 
-**Status:** Proposed frozen schema for parser/validator implementation  
+**Status:** Frozen schema `1.0.0` for parser/validator implementation  
 **Scope:** Structural representation only. This schema does not alter, restate, or adjudicate substantive evidence.  
 **Primary rule:** Human-readable repository sources remain authoritative for controlled content; generated structured representations are derived interface artifacts.
 
@@ -8,21 +8,11 @@
 
 This schema defines the minimum object and relationship model required for the repository to act as a maintainable static documentary database while preserving the repository's existing evidential distinctions.
 
-The model is designed to support:
-
-- stable source and evidence identifiers;
-- controlled Facts, Tensions, Propositions, argument structures, adverse audit and adjudication;
-- audience-specific retrieval without duplicating substantive records;
-- traceability from reader-facing proposition back to source evidence;
-- build-time validation;
-- static GitHub Pages generation;
-- search and printable generated views.
+The model is designed to support stable source and evidence identifiers, controlled Facts/Tensions/Propositions, argument structures, adverse audit and adjudication, audience-specific retrieval without substantive duplication, traceability to source evidence, build-time validation, static GitHub Pages generation, search and printable views.
 
 The website and generated JSON must be projections of these controlled objects, not independent evidence sources.
 
 ## 2. Evidential hierarchy
-
-The canonical relationship chain is:
 
 ```text
 SOURCE / EUID
@@ -35,91 +25,94 @@ SOURCE / EUID
 → AUDIENCE-SPECIFIC VIEW
 ```
 
-This chain expresses dependency and traceability, not a rule that every object must have exactly one parent.
-
-Objects form a graph. A Fact may support several Tensions or Propositions; a Tension may engage several Facts; a Proposition may appear in several argument stages and professional views.
+This chain expresses dependency and traceability, not a rule that every object has exactly one parent. Objects form a graph.
 
 ## 3. Authority tiers
 
 ### Tier 0 — controlling source representation
-
 Native exhibits or their controlling public repository representations remain evidentially controlling where the repository says they control.
 
 ### Tier 1 — controlled repository objects
-
-Human-readable repository documents containing controlled EUIDs, Facts, Tensions, Propositions, argument structures, audit and adjudication are authoritative for the repository's controlled interpretation layer.
+Human-readable repository documents containing EUIDs, Facts, Tensions, Propositions, argument structures, audit and adjudication are authoritative for the repository's controlled interpretation layer.
 
 ### Tier 2 — generated structured interface
-
-Generated JSON, search indexes, relationship manifests, timelines and site metadata are derived and reproducible. They must never be manually treated as an independent evidential source.
+Generated JSON, search indexes, relationship manifests, timelines and site metadata are derived and reproducible. They are not independent evidential sources.
 
 ### Tier 3 — generated audience views
+Expert, Counsel, Governance and Evidence Foundation pages are views over Tier 1 objects. They may select, order and progressively disclose controlled objects but must not create competing substantive versions.
 
-Expert, Counsel, Governance and Evidence Foundation pages are views over Tier 1 objects. They may select, order and progressively disclose controlled objects but must not create competing substantive versions of them.
+## 4. Global normalized object contract
 
-## 4. Global object contract
-
-Every parsed controlled object MUST expose the following normalized fields where applicable:
+Every normalized object MUST expose this universal field set:
 
 | Field | Required | Meaning |
 |---|---:|---|
-| `id` | yes | Stable repository identifier |
-| `object_type` | yes | Controlled object type from `vocabulary.yml` |
-| `title` | conditional | Human-readable object title where the source object has one |
+| `id` | yes | Unique normalized object identifier |
+| `id_kind` | yes | `evidential` or `implementation` |
+| `object_type` | yes | Controlled type from `vocabulary.yml` |
 | `source_file` | yes | Repository file containing the authoritative controlled text |
 | `source_anchor` | yes | Stable parser/build anchor for the object |
-| `substantive_text` | yes | Controlled text extracted without silent rewriting |
-| `relationships` | yes | Explicit typed references to other controlled IDs; may be empty where structurally valid |
-| `metadata` | yes | Controlled classificatory metadata only |
+| `relationships` | yes | Typed references; may be empty where structurally valid |
+| `metadata` | yes | Controlled classificatory metadata; `{}` is valid |
 | `provenance` | yes | Build/source provenance fields defined below |
 
-Generated objects MAY include additional derived fields such as search text, display labels or URL paths, but those fields must be marked/generated by the build process and must not override controlled source text.
+`title` and `substantive_text` are object-dependent rather than globally required. Where an object is represented by several controlled textual fields (for example an argument stage or adjudication), the parser MUST preserve those fields separately and MUST NOT synthesize replacement `substantive_text` merely to satisfy a generic contract.
+
+All object-specific contracts below inherit the universal fields. Their lists therefore specify additional required fields only.
+
+### 4.1 Evidential versus implementation IDs
+
+Existing repository identifiers are evidential IDs and MUST be preserved exactly.
+
+Some controlled analytical objects currently have stable source anchors but no explicit evidential ID. They still require a deterministic normalized `id` for parsing and graph operations.
+
+For such objects the parser MUST derive an implementation ID as:
+
+```text
+impl:<object_type>:<source_file>#<source_anchor>
+```
+
+Rules:
+
+1. `id_kind` MUST be `evidential` for existing EUID/F/T/P/S/C IDs and future explicitly controlled IDs.
+2. `id_kind` MUST be `implementation` for derived parser IDs.
+3. Implementation IDs are deterministic internal identifiers, not evidential identifiers.
+4. Public UI MUST NOT present an implementation ID as though it were a controlled evidential ID.
+5. If an explicit stable evidential ID is later introduced for the same source object, migration must be reviewed; the parser must not silently substitute it.
 
 ## 5. Stable ID namespaces
 
-The parser MUST preserve existing repository identifiers exactly.
+Existing namespaces:
 
-### Existing namespaces
+- EUID — source-level evidence identifiers.
+- `F####` — controlled Facts.
+- `T###` — Evidential Tensions.
+- `P###` — core Propositions.
+- `S###` — supporting Propositions.
+- `C###` — evidential control rules where represented as controlled objects.
 
-- `EUID` — source-level evidence identifiers already present in the consolidated corpus and source mappings.
-- `F####` — controlled Fact IDs.
-- `T###` — Evidential Tension IDs.
-- `P###` — core Proposition IDs.
-- `S###` — supporting Proposition IDs.
-- `C###` — evidential control-rule IDs where represented as controlled objects.
+Reserved future evidential namespaces:
 
-### Reserved namespaces for implementation
+- `A###` — argument stages if explicitly introduced.
+- `DA###` — defence-audit entries if explicitly introduced.
+- `AJ###` — adjudication entries if explicitly introduced.
+- `EQ###` — expert questions.
 
-- `A###` — argument-stage object IDs, only if explicit stable IDs are introduced later.
-- `DA###` — defence-audit object IDs, only if explicit stable IDs are introduced later.
-- `AJ###` — adjudication object IDs, only if explicit stable IDs are introduced later.
-- `EQ###` — expert-question object IDs.
-
-The parser MUST NOT invent replacement IDs for existing controlled objects merely to simplify implementation.
-
-Changing wording MUST NOT change an object's stable ID unless the repository intentionally retires the object and creates a distinct new object.
+Changing wording MUST NOT change an existing stable evidential ID unless the repository intentionally retires the object and creates a distinct object.
 
 ## 6. Object types
 
 ### 6.1 `source_euid`
 
-Represents one addressable evidential unit or source-level addressable record.
-
-Required normalized fields:
+Additional required fields:
 
 ```text
-id
-object_type = source_euid
-source_family
-source_file
-source_anchor
 substantive_text
+source_family
 source_status
-relationships
-provenance
 ```
 
-Optional fields:
+Optional:
 
 ```text
 event_date
@@ -133,151 +126,148 @@ repository_source_path
 
 Rules:
 
-1. Source text must not be silently clinically corrected.
-2. OCR uncertainty, redaction markers and source damage must remain visible when present in the controlled source.
-3. A later reproduction of an existing controlled source must not automatically become independent corroboration.
-4. The object must preserve the distinction between source date and repository/build date.
+- source text must not be silently clinically corrected;
+- OCR uncertainty, redactions and source damage remain visible;
+- later reproduction does not automatically become independent corroboration;
+- source/event dates remain distinct from repository/build dates.
 
 ### 6.2 `fact`
 
-Represents a controlled documentary Fact from `FACT_REGISTER.md`.
-
-Required fields:
+Additional required fields:
 
 ```text
-id
-object_type = fact
 substantive_text
 evidence_ids[]
 evidence_class
 qualification
-source_file
-source_anchor
-relationships
-provenance
 ```
 
-Relationship rules:
+Rules:
 
-- every value in `evidence_ids` MUST resolve to an addressable evidence/source object or an explicitly recognized source identifier;
-- facts MAY be linked upward to Tensions and Propositions as derived reverse relationships;
-- the parser MUST preserve the source Fact wording and Qualification separately.
-
-Semantic rule:
-
-A Fact states what documentary evidence establishes. It must not be automatically promoted into negligence, causation, motive, dishonesty, legal effect or clinical-standard conclusions.
+- every `evidence_ids` value MUST resolve to an addressable evidence/source object or explicitly recognized source identifier;
+- source Fact wording and Qualification remain separate;
+- a Fact must not be automatically promoted into negligence, causation, motive, dishonesty, legal effect or clinical-standard conclusions.
 
 ### 6.3 `tension`
 
-Represents an analytical relationship between controlled Facts.
-
-Required fields:
+Additional required fields:
 
 ```text
-id
-object_type = tension
 title
 facts_engaged[]
-tension_type
+tension_type_source
+tension_type[]
 documentary_tension
 why_it_matters
 possible_reconciliation
 what_would_resolve_it
+resolution_status_source[]
 resolution_status[]
-source_file
-source_anchor
-relationships
-provenance
 ```
 
 Rules:
 
 1. Every `facts_engaged` ID MUST resolve to a Fact.
-2. `resolution_status` values MUST come from the controlled vocabulary.
-3. A Tension is not a historical Fact.
-4. `possible_reconciliation` must remain distinct from `documentary_tension`.
-5. `what_would_resolve_it` is an evidential requirement, not proof that the missing evidence exists.
+2. A Tension is not a historical Fact.
+3. `possible_reconciliation` remains distinct from `documentary_tension`.
+4. `what_would_resolve_it` is an evidential requirement, not proof that missing evidence exists.
+5. Source status wording MUST be preserved in `resolution_status_source[]` and normalized deterministically via `resolution_status_source_map` in `vocabulary.yml`.
+
+#### 6.3.1 Tension-type normalization
+
+The source `**Type:**` field may contain one or more components separated by the literal slash `/`, for example:
+
+```text
+reasoning gap / operational-epistemic mismatch
+operational / epistemic mismatch
+documentary tension / mixed-mechanism issue
+```
+
+The parser MUST:
+
+1. preserve the complete original field in `tension_type_source`;
+2. split on `/`;
+3. trim surrounding whitespace from each component;
+4. preserve component order;
+5. map each component using `tension_type_source_component_map` in `vocabulary.yml`;
+6. emit the ordered mapped values in `tension_type[]`;
+7. fail validation if any component has no controlled mapping.
+
+The parser MUST NOT collapse a composite type into a guessed single category.
+
+Example:
+
+```text
+source: reasoning gap / operational-epistemic mismatch
+normalized: [reasoning-gap, operational-epistemic-mismatch]
+```
+
+#### 6.3.2 Resolution-status normalization
+
+The source may carry multiple controlled statuses separated by `/`. The parser MUST preserve each source label and normalize each independently using the explicit map.
+
+The frozen source-to-normalized mappings include:
+
+```text
+UNRESOLVED                → unresolved
+PARTIALLY RECONCILABLE    → partially-reconcilable
+REQUIRES ADDITIONAL SOURCE→ requires-additional-source
+REQUIRES EXPERT EVIDENCE  → requires-expert-evidence
+RESOLVED BY RECORD        → resolved-by-record
+REPRESENTATION ISSUE ONLY → representation-issue-only
+```
+
+No source status may be silently renamed to a semantically different category.
 
 ### 6.4 `proposition`
 
-Represents a controlled synthesis of identified documentary Facts.
-
-Required fields:
+Additional required fields:
 
 ```text
-id
-object_type = proposition
 title
 substantive_text
 primary_fact_ids[]
 tension_ids[]
 strength
 boundary
-source_file
-source_anchor
-relationships
-metadata
-provenance
 ```
 
 Rules:
 
-1. Every referenced Fact and Tension MUST resolve.
-2. `strength` MUST use the controlled proposition-strength vocabulary.
-3. `boundary` MUST remain independently displayable and must travel with the proposition in every generated professional view.
-4. Generated views MUST NOT maintain independent copies of proposition wording.
-5. Audience relevance is metadata describing retrieval, not a distinct proposition version.
+- every referenced Fact and Tension MUST resolve;
+- `strength` uses the controlled proposition-strength vocabulary;
+- `boundary` remains independently displayable and travels with the proposition in every generated professional view;
+- audience relevance is retrieval metadata, not a distinct proposition version.
 
 ### 6.5 `supporting_proposition`
 
-Represents existing `S###` supporting propositions.
-
-Required fields:
+Additional required fields:
 
 ```text
-id
-object_type = supporting_proposition
 title
 substantive_text
 fact_ids[]
 tension_ids[]
-source_file
-source_anchor
-relationships
-metadata
-provenance
 ```
 
-Rules mirror core propositions except that no core-proposition strength field is required unless the source later supplies one.
+Rules mirror core propositions except no core-proposition strength is required unless supplied by the source.
 
 ### 6.6 `control_rule`
 
-Represents an explicit evidential control rule such as the distinction between original source and later reproduction, patient report and objective finding, administrative classification and etiological conclusion, medication response and exclusive causation, or documentary absence and historical non-occurrence.
-
-Required fields:
+Additional required fields:
 
 ```text
-id
-object_type = control_rule
 title
 substantive_text
-source_file
-source_anchor
-relationships
-provenance
 ```
 
-Control rules are display/validation constraints and must not be treated as historical evidence.
+Control rules are display/validation constraints and not historical evidence.
 
 ### 6.7 `argument_stage`
 
-Represents a controlled argumentative arrangement of propositions.
-
-Required normalized fields:
+Additional required fields:
 
 ```text
-id_or_anchor
-object_type = argument_stage
 title
 question
 controlling_proposition_ids[]
@@ -285,30 +275,22 @@ argument
 strongest_alternative_explanation
 surviving_point
 evidential_status
-source_file
-source_anchor
-relationships
-provenance
 ```
 
 Rules:
 
 1. Argument stages do not add historical Facts.
 2. All controlling Proposition IDs MUST resolve.
-3. Document-only and expert-dependent conclusions MUST remain distinguishable.
-
-Until stable explicit `A###` identifiers are added to source Markdown, the parser MAY use deterministic source anchors as implementation identifiers, but generated public URLs must not pretend those are evidential IDs.
+3. Document-only and expert-dependent conclusions remain distinguishable.
+4. Until explicit `A###` IDs exist, `id` MUST be a deterministic implementation ID under section 4.1 and `id_kind` MUST be `implementation`.
 
 ### 6.8 `defence_audit`
 
-Represents a proposition-specific adverse-case audit entry.
-
-Required normalized fields:
+Additional required fields:
 
 ```text
-id_or_anchor
-object_type = defence_audit
 proposition_id
+defence_position_source
 defence_position
 best_defence_answer
 fact_ids[]
@@ -317,54 +299,63 @@ claimant_entitled_to_say
 claimant_not_entitled_to_say
 defence_vulnerability
 evidence_needed
-source_file
-source_anchor
-relationships
-provenance
 ```
 
 Rules:
 
 1. `proposition_id` MUST resolve.
-2. Audit text is an adverse analysis layer, not a Fact.
-3. Search/UI must label audit content as audit material so it cannot be mistaken for controlled factual content.
+2. Audit text is an adverse-analysis layer, not a Fact.
+3. Search/UI must label audit content as audit material.
+4. Until explicit `DA###` IDs exist, `id` MUST be a deterministic implementation ID and `id_kind` MUST be `implementation`.
+5. The original Defence Audit label MUST be preserved in `defence_position_source` and normalized only through the explicit map in `vocabulary.yml`.
+
+The frozen source labels are:
+
+```text
+ACCEPT
+ACCEPT BUT NEUTRALISE
+PARTIALLY CONTEST
+CONTEST
+REQUIRES EXPERT EVIDENCE
+```
+
+Their normalized values are respectively:
+
+```text
+accept
+accept-but-neutralise
+partially-contest
+contest
+requires-expert-evidence
+```
+
+`PARTIALLY CONTEST` must never be normalized as `partially-accept`, and `CONTEST` must never be silently replaced by a generic `dispute` category.
 
 ### 6.9 `adjudication`
 
-Represents controlled adjudication of an adverse-case answer.
-
-Required normalized fields:
+Additional required fields:
 
 ```text
-id_or_anchor
-object_type = adjudication
 proposition_id
 defence_answer
 adjudication_classes[]
 why
 disposition
-source_file
-source_anchor
-relationships
-provenance
 ```
 
 Rules:
 
 1. `proposition_id` MUST resolve.
-2. Every adjudication class MUST come from the controlled vocabulary.
-3. Disposition text must be available wherever the proposition is used in a Counsel-facing generated view where material.
-4. A class requiring expert adjudication must not be rendered as if the expert conclusion has already been determined.
+2. Every adjudication class comes from the controlled vocabulary.
+3. Disposition text must be available wherever the proposition is materially used in a Counsel-facing generated view.
+4. Expert-adjudication classes must not be rendered as if the expert conclusion has already been determined.
+5. Until explicit `AJ###` IDs exist, `id` MUST be a deterministic implementation ID and `id_kind` MUST be `implementation`.
 
 ### 6.10 `expert_question`
 
-Reserved structured object for specialist questions derived from the controlled evidence architecture.
-
-Required fields when introduced:
+Additional required fields when introduced:
 
 ```text
-id
-object_type = expert_question
 title_or_question
 question
 proposition_ids[]
@@ -372,24 +363,19 @@ tension_ids[]
 fact_ids[]
 expert_domain[]
 status
-source_file
-source_anchor
-relationships
-metadata
-provenance
 ```
 
 Rules:
 
-1. Every referenced controlled ID MUST resolve.
-2. Expert questions must ask for determination; they must not silently encode the desired expert answer.
-3. Expert conclusions, once obtained, must be represented separately from the documentary proposition that generated the question.
+- referenced controlled IDs MUST resolve;
+- questions must request specialist determination without silently encoding the desired answer;
+- expert conclusions are represented separately from the documentary proposition that generated the question.
 
 ## 7. Relationship model
 
-Relationships MUST be typed. A generic untyped list of IDs is insufficient.
+Relationships MUST be typed. A generic untyped ID list is insufficient.
 
-Normalized relationship keys are:
+Normalized relationship keys:
 
 ```text
 source_euids
@@ -404,21 +390,11 @@ adjudication_refs
 expert_question_ids
 ```
 
-Build-time reverse relationships MAY be generated, for example:
-
-```text
-Fact F0162
-← used_by_tensions: [T001, T002, T004]
-← used_by_propositions: [P002, P003, ...]
-```
-
-Reverse relationships are generated convenience fields and do not change the direction of authority.
+Reverse relationships may be generated for convenience but do not change direction of authority.
 
 ## 8. Audience metadata
 
-Audience relevance is a controlled retrieval field, not a substantive evidential classification.
-
-Allowed values are defined in `vocabulary.yml`:
+Allowed values:
 
 ```text
 expert
@@ -429,24 +405,20 @@ foundation
 
 Rules:
 
-1. An object MAY belong to multiple audiences.
-2. `foundation` means directly discoverable in the Evidence Foundation; it does not mean the object is more authoritative.
-3. Audience metadata MUST NOT change `substantive_text`, `boundary`, `qualification`, `possible_reconciliation`, `adjudication` or source provenance.
-4. No generated route may create an audience-specific canonical copy of a controlled object.
+- an object may belong to multiple audiences;
+- `foundation` means directly discoverable in the Evidence Foundation, not more authoritative;
+- audience metadata must not change substantive text, Fact qualifications, Tension reconciliation/status, Proposition boundaries, adjudication or provenance;
+- no route may create an audience-specific canonical copy.
 
 ## 9. Controlled topic metadata
 
-The initial topic vocabulary is intentionally small and is defined in `vocabulary.yml`.
-
-Topics are classificatory retrieval aids only. They MUST NOT be used to replace explicit relationships.
-
-For example, a proposition should link directly to `T022`; it should not rely on both objects sharing `treatment-state` as a substitute for that relationship.
+The initial topic vocabulary is deliberately small and defined in `vocabulary.yml`. Topics are retrieval aids only and MUST NOT replace explicit ID relationships.
 
 ## 10. Temporal model
 
-A single undifferentiated `date` field is prohibited where the source architecture distinguishes different temporal states.
+A single undifferentiated `date` field is prohibited where the source architecture distinguishes temporal states.
 
-Normalized optional fields are:
+Optional normalized temporal fields:
 
 ```text
 event_date
@@ -458,14 +430,14 @@ recorded_date
 
 Rules:
 
-1. Date fields may be absent where the repository does not establish them.
-2. An unknown exact time must not be synthesized from surrounding events.
-3. Build/generated date is provenance metadata and must never be represented as an evidential event date.
-4. `UNMAPPED` source chronology must remain representable where the corpus uses it.
+1. fields may be absent where the repository does not establish them;
+2. unknown times must not be synthesized;
+3. build/generated date is provenance, never evidential event date;
+4. `UNMAPPED` source chronology remains representable.
 
 ## 11. Source-status and statement-status distinctions
 
-The parser/UI must preserve, where represented by source content or metadata:
+The parser/UI must preserve, where represented:
 
 - patient report versus clinician observation;
 - clinical opinion/assessment versus objective documentary fact;
@@ -477,7 +449,7 @@ The parser/UI must preserve, where represented by source content or metadata:
 
 The parser MUST NOT infer a stronger status than the controlled source provides.
 
-## 12. Proposition and tension boundaries
+## 12. Mandatory boundaries and qualifications
 
 The following fields are mandatory display companions where present:
 
@@ -486,7 +458,7 @@ The following fields are mandatory display companions where present:
 - Proposition `boundary`;
 - Adjudication `disposition`.
 
-Generated audience views may initially collapse these under progressive disclosure, but they may not omit them from the canonical object representation or print output where the proposition is substantively relied upon.
+Generated routes may initially collapse them under progressive disclosure but may not omit them from canonical object representation or print output where substantively relied upon.
 
 ## 13. Provenance model
 
@@ -502,7 +474,7 @@ generated_at
 schema_version
 ```
 
-Where available, source objects SHOULD also include:
+Where available, source objects SHOULD include:
 
 ```text
 source_manifest_id
@@ -510,15 +482,11 @@ source_hash
 native_or_public_source_reference
 ```
 
-Generated pages must visually distinguish:
-
-- evidential/source date;
-- repository controlled version;
-- site generation date.
+Generated pages must visibly distinguish evidential/source date, repository-controlled version and site-generation date.
 
 ## 14. Generated-interface contract
 
-Generated JSON and HTML MAY add:
+Generated JSON/HTML MAY add:
 
 ```text
 canonical_url
@@ -528,17 +496,15 @@ reverse_relationships
 reader_route_relevance
 ```
 
-But:
+Rules:
 
-1. generated `display_summary` must never replace the controlled substantive text;
-2. any generated summary must be labelled as generated/interface text;
-3. canonical object URLs must remain audience-independent;
-4. generated files must include `generated: true` or equivalent build provenance;
-5. generated files must be reproducible from repository-controlled inputs.
+- generated summary text never replaces controlled substantive text;
+- generated summaries are labelled as generated/interface text;
+- canonical object URLs remain audience-independent;
+- generated files declare generated provenance;
+- generated files are reproducible from repository-controlled inputs.
 
 ## 15. Canonical URL mapping
-
-The intended canonical URL model is:
 
 ```text
 /evidence/euids/{EUID}/
@@ -548,39 +514,45 @@ The intended canonical URL model is:
 /evidence/propositions/{S-ID}/
 ```
 
-Argument, audit, adjudication and expert-question URLs may be added after their stable public identifier policy is frozen.
+Argument, audit, adjudication and expert-question public URLs may be added after their stable public-ID policy is separately frozen. Implementation IDs alone do not create public canonical URLs.
 
-Professional routes must link to these canonical objects rather than create copies under `/expert/`, `/counsel/` or `/governance/`.
+Professional routes link to canonical objects rather than create copies under `/expert/`, `/counsel/` or `/governance/`.
 
 ## 16. Parser validation requirements
 
-The parser/validator implementation must fail the build on:
+The parser/validator MUST fail the build on:
 
-1. duplicate controlled IDs;
-2. malformed controlled IDs;
-3. a Proposition referencing a missing Fact;
-4. a Proposition referencing a missing Tension;
-5. a Tension referencing a missing Fact;
-6. an Adjudication or Defence Audit referencing a missing Proposition;
-7. invalid controlled-vocabulary values;
-8. a core Proposition without a Boundary;
-9. an object that cannot produce a stable source anchor;
-10. duplicate canonical URL targets.
+1. duplicate normalized IDs;
+2. duplicate controlled evidential IDs;
+3. malformed controlled evidential IDs;
+4. non-deterministic or missing implementation IDs;
+5. a Proposition referencing a missing Fact;
+6. a Proposition referencing a missing Tension;
+7. a Tension referencing a missing Fact;
+8. an Adjudication or Defence Audit referencing a missing Proposition;
+9. invalid controlled-vocabulary values;
+10. unknown source-to-normalized Defence Audit position;
+11. unknown source-to-normalized Tension resolution status;
+12. unknown tension-type source component;
+13. a core Proposition without a Boundary;
+14. an object without a stable source anchor;
+15. a normalized object without `metadata` (use `{}` when no metadata is assigned);
+16. duplicate canonical URL targets.
 
 The parser SHOULD warn on:
 
 1. orphan Facts not used by any higher object;
 2. orphan Tensions;
-3. expert-required Tensions with no mapped expert question once `expert_question` objects are introduced;
+3. expert-required Tensions with no mapped expert question once expert-question objects exist;
 4. unresolved evidence identifiers;
-5. missing provenance fields that are not yet available in the current repository;
-6. duplicate substantive text appearing under different IDs where accidental duplication is plausible.
+5. missing provenance fields not yet available in the current repository;
+6. duplicate substantive text under different IDs where accidental duplication is plausible.
 
 ## 17. Metadata sidecar policy
 
-At this stage, substantive controlled Markdown should remain unchanged.
+At this stage substantive controlled Markdown remains unchanged.
 
-Audience and topic metadata SHOULD initially live in one or more tightly controlled sidecar files keyed by stable object ID.
+Audience and topic metadata SHOULD initially live in tightly controlled sidecar files keyed by stable evidential object ID.
 
 Example:
 
@@ -593,29 +565,23 @@ P024:
 
 Sidecars may classify existing objects but MUST NOT contain replacement proposition/fact text.
 
-If metadata later becomes sufficiently stable and non-disruptive, selected metadata may be moved into structured front matter or local metadata blocks through a separately reviewed migration.
+Implementation-only objects may receive build metadata programmatically; such metadata does not create an evidential identifier.
 
 ## 18. No-duplication rules
 
-The following are architectural invariants:
+Architectural invariants:
 
-1. A controlled Fact has one authoritative controlled text.
-2. A controlled Tension has one authoritative controlled text.
-3. A controlled Proposition has one authoritative controlled text and Boundary.
-4. Audience routes query those same objects.
-5. Search results resolve to canonical object pages.
-6. Print views are generated from the same object graph.
-7. Timelines and summaries must link back to controlled IDs rather than become independent evidence stores.
+1. a controlled Fact has one authoritative controlled text;
+2. a controlled Tension has one authoritative controlled text;
+3. a controlled Proposition has one authoritative controlled text and Boundary;
+4. audience routes query those same objects;
+5. search resolves to canonical object pages where a public canonical object exists;
+6. print views are generated from the same graph;
+7. timelines and summaries link back to controlled IDs rather than becoming independent evidence stores.
 
 ## 19. Schema versioning
 
-Initial schema version:
-
-```text
-1.0.0-draft
-```
-
-After review and approval, freeze as:
+Frozen schema version:
 
 ```text
 1.0.0
@@ -624,22 +590,26 @@ After review and approval, freeze as:
 Versioning rules:
 
 - PATCH: clarification that does not change parser contract;
-- MINOR: backward-compatible new optional field or controlled object type;
+- MINOR: backward-compatible new optional field, mapping or controlled object type;
 - MAJOR: breaking field, relationship or semantic change.
 
-A schema-version change must not by itself change evidence IDs.
+A schema-version change must not by itself change evidential IDs.
 
-## 20. Approval gate
+## 20. Freeze decision
 
-This schema is ready to freeze only when all of the following are accepted:
+Schema `1.0.0` is frozen for the parser/validator gate because:
 
 - existing repository distinctions can be represented without substantive rewriting;
 - Fact qualifications remain first-class;
-- Tension reconciliation/status remain first-class;
+- Tension reconciliation, source type wording and source resolution statuses remain first-class;
+- composite tension types have deterministic, source-preserving normalization;
 - Proposition boundaries remain first-class;
+- Defence Audit categories map one-to-one from actual controlled source labels;
 - adverse audit and adjudication remain distinguishable from Facts and Propositions;
+- every normalized object has deterministic `id`, `id_kind`, `metadata`, relationships and provenance fields;
+- implementation IDs are explicitly non-evidential and non-public;
 - source-date/document-date/finalisation/receipt distinctions remain representable;
 - audience routes can retrieve shared objects without copying them;
-- the future parser can validate every explicit relationship deterministically.
+- the future parser can validate explicit relationships and controlled normalization deterministically.
 
-No UI implementation should begin before this gate is approved.
+No UI implementation should begin before the parser/validator gate is implemented and validated against this frozen contract.
