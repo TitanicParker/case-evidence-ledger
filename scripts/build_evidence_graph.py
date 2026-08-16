@@ -33,18 +33,27 @@ _impl.field_map = _bounded_field_map
 
 
 def _adjudication_fields(block: str):
+    """Extract exact controlled labels by literal position, preserving all body text."""
     labels = ["Defence answer", "Adjudication", "Why", "Disposition"]
+    markers = [f"**{label}:**" for label in labels]
+    positions = []
+    cursor = 0
+    for marker in markers:
+        pos = block.find(marker, cursor)
+        if pos < 0:
+            return {}
+        positions.append(pos)
+        cursor = pos + len(marker)
     found = {}
-    for i, label in enumerate(labels):
-        next_labels = labels[i + 1:]
-        if next_labels:
-            lookahead = "|".join(re.escape(x) for x in next_labels)
-            pattern = rf"(?ms)^\*\*{re.escape(label)}:\*\*\s*(.*?)(?=^\*\*(?:{lookahead}):\*\*)"
-        else:
-            pattern = rf"(?ms)^\*\*{re.escape(label)}:\*\*\s*(.*)$"
-        m = re.search(pattern, block)
-        if m:
-            found[label] = m.group(1).strip()
+    for i, (label, marker, pos) in enumerate(zip(labels, markers, positions)):
+        start = pos + len(marker)
+        end = positions[i + 1] if i + 1 < len(positions) else len(block)
+        value = block[start:end].strip()
+        if i == len(labels) - 1:
+            # The final P-entry can be followed by a horizontal rule and later
+            # D-series sections; these are not part of Disposition.
+            value = re.split(r"(?m)^---\s*$|^#\s+\d+\.\s+", value, maxsplit=1)[0].strip()
+        found[label] = value
     return found
 
 
@@ -55,8 +64,6 @@ def _parse_adjudication():
     rx = re.compile(r"(?m)^##\s+(P\d{3})\s+—\s+(.+)$")
     objects = []
     for m, block in _impl.split_heading_blocks(text, rx):
-        block = re.split(r"(?m)^#\s+\d+\.\s+", block, maxsplit=1)[0]
-        block = re.split(r"(?m)^---\s*$", block, maxsplit=1)[0]
         fields = _adjudication_fields(block)
         required = ["Defence answer", "Adjudication", "Why", "Disposition"]
         missing = [x for x in required if x not in fields]
