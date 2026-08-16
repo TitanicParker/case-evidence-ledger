@@ -124,6 +124,20 @@ def _parse_adjudication():
 
 _impl.parse_adjudication = _parse_adjudication
 
+# The core validator deliberately uses sets for O(1) integrity lookups. Sort all
+# surfaced diagnostics before report generation so Python hash randomization cannot
+# change committed JSON/Markdown output between otherwise identical runs.
+_original_validate = _impl.validate
+
+def _deterministic_validate(objects, vocab):
+    result = _original_validate(objects, vocab)
+    key = lambda item: (item.get("source_file", ""), item.get("id", ""), item.get("condition", ""))
+    result["fatal_errors"] = sorted(result.get("fatal_errors", []), key=key)
+    result["warnings"] = sorted(result.get("warnings", []), key=key)
+    return result
+
+_impl.validate = _deterministic_validate
+
 for _name in dir(_impl):
     if not _name.startswith("_"):
         globals()[_name] = getattr(_impl, _name)
