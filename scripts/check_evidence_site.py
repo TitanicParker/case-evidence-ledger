@@ -29,7 +29,8 @@ def canonical(o):
     return None
 
 def file_for(url):
-    return OUT / url.strip("/") / "index.html"
+    clean = url.strip("/")
+    return OUT / clean / "index.html" if clean else OUT / "index.html"
 
 def contains_exact(rendered, value):
     if not value: return True
@@ -61,9 +62,12 @@ def main():
                 related = by_id.get(ref)
                 related_url = canonical(related)
                 if related_url and not file_for(related_url).exists(): errors.append(f"broken relationship {o['id']} -> {ref}")
-    required = ["/evidence/", "/evidence/facts/", "/evidence/tensions/", "/evidence/propositions/", "/evidence/euids/", "/method/", "/search/"]
+    required = ["/", "/counsel/", "/expert/", "/governance/", "/evidence/", "/evidence/facts/", "/evidence/tensions/", "/evidence/propositions/", "/evidence/euids/", "/method/", "/search/"]
     for url in required:
-        if not file_for(url).exists(): errors.append(f"missing foundation route {url}")
+        if not file_for(url).exists(): errors.append(f"missing site route {url}")
+    home = file_for("/").read_text(encoding="utf-8") if file_for("/").exists() else ""
+    for phrase in ["For Counsel", "For Expert Review", "Governance &amp; Regulatory", "One Evidential Foundation"]:
+        if phrase not in home: errors.append(f"homepage hierarchy missing: {phrase}")
     if not (OUT / "404.html").exists(): errors.append("missing object handling / 404.html")
     for oid in ["P001","P003","P024","F0162","T002","T022","S001"]:
         if oid not in by_id: errors.append(f"representative object absent from graph: {oid}")
@@ -72,7 +76,7 @@ def main():
             if not url or not file_for(url).exists(): errors.append(f"representative page not rendered: {oid}")
     props_index = file_for("/evidence/propositions/").read_text(encoding="utf-8") if file_for("/evidence/propositions/").exists() else ""
     if 'id="C001"' not in props_index: errors.append("representative control rule C001 not rendered on propositions index")
-    print(f"Checked {len(urls)} canonical evidence pages and {len(required)} foundation routes in {OUT.name}.")
+    print(f"Checked {len(urls)} canonical evidence pages and {len(required)} site routes in {OUT.name}.")
     if errors:
         for error in errors: print(f"ERROR: {error}")
         return 1
