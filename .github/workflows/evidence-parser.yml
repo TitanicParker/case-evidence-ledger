@@ -1,0 +1,52 @@
+name: Evidence parser gate
+
+on:
+  pull_request:
+    paths:
+      - 'scripts/build_evidence_graph.py'
+      - 'tests/**'
+      - 'docs/PARSER_AND_VALIDATOR.md'
+      - 'schema/**'
+      - '*.md'
+      - 'site-data/generated/**'
+      - '.github/workflows/evidence-parser.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  parser-gate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Run parser tests
+        run: python -m unittest discover -s tests -p 'test_*.py'
+
+      - name: Validate evidence graph without writes
+        run: python scripts/build_evidence_graph.py --validate
+
+      - name: Build derived artifacts
+        run: python scripts/build_evidence_graph.py --build
+
+      - name: Check committed generated artifacts are current
+        run: git diff --exit-code -- site-data/generated PARSER_VALIDATION_REPORT.md
+
+      - name: Upload parser gate artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: evidence-parser-gate
+          path: |
+            site-data/generated/
+            PARSER_VALIDATION_REPORT.md
+          if-no-files-found: warn
