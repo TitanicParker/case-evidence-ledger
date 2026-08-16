@@ -14,7 +14,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   parser-gate:
@@ -39,6 +39,20 @@ jobs:
 
       - name: Build derived artifacts
         run: python scripts/build_evidence_graph.py --build
+
+      - name: Commit generated artifacts on same-repository PR
+        if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository
+        shell: bash
+        run: |
+          git add site-data/generated PARSER_VALIDATION_REPORT.md
+          if git diff --cached --quiet; then
+            echo "Generated artifacts already current."
+          else
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git commit -m "Update generated evidence graph artifacts"
+            git push origin HEAD:${{ github.head_ref }}
+          fi
 
       - name: Check committed generated artifacts are current
         shell: bash
