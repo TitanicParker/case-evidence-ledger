@@ -18,14 +18,11 @@ if str(SCRIPT_DIR) not in sys.path:
 
 import evidence_graph_impl as _impl
 
-# Provenance is identical for all objects extracted from a given source file in a
-# single build. Cache once per path so parsing remains linear at large EUID counts.
 _impl.provenance = lru_cache(maxsize=None)(_impl.provenance)
 
 _original_field_map = _impl.field_map
 
 def _bounded_field_map(block: str):
-    """Prevent the final object in a register absorbing following report sections."""
     bounded = re.split(r"(?m)^(?:#{1,2}\s+.+|---\s*)$", block, maxsplit=1)[0]
     return _original_field_map(bounded)
 
@@ -33,7 +30,6 @@ _impl.field_map = _bounded_field_map
 
 
 def _adjudication_fields(block: str):
-    """Extract exact controlled labels by literal position, preserving all body text."""
     labels = ["Defence answer", "Adjudication", "Why", "Disposition"]
     markers = [f"**{label}:**" for label in labels]
     positions = []
@@ -50,15 +46,12 @@ def _adjudication_fields(block: str):
         end = positions[i + 1] if i + 1 < len(positions) else len(block)
         value = block[start:end].strip()
         if i == len(labels) - 1:
-            # The final P-entry can be followed by a horizontal rule and later
-            # D-series sections; these are not part of Disposition.
             value = re.split(r"(?m)^---\s*$|^#\s+\d+\.\s+", value, maxsplit=1)[0].strip()
         found[label] = value
     return found
 
 
 def _parse_adjudication():
-    """Parse proposition adjudications using their actual multi-paragraph grammar."""
     path = "ADVERSE_CASE_ADJUDICATION.md"
     text = _impl.read(path)
     rx = re.compile(r"(?m)^##\s+(P\d{3})\s+—\s+(.+)$")
@@ -68,7 +61,8 @@ def _parse_adjudication():
         required = ["Defence answer", "Adjudication", "Why", "Disposition"]
         missing = [x for x in required if x not in fields]
         if missing:
-            raise _impl.GateError(f"adjudication {m.group(1)} missing fields: {missing}")
+            preview = block[:500].replace("\n", "\\n")
+            raise _impl.GateError(f"adjudication {m.group(1)} missing fields: {missing}; block preview={preview!r}")
         raw = _impl.clean_code(fields["Adjudication"])
         classes = re.findall(r"(?<![A-Z])([ABCD])(?![A-Z])", raw)
         if not classes:
