@@ -256,6 +256,41 @@ This is the central expert hinge. Outcome A gives P024 substantive clinical sign
 
 ---
 
+# EQ009 — Subspecialty limitation, escalation and referral
+
+**Question:**  
+In the context of a very young patient with severe Parkinsonism, atypical/dystonic-looking lower-limb features, unresolved structural-versus-neurological foot relationships and a treating record expressly stating “I am not a movement disorders neurologist”, was the level of specialist input, escalation and follow-up represented in the record clinically adequate, or should formal movement-disorders referral or additional subspecialist review reasonably have occurred at any identifiable point?
+
+**Documentary triggers:** `T004`, `T005`, `T006`, `T008`  
+**Controlled propositions:** `P006`, `P009`, `P012`, `P013`, `P014`, `P015`  
+
+**What the documents establish regardless:**  
+- the presentation was unusually young and contained atypical/dystonic-looking features;
+- the treating neurologist expressly recorded that he was not a movement-disorders neurologist;
+- the case received colleague/complex-case input and later an external specialist opinion from Prof Healy;
+- durable treatment and diagnostic-management decisions nevertheless continued within the Galway pathway;
+- the repository does not establish incompetence or lack of authority from the disclaimer alone.
+
+**Expert-dependent issues:**  
+- what level of movement-disorders expertise was reasonably required at the relevant times;
+- whether informal/complex-case consultation and Prof Healy’s opinion constituted adequate specialist input;
+- whether the unresolved phenotype, treatment strategy or later evidence should have triggered formal referral or additional review;
+- whether any absence of formal referral had practical clinical significance.
+
+**Permitted outcome range:**  
+A. Existing consultation and follow-up were clinically adequate; no additional formal movement-disorders referral was reasonably required.  
+B. Existing input was reasonable initially, but later developments should have prompted formal subspecialist review.  
+C. Formal movement-disorders referral or equivalent subspecialist management should reasonably have occurred substantially earlier.  
+D. The represented record is insufficient to determine what specialist input actually occurred or whether it was adequate.
+
+**Boundary:**  
+The statement “I am not a movement disorders neurologist” is not evidence, by itself, of incompetence, lack of authority, breach or a mandatory referral duty.
+
+**Counsel consequence:**  
+Outcome A substantially neutralises any referral/escalation limb. Outcome B supports a later missed-escalation argument. Outcome C may support a stronger standard-of-care contention, subject to expert reasoning and causation. Outcome D makes the completeness of multidisciplinary and referral records central.
+
+---
+
 # EQ008 — Causation and avoidable harm, conditional on the preceding answers
 
 **Question:**  
@@ -315,7 +350,12 @@ The following controls apply to every expert question:
 | EQ005 | Longitudinal symptom continuity | T011–T016, T022 | P018–P023 | Cumulative reopening argument |
 | EQ006 | PRKN significance | T008, T017 | P012, P014, P015, P025 | Genetics / etiological reconstruction |
 | EQ007 | Local vs global updating | T011, T014, T016, T017, T022 | P023–P025 | Central P024 hinge |
+| EQ009 | Subspecialty escalation | T004, T005, T006, T008 | P006, P009, P012–P015 | Referral / escalation adequacy |
 | EQ008 | Causation and harm | conditional downstream set | P009–P025 | Damages / causal consequence |
+
+## Coverage note
+
+`T018`–`T021` are deliberately not promoted into standalone expert questions. They remain chronology, transmission/representation or missing-source controls. Their clinical significance may enter another expert question if additional source material makes that necessary, but the register does not artificially medicalise them.
 
 ## Closing control
 
