@@ -54,15 +54,21 @@ def _adjudication_fields(block: str):
 def _parse_adjudication():
     path = "ADVERSE_CASE_ADJUDICATION.md"
     text = _impl.read(path)
+    start_marker = "# 3. Proposition-by-proposition adjudication"
+    end_marker = "# 4. Defence propositions adjudicated"
+    start = text.find(start_marker)
+    end = text.find(end_marker, start + len(start_marker)) if start >= 0 else -1
+    if start < 0 or end < 0:
+        raise _impl.GateError("adjudication controlled register section boundaries not found")
+    register = text[start + len(start_marker):end]
     rx = re.compile(r"(?m)^##\s+(P\d{3})\s+—\s+(.+)$")
     objects = []
-    for m, block in _impl.split_heading_blocks(text, rx):
+    for m, block in _impl.split_heading_blocks(register, rx):
         fields = _adjudication_fields(block)
         required = ["Defence answer", "Adjudication", "Why", "Disposition"]
         missing = [x for x in required if x not in fields]
         if missing:
-            preview = block[:500].replace("\n", "\\n")
-            raise _impl.GateError(f"adjudication {m.group(1)} missing fields: {missing}; block preview={preview!r}")
+            raise _impl.GateError(f"adjudication {m.group(1)} missing fields: {missing}")
         raw = _impl.clean_code(fields["Adjudication"])
         classes = re.findall(r"(?<![A-Z])([ABCD])(?![A-Z])", raw)
         if not classes:
