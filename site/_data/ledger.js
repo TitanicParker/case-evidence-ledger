@@ -24,6 +24,7 @@ function canonicalUrl(object) {
   if (["proposition", "supporting_proposition"].includes(object.object_type)) {
     return `/evidence/propositions/${object.id}/`;
   }
+  if (object.object_type === "expert_question") return `/evidence/expert-questions/${object.id}/`;
   return null;
 }
 
@@ -81,6 +82,7 @@ module.exports = function() {
   const propositions = objects.filter(object => object.object_type === "proposition").sort((a, b) => a.id.localeCompare(b.id));
   const supporting = objects.filter(object => object.object_type === "supporting_proposition").sort((a, b) => a.id.localeCompare(b.id));
   const controls = objects.filter(object => object.object_type === "control_rule").sort((a, b) => a.id.localeCompare(b.id));
+  const expertQuestions = objects.filter(object => object.object_type === "expert_question").sort((a, b) => a.id.localeCompare(b.id));
   const audits = objects.filter(object => object.object_type === "defence_audit");
   const adjudications = objects.filter(object => object.object_type === "adjudication");
   const auditByProposition = new Map(audits.map(object => [object.proposition_id, object]));
@@ -118,7 +120,7 @@ module.exports = function() {
     return result;
   }
 
-  const canonicalObjects = objects.filter(object => object.canonical_url).map(enrich);
+  const canonicalObjects = objects.filter(object => object.canonical_url && object.object_type !== "expert_question").map(enrich);
   const routes = [
     { kind: "landing", url: "/evidence/", title: "Controlled Evidence Foundation" },
     { kind: "method", url: "/method/", title: "Method & provenance" },
@@ -158,9 +160,10 @@ module.exports = function() {
       propositions: propositions.length,
       supporting: supporting.length,
       controls: controls.length,
+      expertQuestions: expertQuestions.length,
       total: objects.length
     },
-    collections: { facts, euids, tensions, propositions, supporting, controls },
+    collections: { facts, euids, tensions, propositions, supporting, controls, expertQuestions },
     related,
     enrich
   };
