@@ -5,10 +5,13 @@
   "description": "Canonical Evidence Foundation static-site build",
   "scripts": {
     "build": "eleventy",
-    "check": "python3 scripts/check_evidence_site.py"
+    "search:index": "pagefind --site ${SITE_OUTPUT_DIR:-_site}",
+    "check": "python3 scripts/check_evidence_site.py",
+    "check:search": "python3 scripts/check_evidence_search.py"
   },
   "devDependencies": {
     "@11ty/eleventy": "3.1.2",
+    "pagefind": "1.5.2",
     "playwright": "1.55.0"
   }
 }
