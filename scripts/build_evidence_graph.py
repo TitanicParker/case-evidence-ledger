@@ -201,6 +201,17 @@ def _parse_all_with_expert_questions():
 
 _impl.parse_all = _parse_all_with_expert_questions
 
+# Expert Questions now have stable public routes. Keep generated id-map/object metadata
+# synchronized with the canonical Evidence Foundation route used by the site.
+_original_canonical_url = _impl.canonical_url
+
+def _canonical_url(object):
+    if object.get("id_kind") == "evidential" and object.get("object_type") == "expert_question":
+        return f"/evidence/expert-questions/{object['id']}/"
+    return _original_canonical_url(object)
+
+_impl.canonical_url = _canonical_url
+
 # The core validator deliberately uses sets for O(1) integrity lookups. Sort all
 # surfaced diagnostics before report generation so Python hash randomization cannot
 # change committed JSON/Markdown output between otherwise identical runs.
