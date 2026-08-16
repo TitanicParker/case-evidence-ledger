@@ -18,6 +18,39 @@ if str(SCRIPT_DIR) not in sys.path:
 
 import evidence_graph_impl as _impl
 
+# Generated files cannot truthfully embed the commit that stores those same files
+# without creating a self-referential diff on every rebuild. Define the build/source
+# commit as the latest commit that changed an authoritative source, schema, or parser
+# input. A later generated-artifact-only commit therefore reproduces byte-for-byte.
+_original_git_value = _impl.git_value
+_GRAPH_INPUTS = [
+    "schema/EVIDENCE_OBJECT_SCHEMA.md",
+    "schema/vocabulary.yml",
+    "sources-consolidated-evidence-corpus.md",
+    "FACT_REGISTER.md",
+    "EVIDENTIAL_TENSIONS.md",
+    "PROPOSITION_REGISTER.md",
+    "CASE_ARGUMENT_ARCHITECTURE.md",
+    "DEFENCE_ADVERSE_CASE_AUDIT.md",
+    "ADVERSE_CASE_ADJUDICATION.md",
+    "scripts/build_evidence_graph.py",
+    "scripts/evidence_graph_impl.py",
+]
+
+@lru_cache(maxsize=1)
+def _graph_source_commit():
+    return _original_git_value("log", "-1", "--format=%H", "--", *_GRAPH_INPUTS) or "unavailable"
+
+
+def _stable_git_value(*args: str):
+    if args == ("rev-parse", "HEAD"):
+        return _graph_source_commit()
+    if args == ("show", "-s", "--format=%cI", "HEAD"):
+        commit = _graph_source_commit()
+        return _original_git_value("show", "-s", "--format=%cI", commit) if commit != "unavailable" else None
+    return _original_git_value(*args)
+
+_impl.git_value = _stable_git_value
 _impl.provenance = lru_cache(maxsize=None)(_impl.provenance)
 
 _original_field_map = _impl.field_map
