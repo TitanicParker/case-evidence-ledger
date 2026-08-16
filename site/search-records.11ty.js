@@ -45,6 +45,6 @@ module.exports = class {
   }
   render({ record }) {
     const o = record.object;
-    return `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="robots" content="noindex"><title>${esc(o.id)} · Search record</title></head><body><main data-pagefind-body data-pagefind-filter="object-type:${esc(record.type)}" data-pagefind-meta="object-id:${esc(o.id)}, object-title:${esc(o.title || o.id)}, target:${esc(record.target)}, field:${esc(record.field)}, source-status:${esc(o.source_status || "not-applicable")}"><h1>${esc(o.id)} — ${esc(o.title || o.id)}</h1><h2>${esc(record.field)}</h2><p>${esc(record.value)}</p></main></body></html>`;
+    return `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="robots" content="noindex"><title>${esc(o.id)} · Search record</title></head><body><main data-pagefind-body data-pagefind-filter="object-type:${esc(record.type)}"><div data-pagefind-ignore hidden><span data-pagefind-meta="object-id">${esc(o.id)}</span><span data-pagefind-meta="object-title">${esc(o.title || o.id)}</span><span data-pagefind-meta="object-type">${esc(record.type)}</span><span data-pagefind-meta="target">${esc(record.target)}</span><span data-pagefind-meta="field">${esc(record.field)}</span><span data-pagefind-meta="source-status">${esc(o.source_status || "not-applicable")}</span></div><h1>${esc(o.id)} — ${esc(o.title || o.id)}</h1><h2>${esc(record.field)}</h2><p>${esc(record.value)}</p></main></body></html>`;
   }
 };
