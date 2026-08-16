@@ -4,6 +4,7 @@ on:
   pull_request:
     paths:
       - 'scripts/build_evidence_graph.py'
+      - 'scripts/evidence_graph_impl.py'
       - 'tests/**'
       - 'docs/PARSER_AND_VALIDATOR.md'
       - 'schema/**'
@@ -23,6 +24,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -39,7 +41,15 @@ jobs:
         run: python scripts/build_evidence_graph.py --build
 
       - name: Check committed generated artifacts are current
-        run: git diff --exit-code -- site-data/generated PARSER_VALIDATION_REPORT.md
+        shell: bash
+        run: |
+          git diff --exit-code -- site-data/generated PARSER_VALIDATION_REPORT.md
+          untracked="$(git ls-files --others --exclude-standard -- site-data/generated PARSER_VALIDATION_REPORT.md)"
+          if [ -n "$untracked" ]; then
+            echo "Generated artifacts are not committed:"
+            echo "$untracked"
+            exit 1
+          fi
 
       - name: Upload parser gate artifacts
         if: always()
