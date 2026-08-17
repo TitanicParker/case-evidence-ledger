@@ -13,7 +13,7 @@ It deliberately separates documentary fact from inference. It does **not** asser
 3. The database records **First Treated: 14 Sep 2017** and **Patient Last Seen: 25 Mar 2019**.
 4. The older referral is a layered document. The underlying referral is dated 10 Apr 2017, but later Parkinson's-era handwriting cannot safely be attributed to 10 Apr 2017 without audit evidence.
 5. On the older referral, **Medium Risk — Foot deformities** is visibly ticked; visible Low Risk boxes, including **No neuropathy**, are not ticked.
-6. On the 2019 re-referral, the clearer native image shows **No neuropathy** and **No PAD** ticked in the Low Risk section. **No deformity is not visibly ticked**. No High Risk or Medium Risk selection is asserted from that image.
+6. On the 2019 re-referral, all three visible Low Risk boxes are ticked: **No deformity**, **No neuropathy**, and **No PAD**. No High Risk or Medium Risk selection is asserted from that image.
 
 ## Longitudinal treatment-series fact
 
@@ -55,7 +55,7 @@ Visible referral reasons include **Callus** and **Gait abnormalities**. The comm
 
 > Parkinsons at very young age has issues with “clawing feet” and pain
 
-The clearer native image shows Low Risk ticks for **No neuropathy** and **No PAD**. **No deformity is not visibly ticked.**
+The 2019 re-referral shows all three visible Low Risk boxes ticked: **No deformity**, **No neuropathy**, and **No PAD**.
 
 ## Proposed fact-register additions
 
@@ -165,7 +165,7 @@ These are staged identifiers only and should be copied into the canonical `FACT_
 
 ### F1906
 
-**Fact:** On the clearer 2019 re-referral image, Low Risk “No neuropathy” and “No PAD” are ticked; “No deformity” is not visibly ticked.
+**Fact:** On the 2019 re-referral, the three visible Low Risk boxes — “No deformity”, “No neuropathy”, and “No PAD” — are ticked.
 
 **Evidence class:** referral-form checkbox state.
 
