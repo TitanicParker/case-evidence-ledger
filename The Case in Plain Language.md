@@ -307,3 +307,9 @@ A shorter, well-supported period of avoidable suffering would be a stronger case
 The patient entered neurological care with a combined and unresolved presentation involving severe foot problems, abnormal gait and emerging Parkinsonism. The hospital identified both genuine structural foot disease and severe neurological disorder but left the relationship between them unclear. Practical care was nevertheless divided, with Neurology managing Parkinsonism and Podiatry managing the feet. Over the following years, increasingly relevant evidence emerged: neurological medication altered the lower-limb state, a later foot phenomenon was described as Parkinsonian, dystonia and gait changes influenced levodopa treatment, leg pain and shuffling were interpreted as OFF-related, morning pain became a target of dopaminergic therapy, and the long-standing PRKN hypothesis was eventually genetically confirmed. None of those facts proves that every foot symptom was neurological. The central question is whether, as that evidence accumulated, the original unresolved relationship was ever adequately reconsidered as a whole. The records show repeated local responses to new information much more clearly than they show a global reconstruction of the original case. Whether that amounted to negligent care, and whether earlier reassessment would probably have reduced the patient’s suffering, are questions that require independent expert evidence.
 
 That is the argument.
+
+---
+
+### Related reading
+
+For how this clinical history later intersects with the patient’s statutory data-protection rights, see **[The Convergence of the Clinical Record and the GDPR Record](convergence-clinical-gdpr-record.md)**.
