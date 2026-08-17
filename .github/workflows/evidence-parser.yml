@@ -14,7 +14,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   parser-gate:
@@ -39,6 +39,17 @@ jobs:
 
       - name: Build derived artifacts
         run: python scripts/build_evidence_graph.py --build
+
+      - name: Commit refreshed parser artifacts
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add site-data/generated PARSER_VALIDATION_REPORT.md
+          if ! git diff --cached --quiet; then
+            git commit -m "Regenerate evidence graph artifacts"
+            git push origin "HEAD:${GITHUB_HEAD_REF}"
+          fi
 
       - name: Check committed generated artifacts are current
         shell: bash
