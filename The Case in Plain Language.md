@@ -313,3 +313,5 @@ That is the argument.
 ### Related reading
 
 For how this clinical history later intersects with the patient’s statutory data-protection rights, see **[The Convergence of the Clinical Record and the GDPR Record](convergence-clinical-gdpr-record.md)**.
+
+For a fuller combined narrative bringing the clinical uncertainty, medical record and subsequent GDPR trail together, see **[The Whole Story: Clinical Uncertainty, the Medical Record, and the GDPR Trail](gdpratlarge.md)**.
