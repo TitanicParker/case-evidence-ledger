@@ -5,6 +5,7 @@ const { esc, header, footer, head } = require("./_lib/public-shell.js");
 function inlineMarkdown(value) {
   return esc(value)
     .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
+    .replace(/\[([^\]]+)\]\(([^)]+)\.md\)/g, '<a href="$2/">$1</a>')
     .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>');
 }
 
