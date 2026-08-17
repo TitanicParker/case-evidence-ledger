@@ -25,12 +25,12 @@ The contemporaneous documentary record begins with one unresolved clinical prese
 
 ## P002 — Structural foot pathology and neurological abnormality coexisted
 
-**Proposition:** Genuine structural foot pathology and neurological lower-limb abnormalities are independently documented and neither documentary strand can be eliminated by the other.
+**Proposition:** Genuine structural foot pathology and neurological lower-limb abnormalities are independently documented and neither documentary strand can be eliminated by the other. The Podiatry record materially strengthens the structural strand by documenting left 5th MTPJ pathology at all eight represented treatment appointments, while also preserving clawing/gait context and a later referral characterisation relating prior foot issues to increased tone and abnormal gait associated with Parkinson's disease.
 
-**Primary facts:** `F0005`, `F0150`, `F0153`, `F0161`, `F0162`  
+**Primary facts:** `F0005`, `F0150`, `F0153`, `F0161`, `F0162`, `F1894`, `F1895`, `F1896`, `F1897`, `F1898`, `F1899`, `F1900`, `F1901`, `F1902`, `F1903`, `F1904`, `F1905`  
 **Tensions:** `T004`, `T022`  
 **Strength:** Near-direct documentary inference  
-**Boundary:** The proposition does not determine the mechanism of any particular pain episode.
+**Boundary:** The proposition establishes coexistence and longitudinal recurrence, not the mechanism of any particular lesion, pain episode or medication response.
 
 ## P003 — July 2017 left the foot–neurology relationship unresolved
 
@@ -43,21 +43,21 @@ The contemporaneous documentary record begins with one unresolved clinical prese
 
 ## P004 — Operational allocation preceded documentary resolution
 
-**Proposition:** The record shows definite operational allocation of the neurological syndrome to Neurology and the foot problem to Podiatry while the documentary relationship between those domains remained unresolved.
+**Proposition:** The record shows definite operational allocation of the neurological syndrome to Neurology and the foot problem to Podiatry while the documentary relationship between those domains remained unresolved. The later-obtained Podiatry record confirms that the local pathway had a genuine repeatedly treated structural object, but does not convert that operational allocation into proof of etiological separation.
 
-**Primary facts:** `F0162`, `F0188`, `F0323`  
+**Primary facts:** `F0162`, `F0188`, `F0323`, `F1891`, `F1894`, `F1903`  
 **Tensions:** `T001`, `T002`, `T003`  
 **Strength:** Strong documentary inference  
-**Boundary:** Parallel pathways can be appropriate for mixed pathology; the proposition does not make Podiatry referral improper.
+**Boundary:** Parallel pathways can be appropriate for mixed pathology; this proposition does not make Podiatry referral improper or suggest that local treatment lacked value.
 
 ## P005 — Podiatry allocation cannot itself prove neurological separateness
 
-**Proposition:** The 6 July 2017 GP record that Podiatry would mark the case as priority “as Parkinson's” materially limits any later inference that the existence of a Podiatry pathway, by itself, proves that the feet had already been classified as neurologically unrelated.
+**Proposition:** The 6 July 2017 GP record that Podiatry would mark the case as priority “as Parkinson's”, together with the 2019 re-referral characterising previous foot issues as relating to increased tone and abnormal gait relating to Parkinson's disease, materially limits any later inference that the existence of a Podiatry pathway, by itself, proves that the feet had already been classified as neurologically unrelated. The Podiatry record simultaneously establishes genuine structural pathology requiring local treatment.
 
-**Primary facts:** `F0188`, `F0323`  
+**Primary facts:** `F0188`, `F0323`, `F1903`, `F1904`, `F1905`  
 **Tensions:** `T003`  
 **Strength:** Strong documentary inference  
-**Boundary:** “As Parkinson's” may have been contextual or administrative rather than causal.
+**Boundary:** Neither “as Parkinson's” nor the 2019 referral wording is itself an expert mechanism determination.
 
 ## P006 — Syndrome certainty and etiological certainty were different
 
@@ -160,12 +160,12 @@ The contemporaneous documentary record begins with one unresolved clinical prese
 
 ## P017 — Procyclidine withdrawal generated lower-limb/foot-specific information
 
-**Proposition:** The Procyclidine withdrawal episode generated medication-state evidence involving gait/tension and a foot phenomenon, including the recorded rapid return of the outside-left-foot phenomenon.
+**Proposition:** The Procyclidine withdrawal episode generated medication-state evidence involving gait/tension and a foot phenomenon, including the recorded rapid return of the “outside-left-foot corn” phenomenon. The Podiatry record independently shows pathology at the left 5th MTPJ at all eight represented treatment appointments, giving the later patient terminology a documented recurrent anatomical comparator.
 
-**Primary facts:** `F0437`, `F0438`, `F0439`  
+**Primary facts:** `F0437`, `F0438`, `F0439`, `F1895`, `F1900`, `F1902`, `F1903`  
 **Tensions:** `T010`, `T022`  
 **Strength:** Strong documentary inference  
-**Boundary:** The episode may reflect altered tone, loading, restlessness or pain perception and does not prove that a corn itself was neurologically caused.
+**Boundary:** Anatomical consistency does not prove categorical identity or establish that a corn/callus itself was neurologically caused; altered tone, loading, restlessness, pain perception or mixed mechanisms remain possible.
 
 ## P018 — A later foot-drop-like phenomenon was expressly classified as parkinsonian
 
@@ -214,12 +214,12 @@ The contemporaneous documentary record begins with one unresolved clinical prese
 
 ## P023 — The cumulative treatment-state evidence bears on the original unresolved relationship
 
-**Proposition:** Across 2017–2025, repeated medication-state observations involving tension, gait, foot phenomena, OFF-related leg pain and morning pain form a cumulative body of evidence capable of bearing on the original lower-limb/foot uncertainty.
+**Proposition:** Across 2017–2025, repeated medication-state observations involving tension, gait, foot phenomena, OFF-related leg pain and morning pain form a cumulative body of evidence capable of bearing on the original lower-limb/foot uncertainty. The Podiatry record adds a stable structural comparator — pathology at the left 5th MTPJ documented at all eight represented treatment appointments — and affirmative evidence that some local intervention was effective.
 
-**Primary facts:** `F0437`, `F0439`, `F0941`, `F1298`, `F1299`, `F1740`, `F1741`  
+**Primary facts:** `F0437`, `F0439`, `F0941`, `F1298`, `F1299`, `F1740`, `F1741`, `F1901`, `F1903`, `F1904`  
 **Tensions:** `T010`, `T011`, `T014`, `T016`, `T022`  
 **Strength:** Strong documentary inference  
-**Boundary:** The phenomena are not proven identical across time and may reflect mixed mechanisms.
+**Boundary:** The longitudinal phenomena are not proven identical and the evidence remains compatible with genuine structural pathology plus neurological or medication-state modulation.
 
 ## P024 — Local updating is documented more clearly than global reconstruction
 
@@ -283,8 +283,8 @@ The 2026 PRKN result establishes that the earlier PRKN etiological branch was re
 
 ## S008 — The documentary record does not support an exclusively structural or exclusively neurological simplification
 
-The full record contains both genuine structural/peripheral foot pathology and later Parkinsonian, dystonic, OFF-state and dopaminergic-response evidence; the documents alone do not justify reducing the longitudinal phenotype to either exclusive pole.  
-**Facts:** `F0005`, `F0150`, `F0161`, `F0162`, `F0437`, `F0941`, `F1299`, `F1742`, `F1816`
+The full record contains repeatedly treated structural pathology, including left 5th MTPJ pathology at all eight represented Podiatry treatment appointments and reported benefit from some local podiatric intervention, while also containing clawing, neurological gait/tone findings, Parkinson's-related referral framing and later medication-state observations. The documents alone do not justify reducing the longitudinal phenotype to either an exclusively structural or exclusively neurological account.  
+**Facts:** `F0005`, `F0150`, `F0161`, `F0162`, `F0437`, `F0941`, `F1299`, `F1742`, `F1816`, `F1894`, `F1898`, `F1899`, `F1901`, `F1903`, `F1904`, `F1905`
 
 ---
 
