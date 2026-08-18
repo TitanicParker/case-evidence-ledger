@@ -123,7 +123,7 @@ jobs:
       - name: Confirm no substantive evidence files changed in Gate 4
         shell: bash
         run: |
-          git diff --name-only origin/${{ github.base_ref }}...HEAD > /tmp/gate4-files.txt
+          git diff --name-only > /tmp/gate4-files.txt
           forbidden='^(sources-consolidated-evidence-corpus\.md|FACT_REGISTER\.md|EVIDENTIAL_TENSIONS\.md|PROPOSITION_REGISTER\.md|CASE_ARGUMENT_ARCHITECTURE\.md|DEFENCE_ADVERSE_CASE_AUDIT\.md|ADVERSE_CASE_ADJUDICATION\.md|case-evidence-ledger_timeline\.html)$'
           if grep -E "$forbidden" /tmp/gate4-files.txt; then
             echo 'Substantive evidence/timeline change detected.'

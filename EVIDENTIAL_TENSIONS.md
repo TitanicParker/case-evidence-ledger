@@ -35,81 +35,81 @@
 
 ### T001 — Integrated pre-admission neurological concern vs later pathway separation
 
-**Facts engaged:** `F0002`, `F0017`, `F0019`, `F0026`, `F0027`, `F0034`, `F0037`, `F0038`, `F0150`, `F0162`, `F0188`
+**Facts engaged:** `F0002`, `F0017`, `F0019`, `F0026`, `F0027`, `F0034`, `F0037`, `F0038`, `F0150`, `F0162`, `F0188`, `F1891`, `F1894`, `F1903`, `F1904`, `F1905`
 
 **Type:** reasoning gap / operational-epistemic mismatch
 
 **Documentary tension:**  
-Before admission, the GP recorded bilateral foot pain with abnormal gait, later grouped the patient's “gait, feet and \"muscle tension\" issues” within the contemplated Neurology opinion, documented Occupational Health concern, increased bilateral leg tone and worsening dexterity, and arranged direct neurological assessment. During the neurological record, gait was described as footdrop-like and somewhat suggestive of dystonic posture, while the relationship between leg tension and the corns/callouses/foot pain was recorded as “Not clear”. The plan nevertheless separately routed the foot problem to outpatient Chiropody/Podiatry.
+Before admission, the GP recorded bilateral foot pain with abnormal gait, later grouped the patient's “gait, feet and \"muscle tension\" issues” within the contemplated Neurology opinion, documented Occupational Health concern, increased bilateral leg tone and worsening dexterity, and arranged direct neurological assessment. During the neurological record, gait was described as footdrop-like and somewhat suggestive of dystonic posture, while the relationship between leg tension and the corns/callouses/foot pain was recorded as “Not clear”. The plan nevertheless separately routed the foot problem to outpatient Chiropody/Podiatry. The later-obtained Podiatry record confirms that the separate pathway had a genuine local clinical object: structural pathology at the left 5th MTPJ was documented at all eight represented treatment appointments. It also records toe clawing and, in the 2019 re-referral, expressly describes the previous foot issues as relating to increased tone and abnormal gait relating to Parkinson's disease.
 
 **Why it matters:**  
-The documents show a transition from an integrated referral problem to differentiated management pathways, but the presently represented facts do not themselves identify a definitive factual finding that resolved the foot component as neurologically separate before that routing occurred.
+The source gap as to what Podiatry actually treated is materially reduced. The documents still do not identify a definitive factual finding that resolved the structural and neurological strands as unrelated before or during the operational separation.
 
 **Possible reconciliation:**  
-Structural pathology was genuinely present and could independently justify Podiatry involvement while Neurology continued to address tone, bradykinesia and gait. Parallel pathways need not imply a final etiological separation.
+Structural pathology was genuine and repeatedly locally treatable while neurological tone, posture, gait or clawing could also have influenced loading or symptom expression. Parallel pathways therefore remain compatible with a mixed phenotype and do not themselves establish final etiological separation.
 
 **What would resolve it:**  
-The contemporaneous inpatient reasoning note, multidisciplinary discussion record, Podiatry referral text and subsequent Podiatry records identifying how the services understood the relationship.
+Expert review of the combined contemporaneous neurological and podiatric findings, together with any surviving cross-specialty communications or audit material showing how the services understood the relationship.
 
 **Status:** `UNRESOLVED` / `REQUIRES ADDITIONAL SOURCE`
 
 ### T002 — Express “Not clear” relationship vs definite Podiatry routing
 
-**Facts engaged:** `F0161`, `F0162`, `F0188`
+**Facts engaged:** `F0161`, `F0162`, `F0188`, `F1894`, `F1903`, `F1904`
 
 **Type:** operational / epistemic mismatch
 
 **Documentary tension:**  
-The neurological record expressly left the relationship between the leg symptoms and the corns/callouses/burning uncertain—“Not clear”—while the management plan contained a definite referral to outpatient Chiropody/Podiatry.
+The neurological record expressly left the relationship between the leg symptoms and the corns/callouses/burning uncertain—“Not clear”—while the management plan contained a definite referral to outpatient Chiropody/Podiatry. The later-obtained Podiatry record demonstrates repeated treatment of a genuine structural lesion, but it does not contain a contemporaneous 2017 finding that resolves the earlier neurological relationship. The 2019 re-referral instead expressly situates the prior foot history in relation to increased tone and abnormal gait associated with Parkinson's disease.
 
 **Why it matters:**  
-Clinical uncertainty and operational action can coexist, but the action alone cannot establish that the uncertainty had been resolved.
+The Podiatry treatment record strengthens the factual basis for local structural management while reinforcing the distinction between operational routing and etiological resolution.
 
 **Possible reconciliation:**  
-A service can appropriately treat a visible structural problem without deciding whether neurological posture, loading, peripheral pathology or another mechanism contributed to it.
+A service can appropriately and successfully treat a visible structural lesion while the forces producing recurrent loading, pain or deformity remain mixed or unresolved.
 
 **What would resolve it:**  
-No further evidence is required to establish that the two documentary states coexisted; additional referral/pathway records would be needed to establish what conclusion, if any, Podiatry routing was intended to embody.
+No further evidence is required to establish that the two documentary states coexisted. Cross-specialty communication or expert interpretation would be needed to establish what conclusion, if any, the routing was intended to embody clinically.
 
 **Status:** `PARTIALLY RECONCILABLE` / `REQUIRES ADDITIONAL SOURCE`
 
 ### T003 — Podiatry priority “as Parkinson's” vs later use of a separate foot pathway
 
-**Facts engaged:** `F0188`, `F0323`, `F1720`
+**Facts engaged:** `F0188`, `F0323`, `F1720`, `F1891`, `F1903`, `F1904`, `F1905`
 
 **Type:** representation / reasoning tension
 
 **Documentary tension:**  
-The GP recorded on 6 July 2017 that Podiatry would mark the case as priority “and as Parkinson's”. The neurological plan also separately requested outpatient Podiatry for the foot problem. The records therefore support both a Parkinson's-linked prioritisation label and a distinct Podiatry pathway.
+The GP recorded on 6 July 2017 that Podiatry would mark the case as priority “and as Parkinson's”. The neurological plan also separately requested outpatient Podiatry for the foot problem. The newly obtained Podiatry material adds two longitudinal facts: every represented treatment encounter documented pathology at the same left 5th MTPJ site, and the 2019 re-referral described the previous Podiatry history as feet issues relating to increased tone and abnormal gait relating to Parkinson's disease, with separate reference to clawing feet and pain.
 
 **Why it matters:**  
-The fact of Podiatry allocation cannot, without more, safely be used to prove that the foot problem had already been classified as independent of Parkinsonism.
+The existence of the Podiatry pathway now affirmatively proves a repeatedly treated structural problem, but the pathway still cannot be used as documentary proof that the feet had been classified as neurologically unrelated.
 
 **Possible reconciliation:**  
-“As Parkinson's” may have been a prioritisation or contextual label rather than a causal classification. Podiatry could still address structural foot disease in a patient with Parkinsonism.
+“As Parkinson's” may have been contextual or prioritisation language. A recurrent structural lesion could be treated locally while neurological tone/gait/clawing remained clinically relevant to loading or symptom expression.
 
 **What would resolve it:**  
-The original Podiatry referral, telephone record and Podiatry triage/treatment notes.
+Expert interpretation of the mixed structural/neurological phenotype and any surviving 2017 triage or cross-service communication. The Podiatry treatment notes themselves are no longer a missing source.
 
 **Status:** `UNRESOLVED` / `REQUIRES ADDITIONAL SOURCE`
 
 ### T004 — Structural foot pathology vs neurological gait/posture findings
 
-**Facts engaged:** `F0005`, `F0150`, `F0153`, `F0162`
+**Facts engaged:** `F0005`, `F0150`, `F0153`, `F0162`, `F1893`, `F1894`, `F1895`, `F1896`, `F1897`, `F1898`, `F1899`, `F1900`, `F1901`, `F1902`, `F1903`, `F1904`, `F1905`
 
 **Type:** documentary tension / mixed-mechanism issue
 
 **Documentary tension:**  
-The record documents marked mallet toes, onychogryphosis, callouses/pressure areas, pes planus and hammertoes, while also recording high tone and a footdrop-like gait somewhat suggestive of dystonic posture and expressly “NOT FOOT DROP”. The relationship between these domains was left “Not clear”.
+The record now documents structural foot pathology at high longitudinal consistency: every one of eight represented Podiatry treatment appointments from 14 Sep 2017 to 25 Mar 2019 records pathology at the left 5th MTPJ, variably described as callus or HD/corn-related pathology and repeatedly debrided, enucleated or offloaded. Podiatry also recorded “Toes clawed” on 22 Mar 2018 and “Toes clawed 1-3 on both feet” on 15 Jun 2018. These findings coexist with the earlier neurological record of high tone, a footdrop-like gait somewhat suggestive of dystonic posture and an expressly unresolved relationship, and with the 2019 re-referral wording relating previous foot issues to increased tone and abnormal gait relating to Parkinson's disease.
 
 **Why it matters:**  
-Any later account that reduces the historical presentation to either a purely structural foot problem or a purely neurological foot problem would have to reconcile both sets of contemporaneous findings.
+The new record makes an exclusive simplification in either direction less defensible at documentary level. Genuine structural pathology is incontrovertibly present, while the podiatric/referral record itself preserves gait, clawing and neurological context.
 
 **Possible reconciliation:**  
-Structural pathology, altered neurological posture/loading, pain amplification and separate peripheral mechanisms could have coexisted. The documentary record does not require one exclusive generator.
+A mixed phenotype can accommodate all of the documents: a genuine structural lesion at a repeatedly loaded site, local podiatric benefit, and neurological tone/posture/gait/clawing capable of influencing loading or pain expression. The relative contribution remains expert-dependent.
 
 **What would resolve it:**  
-Expert clinical evidence informed by the contemporaneous podiatric examination, neurological examination and any available foot imaging/pathway records.
+Independent movement-disorders and, if necessary, podiatric/biomechanical expert review of the repeated left 5th MTPJ lesion, clawing, gait/tone findings, offloading response and medication-state evidence.
 
 **Status:** `REQUIRES EXPERT EVIDENCE`
 
@@ -215,21 +215,21 @@ Expert evidence on what can and cannot be inferred from the documented Procyclid
 
 ### T010 — Procyclidine withdrawal deterioration involving feet and gait vs earlier separation
 
-**Facts engaged:** `F0394`, `F0437`, `F0438`, `F0439`, `F0162`
+**Facts engaged:** `F0394`, `F0437`, `F0438`, `F0439`, `F0162`, `F1895`, `F1900`, `F1902`, `F1903`, `F1904`, `F1905`
 
 **Type:** treatment-state / temporal tension
 
 **Documentary tension:**  
-During the planned Procyclidine break, the contemporaneous patient account recorded increasing tension, restless feet and a deteriorating walk. The later Neurology record stated that on stopping Procyclidine the first rapid change noticed was return of the outside-left-foot corn phenomenon, with worsening symptoms and feeling more “shifty” and “unrelaxed”. This sits alongside the earlier “Not clear” relationship between leg tension and foot pathology.
+During the planned Procyclidine break, the contemporaneous patient account recorded increasing tension, restless feet and a deteriorating walk. The later Neurology record stated that on stopping Procyclidine the first rapid change noticed was return of the outside-left-foot corn phenomenon, with worsening symptoms and feeling more “shifty” and “unrelaxed”. The Podiatry record independently establishes that the left 5th MTPJ was a recurrent objective treatment site across all eight represented appointments. The patient's later Neurology description is therefore anatomically capable of corresponding to a repeatedly documented structural site, while the terminology remains source-specific.
 
 **Why it matters:**  
-The withdrawal episode supplied later evidence linking medication state, gait/tension and a foot phenomenon in time, without itself resolving mechanism.
+The withdrawal episode is no longer merely a generic foot reference when read longitudinally: it can be compared against a repeatedly documented lateral-left-forefoot lesion. That anatomical correspondence increases the evidential relevance of the treatment-state episode without determining its mechanism.
 
 **Possible reconciliation:**  
-Medication withdrawal may change tone, movement, loading, restlessness or pain perception and thereby alter a structurally vulnerable foot without showing that the structural lesion itself was caused by Parkinsonism.
+A structural callus/HD may remain structurally real while its pain, prominence, pressure loading or symptom awareness changes with tone, posture, gait, restlessness or pain modulation. Procyclidine response does not establish that the lesion itself was neurologically caused.
 
 **What would resolve it:**  
-Expert interpretation of the pharmacological and biomechanical significance of the withdrawal/restart pattern and any contemporaneous clinical examination during the break.
+Expert interpretation of whether the “outside-left-foot corn” is clinically/anatomically consistent with the documented left 5th MTPJ lesion and what, if anything, medication-state sensitivity implies about mechanism.
 
 **Status:** `REQUIRES EXPERT EVIDENCE`
 
@@ -455,18 +455,18 @@ The late-December/early-January clinical or nursing review corresponding to the 
 
 ### T022 — Treatment-response evidence over time vs persistence of mixed-mechanism explanation
 
-**Facts engaged:** `F0394`, `F0437`, `F0439`, `F0941`, `F1298`, `F1299`, `F1740`, `F1741`, `F1742`
+**Facts engaged:** `F0394`, `F0437`, `F0439`, `F0941`, `F1298`, `F1299`, `F1740`, `F1741`, `F1742`, `F1901`, `F1903`, `F1904`
 
 **Type:** temporal / treatment-state tension
 
 **Documentary tension:**  
-Across several years, the record contains medication-state observations involving feet, gait, tension or pain: deterioration during Procyclidine withdrawal; later classification of a foot throw as “actually parkinsonian”; worse mobility and symptoms when Sinemet had not been taken; an OFF-related assessment of leg pain/shuffling; and later pain-targeted Sinemet CR followed by reported profound relief. At the same time, the later clinician explanation continues to preserve possible peripheral, structural and mixed causes.
+Across several years, the record contains medication-state observations involving feet, gait, tension or pain: deterioration during Procyclidine withdrawal; later classification of a foot throw as “actually parkinsonian”; worse mobility and symptoms when Sinemet had not been taken; an OFF-related assessment of leg pain/shuffling; and later pain-targeted Sinemet CR followed by reported profound relief. The Podiatry record supplies an important counterweight: local intervention was genuinely directed at a persistent structural site, and the patient reported Ottoforms as “very effective”. At the same time, the 2019 re-referral relates the prior foot history to increased tone and abnormal gait relating to Parkinson's disease. Local treatment benefit and neurological relevance therefore coexist in the record.
 
 **Why it matters:**  
 The cumulative later evidence is capable of bearing on the original uncertainty, but it does not by itself establish that every historical foot symptom shared one mechanism. The documentary question is how the accumulating treatment-state evidence was integrated with the continuing mixed-mechanism account.
 
 **Possible reconciliation:**  
-The most coherent record-based reconciliation is a mixed phenotype: structural foot disease and/or peripheral pain could coexist with Parkinsonian dystonia, OFF-related movement changes and dopaminergic modulation of pain experience.
+The most coherent record-based reconciliation is a mixed phenotype: structural foot disease and/or peripheral pain could coexist with Parkinsonian dystonia, OFF-related movement changes and dopaminergic modulation of pain experience. Neither local podiatric benefit nor medication response is converted into exclusive causation proof.
 
 **What would resolve it:**  
 Longitudinal expert review of the contemporaneous examinations, medication-response episodes and foot pathology, with symptom-specific rather than diagnosis-level analysis.

@@ -21,7 +21,7 @@
 - `control_rule`: 5
 - `defence_audit`: 25
 - `expert_question`: 9
-- `fact`: 1890
+- `fact`: 1906
 - `proposition`: 25
 - `source_euid`: 2950
 - `supporting_proposition`: 8
@@ -29,7 +29,7 @@
 
 ## Relationship counts
 
-- `fact_ids`: 446
+- `fact_ids`: 512
 - `proposition_ids`: 129
 - `source_euids`: 4632
 - `tension_ids`: 144
@@ -1891,6 +1891,8 @@
 - `F1887` · `FACT_REGISTER.md` — orphan Fact
 - `F1888` · `FACT_REGISTER.md` — orphan Fact
 - `F1890` · `FACT_REGISTER.md` — orphan Fact
+- `F1892` · `FACT_REGISTER.md` — orphan Fact
+- `F1906` · `FACT_REGISTER.md` — orphan Fact
 - `ART18250804-20250804-0008` · `sources-consolidated-evidence-corpus.md` — duplicate substantive text also present in ART16250612-20250612-0008
 - `GDPR260127-20260127-0008` · `sources-consolidated-evidence-corpus.md` — duplicate substantive text also present in ART16260114-20260114-0008
 - `GDPR260127-20260127-0009` · `sources-consolidated-evidence-corpus.md` — duplicate substantive text also present in DPC260113-20260113-0009

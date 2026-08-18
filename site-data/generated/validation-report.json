@@ -1,10 +1,10 @@
 {
   "generated": true,
-  "generated_at": "2026-08-16T20:17:21+01:00",
+  "generated_at": "2026-08-17T20:44:12+01:00",
   "parser_version": "1.0.0",
   "repository": "TitanicParker/case-evidence-ledger",
   "schema_version": "1.0.0",
-  "site_build_commit": "66a6ca0496cf71dee0591c2774fe81dc70a8130c",
+  "site_build_commit": "cf7940cad23ac6b67a89e6fd0affe78a0e34a644",
   "validation": {
     "fatal_errors": [],
     "normalization_mappings_used": [
@@ -19,7 +19,7 @@
       "control_rule": 5,
       "defence_audit": 25,
       "expert_question": 9,
-      "fact": 1890,
+      "fact": 1906,
       "proposition": 25,
       "source_euid": 2950,
       "supporting_proposition": 8,
@@ -28,7 +28,7 @@
     "passed": true,
     "provenance_limitations": [],
     "relationship_counts": {
-      "fact_ids": 446,
+      "fact_ids": 512,
       "proposition_ids": 129,
       "source_euids": 4632,
       "tension_ids": 144
@@ -9303,6 +9303,16 @@
       {
         "condition": "orphan Fact",
         "id": "F1890",
+        "source_file": "FACT_REGISTER.md"
+      },
+      {
+        "condition": "orphan Fact",
+        "id": "F1892",
+        "source_file": "FACT_REGISTER.md"
+      },
+      {
+        "condition": "orphan Fact",
+        "id": "F1906",
         "source_file": "FACT_REGISTER.md"
       },
       {

@@ -34,12 +34,16 @@ How should an independent movement-disorders expert clinically characterise the 
 - the patient entered Neurology through one evolving referral pathway involving feet, gait, tone, movement initiation, dexterity and function;
 - genuine structural foot pathology was present;
 - neurological lower-limb abnormalities were present;
-- the relationship was expressly unresolved in the represented 2017 record.
+- the relationship was expressly unresolved in the represented 2017 record;
+- Podiatry subsequently documented left 5th MTPJ pathology at every represented treatment encounter, 8/8;
+- toe clawing was documented during the Podiatry treatment series;
+- local structural treatment and offloading were repeatedly performed.
 
 **Expert-dependent issues:**  
 - whether the gait/posture findings were clinically consistent with dystonia;
 - whether structural and neurological mechanisms likely coexisted;
-- whether any component can be allocated retrospectively with reasonable confidence.
+- whether any component can be allocated retrospectively with reasonable confidence;
+- whether recurrent loading at the left 5th MTPJ could plausibly have been influenced by tone, posture, gait or clawing while remaining genuine structural pathology.
 
 **Permitted outcome range:**  
 A. Predominantly mixed structural and neurological phenotype.  
@@ -65,26 +69,28 @@ Was the 2017 parallel allocation of Parkinsonism to Neurology and the foot probl
 
 **What the documents establish regardless:**  
 - operational allocation occurred while the represented causal relationship remained unresolved;
-- Podiatry had a genuine structural clinical object;
+- Podiatry had a genuine structural clinical object, now documented longitudinally across eight treatment encounters;
 - the 6 July GP record used the phrase “as Parkinson's” in relation to Podiatry prioritisation;
+- the 2019 re-referral described previous foot issues as relating to increased tone and abnormal gait relating to Parkinson's disease;
 - Podiatry allocation alone does not establish etiological separateness.
 
 **Expert-dependent issues:**  
 - whether parallel specialty management was clinically appropriate;
 - whether coordination or later re-integration would ordinarily be expected in a mixed phenotype;
-- whether the operational split risked becoming an over-stable explanatory partition.
+- whether the operational split risked becoming an over-stable explanatory partition;
+- whether the available combined Neurology/Podiatry record was sufficient for appropriate causal reconsideration.
 
 **Permitted outcome range:**  
 A. Parallel management was reasonable and required no special later synthesis beyond ordinary follow-up.  
 B. Parallel management was reasonable initially but should have remained explicitly provisional and coordinated.  
 C. The allocation materially risked obscuring a neurological component and required active later reconsideration.  
-D. The record is insufficient to assess the adequacy of the allocation without missing Podiatry/referral material.
+D. The available combined Neurology/Podiatry material remains insufficient to assess coordination or causal reconsideration without cross-specialty communications or other missing pathway records.
 
 **Boundary:**  
-Podiatry involvement must not be characterised as inherently improper.
+Podiatry involvement must not be characterised as inherently improper. The existence of a repeatedly treated structural lesion does not by itself resolve the neurological relationship.
 
 **Counsel consequence:**  
-Only outcomes B or C materially support an argument that later evidence should have triggered re-integration of the original case architecture. Outcome A substantially neutralises that limb. Outcome D makes missing source material central.
+Only outcomes B or C materially support an argument that later evidence should have triggered re-integration of the original case architecture. Outcome A substantially neutralises that limb. Outcome D makes cross-specialty communications and other missing pathway records central.
 
 ---
 
@@ -126,7 +132,7 @@ Outcome A substantially defeats a treatment-delay limb. Outcome B supports a lat
 # EQ004 — Meaning of Procyclidine response and withdrawal evidence
 
 **Question:**  
-What clinical significance, if any, should be attributed to the recorded improvement on Procyclidine and deterioration during withdrawal, including the rapid return of the outside-left-foot phenomenon together with worsening tension, gait or restlessness?
+What clinical significance, if any, should be attributed to the recorded improvement on Procyclidine and deterioration during withdrawal, including the rapid return of the “outside-left-foot corn” phenomenon, when Podiatry independently documented callus/HD pathology at the left 5th MTPJ at every one of eight represented treatment appointments?
 
 **Documentary triggers:** `T009`, `T010`, `T022`  
 **Controlled propositions:** `P016`, `P017`, `P023`  
@@ -134,11 +140,15 @@ What clinical significance, if any, should be attributed to the recorded improve
 **What the documents establish regardless:**  
 - Procyclidine was clinically material to the recorded motor state;
 - withdrawal generated lower-limb/foot-specific information;
-- the episode temporally linked medication state with gait/tension and a foot phenomenon.
+- the episode temporally linked medication state with gait/tension and a foot phenomenon;
+- Podiatry repeatedly documented a structural lesion at the left 5th MTPJ across 8/8 treatment encounters;
+- the patient's and Podiatry's terminology differs and remains source-specific;
+- the later withdrawal description supplies medication-state information capable of comparison with that anatomical record.
 
 **Expert-dependent issues:**  
 - whether the response supports a dystonic or other central motor component;
-- whether altered tone, loading, restlessness or pain perception could explain the observations;
+- whether the “outside-left-foot corn” is clinically/anatomically consistent with the recurrent left 5th MTPJ lesion;
+- whether a medication-sensitive change in pain, prominence or recurrence at a structurally vulnerable site could arise through altered tone, gait, loading, restlessness, pain perception or another mechanism;
 - how much weight the episode should carry in retrospectively assessing the 2017 uncertainty.
 
 **Permitted outcome range:**  
@@ -148,7 +158,7 @@ C. Nonspecific treatment-state information compatible with several mechanisms an
 D. Insufficiently documented for reliable interpretation.
 
 **Boundary:**  
-Medication response does not establish exclusive causation and does not prove that a corn or structural lesion was neurologically caused.
+Medication response does not establish exclusive causation and does not prove that a corn or structural lesion was neurologically caused. Procyclidine must not be described as treating a corn/callus unless an independent expert can support that characterisation.
 
 **Counsel consequence:**  
 Outcomes A or B materially strengthen the argument that later evidence bore on the original unresolved relationship. Outcome C leaves only modest relevance. Outcome D prevents strong reliance on this strand.
@@ -167,11 +177,14 @@ To what extent, if any, are the 2020 parkinsonian foot-throw finding, the 2021 d
 - later clinicians assigned Parkinsonian or OFF-state significance to some lower-limb phenomena;
 - levodopa exposure later increased in the context of dystonia/altered gait;
 - dopaminergic treatment was later used in part against morning pain;
-- repeated medication-state observations are capable of bearing on the earlier uncertainty.
+- repeated medication-state observations are capable of bearing on the earlier uncertainty;
+- Podiatry provides a longitudinal anatomical series between 2017 and 2019, including recurrent left 5th MTPJ pathology and documented clawing;
+- that series provides a structural/biomechanical comparator against which later neurological and medication-state phenomena can be assessed.
 
 **Expert-dependent issues:**  
 - symptom identity or non-identity across years;
 - whether the later phenomena represent evolution of an earlier dystonic/Parkinsonian component;
+- whether the recurrent left 5th MTPJ pathology, toe clawing and later “outside-left-foot corn” terminology have clinically meaningful continuity or merely anatomical proximity;
 - whether mixed structural, neuropathic and OFF-related mechanisms better explain the longitudinal record.
 
 **Permitted outcome range:**  
@@ -181,7 +194,7 @@ C. Limited continuity: the later phenomena are clinically different enough that 
 D. Insufficient data for reliable longitudinal identity analysis.
 
 **Boundary:**  
-Similarity across time is not identity. The register does not assume that the 2017, 2020, 2023 and 2025 phenomena were the same symptom.
+Similarity across time is not identity. The register does not assume that the 2017, 2019, 2020, 2023 and 2025 phenomena were the same symptom.
 
 **Counsel consequence:**  
 Outcome A gives P023 substantial clinical force. Outcome B supports a mixed-mechanism reconsideration argument. Outcome C materially narrows the cumulative case. Outcome D requires caution and possibly further expert/source work.
@@ -233,12 +246,15 @@ Taken cumulatively, did the later medication-state, phenomenological and genetic
 **What the documents establish regardless:**  
 - later evidence repeatedly became capable of bearing on the original unresolved relationship;
 - local treatment and symptom interpretation clearly changed over time;
+- the Podiatry pathway repeatedly treated a structural lesion and achieved at least some reported local benefit;
+- the later re-referral nevertheless framed prior foot issues in relation to increased tone and abnormal gait associated with Parkinson's disease;
 - the represented record does not show an equally explicit later reconstruction of the original relationship;
 - absence of one synthesis document does not prove absence of reconsideration;
 - local updating may itself evidence reconsideration.
 
 **Expert-dependent issues:**  
 - whether local updating was clinically sufficient;
+- whether successful local treatment would ordinarily reduce, preserve or increase the need to reconsider neurological contribution when the lesion repeatedly recurs at one site and neurological gait/clawing context is also documented;
 - whether a broader longitudinal synthesis would ordinarily be expected or clinically material;
 - whether failure to articulate such a synthesis, if established, would matter to diagnosis, treatment or risk management.
 
